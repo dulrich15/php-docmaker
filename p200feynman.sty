@@ -1,0 +1,346 @@
+\ProvidesPackage{p200feynman}
+
+\pagestyle{plain}
+
+\usepackage{p200}
+\usepackage{mparhack}
+\usepackage[strict]{changepage}
+\usepackage{caption}
+\captionsetup{font={sf,footnotesize},singlelinecheck=false}
+%\DeclareCaptionFormat{lcap}{#1#2#3\hfill}
+%\DeclareCaptionFormat{rcap}{\hfill#1#2#3}
+\DeclareCaptionFormat{lcap}{#1#2#3}
+\DeclareCaptionFormat{rcap}{#1#2#3}
+
+\usepackage[margin=0.625in, rmargin=3in, paperwidth=8.5in, paperheight=11in]{geometry}
+\setlength\marginparwidth{2.125in}
+\setlength\marginparsep{0.25in}
+\newlength\fullwidth \setlength\fullwidth{7.25in}
+\newlength\adjwidth \setlength\adjwidth{-2.375in}
+
+\newlength\picwidth \setlength\picwidth{4.00in}
+\newlength\capwidth \setlength\capwidth{3.00in}
+
+
+
+\newcommand{\pics}[4][]{
+
+\def\piccontent{\centering #3}
+\def\capcontent{\ifthenelse{\equal{#4}{}}{}{\captionof{figure}{#4}}}
+\def\lblcontent{\ifthenelse{\equal{#2}{}}{}{\label{fig:#2}}}
+
+\ifthenelse{\equal{#1}{side}}{ \marginpar{ \piccontent \capcontent \lblcontent } }
+{
+
+\begin{figure}[!th] \lblcontent
+\begin{adjustwidth*}{}{\adjwidth}
+
+\checkoddpage 
+\ifoddpage 
+\captionsetup{format=rcap} 
+\else 
+\captionsetup{format=lcap} 
+\fi
+
+\ifthenelse{\equal{#1}{full}}{ \piccontent \capcontent \lblcontent }
+{
+\checkoddpage
+\ifoddpage 
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage} \hfill
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage}
+\else
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage} \hfill
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage}
+\fi
+}
+
+\end{adjustwidth*}
+\end{figure}
+
+}
+
+}
+
+
+
+
+\renewcommand{\fig}[4][]{
+
+\vspace{1pt}
+
+\def\piccontent{\centering \includegraphics[scale=#3]{images/#2.png}}
+\def\capcontent{\ifthenelse{\equal{#4}{}}{}{\captionof{figure}{#4}}}
+\def\lblcontent{\ifthenelse{\equal{#2}{}}{}{\label{fig:#2}}}
+
+\ifthenelse{\equal{#1}{side}}{ \marginpar{ \piccontent \capcontent \lblcontent } }
+{
+
+\begin{figure}[!th] \lblcontent
+\begin{adjustwidth*}{}{\adjwidth}
+
+\checkoddpage
+\ifoddpage 
+\captionsetup{format=rcap}
+\else
+\captionsetup{format=lcap}
+\fi
+
+\ifthenelse{\equal{#1}{full}}{ \piccontent \capcontent \lblcontent }
+{
+\checkoddpage
+\ifoddpage 
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage} \hfill
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage}
+\else
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage} \hfill
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage}
+\fi
+}
+
+\end{adjustwidth*}
+\end{figure}
+
+}
+
+\vspace{1pt}
+}
+
+
+
+
+
+
+
+
+
+
+\renewcommand{\tikzfig}[4][]{
+\vspace{1pt}
+
+\def\piccontent{\centering #3}
+\def\capcontent{\ifthenelse{\equal{#4}{}}{}{\captionof{figure}{#4}}}
+\def\lblcontent{\ifthenelse{\equal{#2}{}}{}{\label{fig:#2}}}
+
+\ifthenelse{\equal{#1}{side}}{ \marginpar{ \piccontent \capcontent \lblcontent } }
+{
+
+\begin{figure}[!th]
+
+\ifthenelse{\equal{#4}{}}{\piccontent}
+{
+
+\begin{adjustwidth*}{}{\adjwidth}
+
+\checkoddpage
+\ifoddpage 
+\captionsetup{format=rcap}
+\else
+\captionsetup{format=lcap}
+\fi
+
+\ifthenelse{\equal{#1}{full}}{ \piccontent \capcontent \lblcontent }
+{
+\checkoddpage
+\ifoddpage 
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage} \hfill
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage}
+\else
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage} \hfill
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage}
+\fi
+}
+
+\end{adjustwidth*}
+
+}
+
+\end{figure}
+}
+
+}
+
+
+
+
+
+\renewcommand{\tbl}[5][]{
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\tabcolsep}{0.2cm}
+
+\def\piccontent{\centering \begin{tabular}{#3} \hline #4 \hline \end{tabular}}
+\def\capcontent{\ifthenelse{\equal{#5}{}}{}{\captionof{table}{#5}}}
+\def\lblcontent{\ifthenelse{\equal{#2}{}}{}{\label{tbl:#2}}}
+
+\ifthenelse{\equal{#1}{side}}{ \marginpar{ \piccontent \capcontent \lblcontent } }
+{
+\ifthenelse{\equal{#5}{}}{}{\begin{table*}[!htp]}
+{
+
+\begin{adjustwidth*}{}{\adjwidth}
+
+\checkoddpage
+\ifoddpage 
+\captionsetup{format=rcap}
+\else
+\captionsetup{format=lcap}
+\fi
+
+\ifthenelse{\equal{#1}{full}}{ \piccontent \capcontent \lblcontent }
+{
+\checkoddpage
+\ifoddpage 
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage} \hfill
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage}
+\else
+\begin{minipage}[c]{\capwidth} \capcontent \lblcontent \end{minipage} \hfill
+\begin{minipage}[c]{\picwidth} \piccontent \end{minipage}
+\fi
+}
+
+\end{adjustwidth*}
+
+}
+
+\ifthenelse{\equal{#5}{}}{}{\end{table*}}
+
+}
+
+}
+
+
+
+
+\renewcommand{\footnote}[2][0pt]{%
+\addtocounter{footnote}{1}%
+\footnotemark[\thefootnote]%
+\marginpar{\vspace{#1}\footnotemark[\thefootnote]\footnotesize\sf#2}%
+%\marginpar{\vspace{#1}\footnotesize\sf#2}%
+}
+
+\renewcommand{\figurename}{\sf Figure}
+\renewcommand{\tablename}{\sf Table}
+
+% Preventing figures from appearing on a page by themselves. From http://dcwww.camd.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html#figplacement
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+\hyphenpenalty=1000
+
+\newenvironment{desc}
+{ \begin{description} \setlength\parskip{0in} }
+{ \end{description} }
+
+\renewcommand{\half}{\ensuremath{\tfrac{1}{2}}}
+\renewcommand{\dg}{\ensuremath{^\circ} }
+\renewcommand{\ohm}{\ensuremath{\Omega}}
+\renewcommand{\sci}[2]{\ensuremath{#1 \times 10^{#2}}}
+
+%\tikzstyle {nde} = [fill=white,minimum width=8mm, minimum height=8mm]
+%\tikzstyle {bat} = []
+%\tikzstyle {res} = [decorate,decoration={zigzag,amplitude=2mm,segment length=2mm}]
+%\tikzstyle {cpr} = []
+%\tikzstyle {ind} = [decorate,decoration={coil,amplitude=2mm,segment length=2mm}]
+%\tikzstyle {acv} = []
+%\tikzstyle {led} = []
+%\tikzstyle {npn} = []
+
+%% inout node for drawing vectors pointing in/out of the page %%
+
+\makeatletter
+
+\newif\ifpgf@pointing@in
+\newif\ifpgf@pointing@out
+
+\tikzoption{pointing out}[]{\pgf@pointing@outtrue}
+\tikzoption{pointing in}[]{\pgf@pointing@intrue}
+\tikzoption{not pointing}[]{}
+
+\tikzoption{point}[]{\csname pgf@pointing@#1true\endcsname}
+
+\pgfdeclareshape{inout}{%
+  \savedanchor\centerpoint{\pgfpointorigin}
+  \saveddimen\r{% = max(8pt,wd,ht) / 2
+    \setlength{\pgf@xa}{\pgfshapeminwidth}
+    \setlength{\pgf@xb}{\pgfshapeminheight}
+    \setlength{\pgf@xc}{8pt}
+    \ifdim\pgf@xa>\pgf@xb
+      \pgf@x=\pgf@xa
+    \else
+      \ifdim\pgf@xb>\pgf@xc
+        \pgf@x=\pgf@xb
+      \else
+        \pgf@x=\pgf@xc
+      \fi
+    \fi
+    \pgf@x=0.5\pgf@x
+  }
+  \nodeparts{}
+  \inheritsavedanchors[from=circle]
+  \inheritanchorborder[from=circle]
+  \inheritanchor[from=circle]{center}
+  \backgroundpath{
+    \pgfpathcircle{\centerpoint}{\r}
+    \pgfsetfillcolor{white}
+    \pgfusepath{fill}
+    \pgfpathcircle{\centerpoint}{\r}
+    \pgfusepath{draw}
+    \ifpgf@pointing@in
+      \pgfpathmoveto{\pgfpointpolar{045}{\r}}
+      \pgfpathlineto{\pgfpointpolar{225}{\r}}
+      \pgfusepath{draw}
+      \pgfpathmoveto{\pgfpointpolar{135}{\r}}
+      \pgfpathlineto{\pgfpointpolar{315}{\r}}
+      \pgfusepath{draw}
+    \fi
+    \ifpgf@pointing@out
+      \pgfpathcircle{\centerpoint}{1pt}
+      \pgfsetfillcolor{black}
+      \pgfusepath{fill}
+    \fi  }
+}
+
+\makeatother
+
+\tikzstyle {light box} = [draw,fill=black!20,minimum width=2mm,minimum height=\dx cm,inner sep=0]
+\tikzstyle {ruler} = [draw,fill=black!20,minimum width=\dx cm,minimum height=2mm,inner sep=0]
+\tikzstyle {beam} = [red,decorate,decoration={expanding waves,angle=3,segment length=3mm}]
+
+\tikzstyle {event} = [fill,circle,inner sep=0.5mm]
+
+\tikzstyle {brace} = [|-|]
+\tikzstyle {brace help} = [draw=none]%[loosely dotted]
+\tikzstyle {brace note hi} = [pos=0.5,sloped,above=1mm]
+\tikzstyle {brace note lo} = [pos=0.5,sloped,below=1mm]
+\tikzstyle {->-} = [postaction={decorate},decoration={markings,mark=at position .50 with {\arrow[xshift=3pt]{>}}}]
+\newlength\bracenudge 
+\setlength\bracenudge{5mm}
+\newlength\secondbracenudge 
+\setlength\secondbracenudge{\bracenudge} 
+\addtolength\secondbracenudge{10mm}
+
+% For Feynman diagrams
+\tikzstyle {actual} = [fill,circle,inner sep=0.5mm]
+\tikzstyle {virtual} = [actual,fill=white,draw]
+
+\tikzstyle {electron} = []
+%[postaction={decorate},decoration={markings,mark=at position 0.7 with {\arrow{>}}}]
+
+\tikzstyle {photon} = [decorate,decoration={snake,segment length=2mm,amplitude=0.5mm}]
+\tikzstyle {gluon} = [decorate,decoration={coil,aspect=1,segment length=1mm,amplitude=0.5mm}]
+\tikzstyle {weak} = [decorate,decoration={zigzag,segment length=1mm,amplitude=0.5mm}]
+
+% For drawing tables (periodic chart)
+\tikzstyle {table-nix} = [minimum size=12mm,inner sep=0mm]
+\tikzstyle {table-box} = [table-nix,draw,ultra thin]
+
+\newcommand{\ep}[3]
+{
+\begin{minipage}{10mm}
+\centering
+\tiny \ifthenelse{\equal{#1}{}}{~}{#1} \\
+\small \ifthenelse{\equal{#2}{}}{~}{#2} \\
+\tiny \ifthenelse{\equal{#3}{}}{~}{\raisebox{-1mm}{#3}}
+\end{minipage}
+}

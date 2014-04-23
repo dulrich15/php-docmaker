@@ -1,0 +1,1509 @@
+========
+1:Quadratic equation
+--------
+x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+========
+1:Definition of logarithm
+--------
+a^n = b \Rightarrow \log_a (b) = n
+========
+1:Logarithm rule \#1
+--------
+\log(ab) = \log(a) + \log(b)
+========
+1:Logarithm rule \#2
+--------
+\log(a^n) = n \log(a)
+========
+1:Pythagorean theorem
+--------
+c^2 = a^2 + b^2
+========
+1:Law of cosines
+--------
+c^2 = a^2 + b^2 - 2ab \cos \gamma
+========
+1:Law of sines
+--------
+\dfrac{\sin \alpha}{a} = \dfrac{\sin \beta}{b} = \dfrac{\sin \gamma}{c}
+========
+1:Circumference of circle
+--------
+C = 2 \pi r
+========
+1:Area of circle
+--------
+A = \pi r^2
+========
+1:Surface area of sphere
+--------
+SA = 4 \pi r^2
+========
+1:Volume of sphere
+--------
+V = \tfrac{4}{3} \pi r^3
+========
+1:Change in some quantity
+--------
+\Delta q = q - q_0 = q_f - q_i
+========
+1:Fundamental structure of all physical equations
+--------
+\Delta y = k(x) \Delta x
+========
+1:Values of a function near a particular point $x$
+--------
+f(x + \Delta x) = f(x) + f'(x) \Delta x
+========
+1:Binomial theorem
+--------
+(1 + x)^n = 1 + nx^{n-1}
+========
+2:Definition of sine function
+--------
+\sin \theta = \text{opp/hyp}
+========
+2:Definition of cosine function
+--------
+\cos \theta = \text{adj/hyp}
+========
+2:Definition of tangent function
+--------
+\tan \theta = \text{opp/adj}
+========
+2:Magnitude of a vector
+--------
+\vmag{a} = \sqrt{a_x^2 + a_y^2}
+========
+2:Angle of a vector
+--------
+\vang{a} = \tan^{-1}(a_y / a_x)
+========
+2:X-component of a vector
+--------
+a_x = a \cos \theta
+========
+2:Y-component of a vector
+--------
+a_y = a \sin \theta
+========
+2:Definition of dot product \#1
+--------
+\vect{a} \cdot \vect{b} = ab \cos \theta
+========
+2:Definition of dot product \#2
+--------
+\vect{a} \cdot \vect{b} = a_x b_x + a_y b_y
+========
+2:Definition of cross product \#1
+--------
+\vect{a} \times \vect{b} = (ab \sin \theta) \vhat{n}
+========
+2:Definition of cross product \#2
+--------
+\vect{a} \times \vect{b} = (a_x b_y - a_y b_x) \vhat{n}
+========
+3:Constant velocity equation
+--------
+x = vt
+========
+3:Definition of average velocity
+--------
+\avg{v} = \Delta x / \Delta t
+========
+3:Definition of average acceleration
+--------
+\avg{a} = \Delta v / \Delta t
+========
+3:Average velocity under constant acceleration
+--------
+\avg{v} = \half (v + v_0)
+========
+3:Const. acceleration equation \#1
+--------
+v = v_0 + at
+========
+3:Const. acceleration equation \#2
+--------
+x = \half(v + v_0)(t)
+========
+3:Const. acceleration equation \#3
+--------
+x = v_0 t + \half at^2
+========
+3:Const. acceleration equation \#4
+--------
+v^2 = v_0^2 + 2ax
+========
+3:Const. acceleration equation \#5
+--------
+x = vt - \half at^2
+========
+3:Stopping distance
+--------
+d = v_0^2 / 2a
+========
+3:Acceleration due to gravity
+--------
+g = 9.8 \unit{m/s$^2$}
+========
+3:Distance an object falls when dropped from rest
+--------
+d = \half gt^2
+========
+3:Projectile range
+--------
+R = (v_0^2/g) \sin 2\theta
+========
+4:Condition for equilibrium
+--------
+\sum F = 0
+========
+4:Definition of weight
+--------
+W = mg
+========
+5:Newton's 2nd law
+--------
+\sum F = ma
+========
+6:Gravitational force
+--------
+F_\text{grav} = GMm/r^2
+========
+4:Static friction
+--------
+F_s \le \mu_s N
+========
+4:Static friction (alternate form)
+--------
+F_\text{s,max} = \mu_s N
+========
+4:Kinetic friction
+--------
+F_k = \mu_k N
+========
+6:Defintion of period
+--------
+T = 2\pi r / v
+========
+6:Acceleration in uniform circular motion
+--------
+a = v^2 / r
+========
+6:Centripetal force
+--------
+F_\text{cent} = mv^2 / r
+========
+6:Centripetal force
+--------
+F_\text{cent} = 4\pi^2 mr / T^2
+========
+6:Banked curve (no friction)
+--------
+\tan \theta = v^2 / rg
+========
+6:Circular orbit under gravity
+--------
+GM = rv^2
+========
+6:Period of circular orbit under gravity
+--------
+GMT^2 = 4 \pi^2 r^3
+========
+7:Mechanical advantage
+--------
+MA = F_\text{out} / F_\text{in}
+========
+7:Definition of work
+--------
+W = (F \cos \theta) \; \Delta x
+========
+7:Work-energy theorem
+--------
+W_\text{ext} = \Delta E
+========
+7:Work-energy theorem
+--------
+\Delta E = \Delta KE + \Delta PE - W_\text{nc}
+========
+7:Definition of power
+--------
+P = \Delta W / \Delta t = Fv
+========
+7:Kinetic energy (translation)
+--------
+KE = \half mv^2
+========
+7:Potential energy (weight)
+--------
+PE = mgh
+========
+7:Potential energy (elastic)
+--------
+PE_\text{elas} = \half kx^2
+========
+7:Potential energy (gravity)
+--------
+PE_\text{grav} = -GMm/r
+========
+7:Conservation of energy in free-fall
+--------
+\half mv^2 + mgh = \half mv_0^2 + mgh_0
+========
+7:Force is the derivative of potential energy
+--------
+F = -dU / dx
+========
+7:Defintion of Lagrangian
+--------
+L = KE - PE
+========
+7:Defintion of action
+--------
+S = \sum L \; dt
+========
+8:Definition of momentum
+--------
+p = mv
+========
+8:Definition of impulse
+--------
+J = F \Delta t
+========
+8:Impulse-momentum theorem
+--------
+J = \Delta p \implies F \Delta t = \Delta (mv)
+========
+8:Conservation of momentum
+--------
+m_1 v_1 + m_2 v_2 = m_1 u_1 + m_2 u_2
+========
+8:Location of center of mass
+--------
+x_\text{cm} = \dfrac{m_1 x_1 + m_2 x_2}{m_1 + m_2}
+========
+8:Completely inelastic collision
+--------
+u_1 = u_2 = u = \left( \dfrac{m_1}{m_1 + m_2} \right) v_1
+========
+8:Perfectly elastic collision \#1
+--------
+u_1 = \left( \dfrac{m_1 - m_2}{m_1 + m_2} \right) v_1
+========
+8:Perfectly elastic collision \#2
+--------
+u_2 = \left( \dfrac{2m_1}{m_1 + m_2} \right) v_1
+========
+8:Relationship between momentum and energy
+--------
+E = p^2 / 2m
+========
+8:Rocket equation
+--------
+\Delta v = v_e \ln (m_0 / m)
+========
+9:Definition of radian angle
+--------
+\theta = s/r
+========
+9:Constant angular velocity equation
+--------
+\theta = \omega t
+========
+9:Defintion of angular velocity
+--------
+\avg{\omega} = \Delta \theta / \Delta t
+========
+9:Definition of angular acceleration
+--------
+\avg{\alpha} = \Delta \omega / \Delta t
+========
+9:Constant angular acceleration equation \#1
+--------
+\omega = \omega_0 + \alpha t
+========
+9:Constant angular acceleration equation \#2
+--------
+\theta = \half(\omega + \omega_0)(t)
+========
+9:Constant angular acceleration equation \#3
+--------
+\theta = \omega_0 t + \half \alpha t^2
+========
+9:Constant angular acceleration equation \#4
+--------
+\omega^2 = \omega_0^2 + 2 \alpha \theta
+========
+9:Constant angular acceleration equation \#5
+--------
+\theta = \omega t - \half \alpha t^2
+========
+9:Tangential distance (arc-length) and angle
+--------
+s = r \theta
+========
+9:Tangential velocity and angular velocity
+--------
+v_t = r \omega
+========
+9:Tangential acceleration and angular acceleration
+--------
+a_t = r \alpha
+========
+9:Condition for a rolling object \#1
+--------
+v = v_t = r \omega
+========
+9:Condition for a rolling object \#2
+--------
+a = a_t = r \alpha
+========
+9:Centrifugal force in a rotating frame
+--------
+F_\text{cfg} = mr\omega^2
+========
+9:Coriolis force in a rotating frame
+--------
+F_\text{cor} = 2mv_t\omega
+========
+10:Definition of torque
+--------
+\tau = F \ell
+========
+10:Newton's 2nd law for torque
+--------
+\tau_\text{net} = I \alpha
+========
+10:Condition for equilibrium
+--------
+\tau_\text{net} = 0
+========
+10:Definition of moment of inertia
+--------
+I = \sum{mr^2}
+========
+10:Parallel axis theorem
+--------
+I = I_\text{cm} + ML^2
+========
+10:Definition of angular work
+--------
+W = \tau \theta
+========
+10:Kinetic energy (rotation)
+--------
+KE = \half I \omega^2
+========
+10:Definition of angular momentum
+--------
+L = I \omega
+========
+11:Angular momentum of an orbiting particle
+--------
+L = mrv_t
+========
+11:Relationship between apsides and semi-major axis
+--------
+2a = r_0 + r_1
+========
+11:Relationship between apsides and eccentricity
+--------
+e = \dfrac{r_1 - r_0}{r_1 + r_0}
+========
+11:Ellipse in polar coordinates
+--------
+r = r_0 \dfrac{1 + e}{1 + e \cos \theta}
+========
+11:Definition of reduced dynamic parameters
+--------
+E' = E/m \quad L' = L/m
+========
+11:Effective potential (reduced) in Newtonian gravity
+--------
+U' = -\dfrac{GM}{r} + \dfrac{L'^2}{2r^2}
+========
+11:Dynamic parameters related to semi-major axis
+--------
+a = -GM/2E'
+========
+11:Dynamic parameters related to eccentricity
+--------
+e = \sqrt{\dfrac{1}{4} + \dfrac{E' L'^2}{2(GM)^2}}
+========
+11:Effective potential (reduced) in general relativity
+--------
+U' = -\dfrac{GM}{r} + \dfrac{L'^2}{2r^2} - \dfrac{GM}{c^2} \dfrac{L'^2}{r^3}
+========
+11:Anomolous precession due to general relativity
+--------
+\Delta \phi = \dfrac{6\pi}{a(1 - e^2)} \dfrac{GM}{c^2}
+========
+11:Schwarzschild radius (black hole)
+--------
+r_s = 2GM/c^2
+========
+12:Relationship between period and frequency
+--------
+f = 1 / T
+========
+12:Definition of angular frequency
+--------
+\omega = 2\pi f
+========
+12:Maximum speed during simple harmonic motion
+--------
+v_\text{max} = A \omega
+========
+12:Maximum acceleration during simple harmonic motion
+--------
+a_\text{max} = A \omega^2
+========
+12:Displacement of ideal spring under applied force
+--------
+F_\text{applied} = kx
+========
+12:Force from ideal spring at a given displacement
+--------
+F = -kx
+========
+12:Angular frequency of a simple harmonic oscillator
+--------
+\omega = \sqrt{k/m}
+========
+12:Potential energy of an ideal spring
+--------
+PE = \half kx^2
+========
+12:Relationship between energy and amplitude
+--------
+E = \half kA^2
+========
+12:Frequency of simple harmonic oscillator
+--------
+f = \dfrac{1}{2\pi}\sqrt{\dfrac{k}{m}}
+========
+12:Frequency of simple pendulum (small angle)
+--------
+f = \dfrac{1}{2\pi}\sqrt{\dfrac{g}{L}}
+========
+12:Frequency of physical pendulum (small angle)
+--------
+f = \dfrac{1}{2\pi} \sqrt{\dfrac{mgL}{I}}
+========
+13:Tensile stress response
+--------
+\dfrac{F}{A} = Y \left( \dfrac{\Delta L}{L_0} \right)
+========
+13:Shear stress response
+--------
+\dfrac{F}{A} = S \left( \dfrac{\Delta x}{L_0} \right)
+========
+13:Pressure stress response
+--------
+\Delta P = -B \left( \dfrac{\Delta V}{V_0} \right)
+========
+14:Definition of mass density
+--------
+\rho = m/V
+========
+14:Mass flow rate related to fluid speed
+--------
+\Delta m / \Delta t = \rho Av
+========
+14:Equation of continuity
+--------
+\rho_1 A_1 v_1 = \rho_2 A_2 v_2
+========
+14:Definition of volume flow rate
+--------
+Q = \Delta V / \Delta t
+========
+14:Volume flow rate equation
+--------
+Q = Av
+========
+14:Condition for incompressible fluid
+--------
+\rho_1 = \rho_2 \implies A_1 v_1 = A_2 v_2
+========
+14:Definition of pressure (fluid)
+--------
+P = F/A
+========
+14:Hydrostatic equation
+--------
+\Delta P = \rho gh
+========
+14:Archimedes' principle (force of buoyancy)
+--------
+B = (\rho_\text{fl})(g)(V_\text{disp})
+========
+14:Bernoulli's equation \#1
+--------
+P_2 + \half \rho v_2^2 + \rho gh_2 = P_1 + \half \rho v_1^2 + \rho gh_1
+========
+14:Bernoulli's equation \#2
+--------
+\Delta P = \rho gh - \half \rho(v_2^2 - v_1^2)
+========
+14:Definition of viscosity
+--------
+F = \eta A v / y
+========
+14:Poiseuille's law (viscous flow)
+--------
+Q = \dfrac{\pi R^4 (\Delta P)}{8 \eta L}
+========
+14:Stokes' law (viscous force)
+--------
+F = 6 \pi \eta R v
+========
+14:Definition of Reynold's number
+--------
+N_R = 2 \avg{v} \rho R / \eta
+========
+15:Relationship between Fahrenheit and Celcius
+--------
+F = \tfrac{9}{5} C + 32
+========
+15:Relationship between Celcius and Kelvin
+--------
+K = C + 273.15
+========
+15:Definition of a thermometric property
+--------
+\Delta T = k \Delta q
+========
+15:Thermal expansion (linear)
+--------
+\Delta L / L_0 = \alpha \Delta T
+========
+15:Thermal expansion (volume)
+--------
+\Delta V / V_0 = \beta \Delta T
+========
+15:Definition of specific heat
+--------
+\Delta Q = cm \Delta T
+========
+15:Definition of latent heat
+--------
+\Delta Q = mL
+========
+15:Heat flow (conduction)
+--------
+P = \Delta Q / \Delta t = kA(\Delta T)/L
+========
+15:Heat flow (radiation)
+--------
+P = \Delta Q / \Delta t = e \sigma AT^4
+========
+15:Net heat radiation
+--------
+P_\text{net} = e \sigma A (T^4 - T_0^4)
+========
+16:Avagadro's number
+--------
+N_A = \sci{6.022}{23}
+========
+16:Conversion for atomic mass unit
+--------
+1 \unit{u} = \sci{1.6605}{-27} \unit{kg}
+========
+16:Atomic mass and SI units
+--------
+\dfrac{\text{atomic mass units}}{\text{molecule}} = \dfrac{\text{grams}}{\text{mole}}
+========
+16:Ideal gas law \#1
+--------
+PV = nRT
+========
+16:Ideal gas law \#2
+--------
+PV = NkT
+========
+16:Ideal gas law special case: Boyle's law
+--------
+P_1 V_2 = P_2 V_2
+========
+16:Ideal gas law special case: Charles' law
+--------
+V_1 / T_1 = V_2 / T_2
+========
+16:Ideal gas law special case: DeMorgan's law
+--------
+P_1 / T_1 = P_2 / T_2
+========
+16:Work for adiabatic process (no heat flow)
+--------
+W_\text{adiab} = nRT \ln(V/V_0)
+========
+16:Work for isothermal process (constant temperature)
+--------
+W_\text{isoth} = -\tfrac{3}{2} nR \Delta T
+========
+16:Work for isobaric process (constant pressure)
+--------
+W_\text{isoba} = P \Delta V
+========
+16:Work for isochoric process (constant volume)
+--------
+W_\text{isoch} = 0
+========
+16:Gamma is the ratio of specific heat measures
+--------
+\gamma = c_p / c_v
+========
+16:Gamma for a monatomic ideal gas is\ldots
+--------
+\gamma = 5/3
+========
+16:Pressure and volume in adiabadic process (cf. Boyle's law)
+--------
+P_1 V_1^{\gamma} = P_2 V_2^{\gamma}
+========
+16:Average kinetic energy per molecule
+--------
+\avg{KE} = \tfrac{3}{2} kT
+========
+16:Relationship between kinetic energy and RMS speed
+--------
+\avg{KE} = \half mv_\text{rms}^2
+========
+16:Relationship between pressure and RMS speed
+--------
+P = \tfrac{1}{3} \rho v_\text{rms}^2
+========
+16:Internal energy of a monatomic ideal gas
+--------
+\Delta U = \tfrac{3][2} nR \Delta T
+========
+16:Fick's law of diffusion
+--------
+\dfrac{\Delta m}{\Delta t} = \dfrac{DA}{L} \Delta C
+========
+17:First law of thermodynamics
+--------
+\Delta U = \Delta Q - \Delta W
+========
+17:Second law of thermodynamics
+--------
+\Delta S_\text{tot} \ge 0
+========
+17:Efficiency of a heat engine
+--------
+e = \Delta W / \Delta Q_h
+========
+17:Conservation of energy (heat engine)
+--------
+\Delta Q_h = \Delta W + \Delta Q_c
+========
+17:Efficiency of a reversible heat engine
+--------
+e_\text{rev} = 1 - T_c / T_h
+========
+17:Definition of entropy (reversible isothermal process only)
+--------
+\Delta S = \Delta Q / T
+========
+17:Work lost due to entropy changes
+--------
+W = T_0 \Delta S
+========
+18:Definition of mass density for a string
+--------
+\mu = m/L
+========
+18:Speed of disturbance propagation
+--------
+v = \sqrt{F / \mu}
+========
+18:Relationship between frequency and wavelength
+--------
+v = f\lambda
+========
+18:Definition of wave-number (or, propagation vector)
+--------
+k = 1 / \lambda
+========
+18:Equation for sinusoidal waves
+--------
+\psi = A \sin(2\pi ft - 2\pi kx)
+========
+18:Speed of sound (solid)
+--------
+v = \sqrt{Y / \rho}
+========
+18:Speed of sound (fluid)
+--------
+v = \sqrt{B_\text{ad} / \rho}
+========
+18:Speed of sound (ideal gas, function of pressure)
+--------
+v = \sqrt{ \gamma P / \rho }
+========
+18:Speed of sound (ideal gas, function of temperature)
+--------
+v = \sqrt{ \gamma kT / m }
+========
+18:Speed of sound (rule of thumb)
+--------
+v = 331 + 0.6 T_c
+========
+18:Definition of intensity
+--------
+I = P/A
+========
+18:Intensity from a point source
+--------
+I = P / 4 \pi r^2
+========
+18:Sound intensity and pressure amplitude
+--------
+I = \half A^2 / \sqrt{B \rho}
+========
+18:Definition of intensity level (decibels)
+--------
+\beta = 10 \log (I / 10^{-12})
+========
+18:Relationship between intensity and decibels
+--------
+I = 10^{0.1\beta - 12}
+========
+19:Condition for constructive interference
+--------
+d_1 - d_2 = n \lambda
+========
+19:Condition for destructive interference
+--------
+d_1 - d_2 = (n + \half) \lambda
+========
+19:Harmonics for a string fixed at both ends
+--------
+f_n = (n)(v/2L)
+========
+19:Harmonics for a tube closed at one end
+--------
+f_n = (2n - 1)(v/4L)
+========
+19:Harmonics for a tube open at both ends
+--------
+f_n = (2n)(v/4L)
+========
+19:Beat frequency
+--------
+f_\text{beat} = f_1 - f_2
+========
+20:Focal length
+--------
+f = R/2
+========
+20:Lens equation
+--------
+1/d_0 + 1/d_i = 1/f
+========
+20:Lens magnification
+--------
+m = -d_i / d_0
+========
+20:Index of refraction and the speed of light
+--------
+v = c/n
+========
+20:Snell's law of refraction
+--------
+n_1 \sin \theta_1 = n_2 \sin \theta_2
+========
+20:Critical angle
+--------
+\sin \theta_c = n_2 / n_1
+========
+20:Apparent depth
+--------
+d' = (n_2 / n1)(d)
+========
+20:Refractive power (diopters)
+--------
+RP = 1 / f
+========
+20:Refractive power of thin lenses close together
+--------
+RP = RP_1 + RP_2
+========
+21:Double slit interference
+--------
+\sin \theta = m \lambda / d
+========
+21:Diffraction from a single slit
+--------
+\sin \theta = m \lambda / W
+========
+21:Rayleigh's criterion for resolving two point sources
+--------
+\sin \theta = 1.22 \lambda / D
+========
+21:Condition for thin film interference
+--------
+2t = (m + \half)(n_1/n_2)(\lambda_1)}
+========
+22:Energy-mass equivalence
+--------
+E = mc^2
+========
+22:Planck's formula of photon energy
+--------
+E = hf
+========
+22:Wien's law
+--------
+\lambda_\text{max} = \dfrac{\sci{2.898}{-3}}{T}
+========
+22:Number of modes in three-dimensional medium
+--------
+N = \dfrac{8\pi f^2}{c^3}
+========
+22:Blackbody radiation spectrum
+--------
+\dfrac{8\pi hc}{\lambda^5} \dfrac{1}{\exp(hc/\lambda kT) - 1}
+========
+23:Electron charge
+--------
+e = -\sci{1.6}{-19} \unit{C}
+========
+23:Number of electrons per microcoulomb
+--------
+6.25 \unit{trillion}
+========
+23:Electric force between two charges (Coloumb's Law)
+--------
+F = kQq/r^2
+========
+23:Coloumb's constant and vacuum permittivity
+--------
+k = 1 / 4\pi\epsilon_0
+========
+23:Definition of electric field
+--------
+E = F/q \implies F = qE
+========
+23:Field from a point charge
+--------
+E = kQ/r^2
+========
+23:Electric dipole moment
+--------
+p = qd
+========
+23:Electric field far away from the dipole
+--------
+E \propto 1/r^3
+========
+23:Torque on an electric dipole
+--------
+\tau = pE \sin \theta
+========
+23:Potential energy of a dipole in an electric field
+--------
+PE = -pE \cos \theta
+========
+23:Definition of electric flux
+--------
+\Phi_E = EA \cos \theta
+========
+23:Gauss' Law
+--------
+\Phi_E = Q_{enclosed} / \epsilon_0
+========
+23:Gauss' Law (integral form)
+--------
+\int_S E \cdot dA = Q / \epsilon_0
+========
+23:Gauss' Law (differential form)
+--------
+\vdiv E = \rho_q / \epsilon_0
+========
+23:Electric field in a capacitor
+--------
+E_{cap} = 4\pi k \sigma = \sigma / \epsilon_0
+========
+23:The electric field is conservative
+--------
+\oint E \cdot d\ell = 0
+========
+23:The electric field is conservative (differential form)
+--------
+\curl{E} = 0
+========
+23:Therefore an electric potential exists
+--------
+E = -\grad{V}
+========
+23:Definition of electric potential
+--------
+\Delta V = -E_x \Delta x
+========
+23:Electric potential from a point charge
+--------
+V = kQ/r
+========
+23:Electric potential of a dipole
+--------
+V = \dfrac{1}{4 \pi \epsilon_0} \dfrac{p \cos \theta}{r^2}
+========
+23:Work done by an electric potential
+--------
+W = -qV
+========
+23:Energy density of the electric field
+--------
+u = \half \kappa \epsilon_0 E^2
+========
+23:Definition of capacitance
+--------
+Q = CV
+========
+23:Definition of dielectric
+--------
+\kappa = E_{vac}/E
+========
+23:Capacitance related to geometry
+--------
+C = \kappa \epsilon_0 A / d
+========
+23:Total capacitance of capacitance in series
+--------
+C = \dfrac{C_1 C_2}{C_1 + C_2}
+========
+23:Total capacitance of capacitance in parallel
+--------
+C = C_1 + C_2
+========
+23:Electrical energy held in a charged capacitor
+--------
+E = \half CV^2
+========
+24:Definition of current
+--------
+I = \Delta q / \Delta t
+========
+24:Power consumed by an electric circuit
+--------
+P = IV
+========
+24:Current/voltage relationship for a resistor (Ohm's Law)
+--------
+V = IR
+========
+24:Resistance related to geometry
+--------
+R = \rho L / A
+========
+24:Total resistance of resistors in series
+--------
+R = R_1 + R_2
+========
+24:Total resistance of resistors in parallel
+--------
+R = \dfrac{R_1 R_2}{R_1 + R_2}
+========
+24:Resistivity depends on temperature
+--------
+\rho = \rho_0 [ 1 + \alpha (T - T_0) ]
+========
+24:Definition of current density
+--------
+J = I / A
+========
+24:Ohm's law in terms of current density
+--------
+E = \rho J
+========
+24:Voltages in series
+--------
+V = V_1 + V_2
+========
+24:Currents in series
+--------
+I_1 = I_2
+========
+24:Voltages in parallel
+--------
+V_1 = V_2
+========
+24:Currents in parallel
+--------
+I = I_1 + I_2
+========
+24:Kirchoff's law (Junction rule)
+--------
+\sum_{junction} I = 0
+========
+24:Kirchoff's law (Loop rule)
+--------
+\sum_{loop} V = 0
+========
+24:Charge in an RC circuit (discharging)
+--------
+Q = Q_0 \exp (-t/RC)
+========
+24:Current in an RC circuit (discharging)
+--------
+I = I_0 [1 - \exp (-t/RC)]
+========
+24:Charge in an RC circuit (charging)
+--------
+Q = Q_0 [1 - \exp (-t/RC)]
+========
+24:Current in an RC circuit (charging)
+--------
+I = I_0 \exp (-t/RC)
+========
+24:Time constant in an RC circuit
+--------
+\tau = RC
+========
+24:Magnetic force between two monopoles
+--------
+F = (\mu / 4\pi) Pp / r^2
+========
+24:But there are no magnetic monopoles\ldots
+--------
+\vdiv{B} = 0
+========
+24:No monopoles (integral form)
+--------
+\int_S B \cdot dA = 0
+========
+24:Force on a charge moving through a magnetic field
+--------
+F = qvB \sin \theta
+========
+24:Radius of a charged particle's motion in a magnetic field
+--------
+R = mv/qB
+========
+24:Mass spectrometer calculation
+--------
+m = (er^2 / 2V)(B)
+========
+24:Magnetic force on a straight-line current
+--------
+F = ILB \sin \theta
+========
+24:Magnetic moment defined
+--------
+m = IA
+========
+24:Torque on a magnetic dipole
+--------
+\tau = mB \sin \theta
+========
+24:Potential energy of a dipole in a magnetic field
+--------
+PE = -mB \cos \theta
+========
+24:Ampere's Law
+--------
+\sum B_{||} \Delta \ell = \mu_0 I
+========
+24:Ampere's law (integral form)
+--------
+\oint B \cdot d\ell = \mu_0 I
+========
+24:Ampere's Law (differential form)
+--------
+\curl B = \mu_0 J
+========
+24:Magnetic field around a long straight wire
+--------
+B = \mu_0 I / 2\pi r
+========
+24:Magnetic field in the \emph{center} of a loop of current
+--------
+B = \mu_0 I / 2r
+========
+24:Magnetic field inside a solenoid
+--------
+B = \mu_0 n I
+========
+24:Magnetic potential exists, but it is a vector
+--------
+B = \curl{A}}
+========
+25:Electromotive force generated in a wire moving through a magnetic field
+--------
+EMF = vBL
+========
+25:Definition of magnetic flux
+--------
+\Phi_B = BA \cos \theta
+========
+25:Electromotive force generated by a changing magnetic flux (Faraday's Law)
+--------
+EMF = -N \Delta \Phi_B / \Delta t
+========
+25:Faraday's law (differential form)
+--------
+\curl E = -\partial B / \partial t
+========
+25:Peak EMF from an AC generator
+--------
+EMF = NAB \omega
+========
+25:Voltage step-up in a transformer
+--------
+V_2 / V_1 = N_2 / N_1
+========
+25:Mutual inductance defined
+--------
+EMF_2 = -M \Delta I_1 / \Delta t
+========
+25:Self-inductance defined
+--------
+EMF = -L \Delta I / \Delta t
+========
+25:Self-inductance related to geometry
+--------
+L = \mu_0 N^2 A / \ell
+========
+25:Magnetic energy in an inductor
+--------
+E = \half LI^2
+========
+25:Energy density of the magnetic field
+--------
+u = (1/2\mu_0) B^2
+========
+25:Time dependence of voltage in an AC circuit
+--------
+V(t) = V_0 \sin(2\pi ft)
+========
+25:RMS value of a sinusoidally varying quantity
+--------
+X_{rms} = X_{peak} / \sqrt{2}
+========
+25:AC reactance of a resistor
+--------
+X_R = R
+========
+25:AC reactance of a capacitor
+--------
+X_C = -\vhat{j}/2\pi f C
+========
+25:AC reactance of an inductor
+--------
+X_L = 2\pi f L \vhat{j}
+========
+25:Ohm's Law in terms of reactance
+--------
+V = IX
+========
+25:Impedance of an AC circuit
+--------
+Z = \sqrt{R^2 + (X_L - X_C)^2}
+========
+25:Ohm's Law in terms of impedance
+--------
+V = IZ
+========
+25:Net phase angle
+--------
+\tan \phi = (X_L - X_C) / R
+========
+25:Power consumption of an AC circuit
+--------
+\avg{P} = I_{rms}V_{rms} \cos \phi
+========
+25:Resonant frequency in an RCL circuit
+--------
+f_0 = \dfrac{1}{2\pi}\sqrt{\dfrac{1}{LC}}}
+========
+26:Maxwell's displacement current
+--------
+\curl{B} = \mu_0 \epsilon_0 \partial E / \partial t
+========
+26:Speed of light in terms of electromagnetic quantities
+--------
+c = \sqrt{1 / \epsilon_0 \mu_0}
+========
+26:Maxwell's Law \#1 (Coulomb's Law)
+--------
+\vdiv E = \rho / \epsilon_0
+========
+26:Maxwell's Law \#2 (Faraday's Law)
+--------
+\curl E = -\partial B / \partial t
+========
+26:Maxwell's Law \#3 (No Monopoles)
+--------
+\vdiv B = 0
+========
+26:Maxwell's Law \#4 (Ampere + Maxwell)
+--------
+\curl B = \mu_0 J + \mu_0 \epsilon_0 \partial E / \partial t
+========
+26:Larmor's power radiation formula
+--------
+P = q^2 a^2 / 6\pi \epsilon_0 c^3
+========
+26:Relationship between the electric and magnetic fields in electromagnetic radiation
+--------
+E = cB
+========
+26:Energy density in the electromagnetic field
+--------
+u = \half \epsilon_0 E^2 + \half B^2 / \mu_0
+========
+26:Energy density in electromagnetic radiation (in terms of electric field)
+--------
+u = \epsilon_0 E_{rms}^2
+========
+26:Energy density in electromagnetic radiation (in terms of magnetic field)
+--------
+u = B_{rms}^2 / \mu_0
+========
+26:Doppler shift for electromagnetic radiation
+--------
+f_o = f_s (1 \pm v/c)
+========
+26:Intensity of electromagnetic radiation \#1
+--------
+S = c \epsilon_0 E_{rms}^2
+========
+26:Intensity of electromagnetic radiation \#2
+--------
+S = EB / \mu_0
+========
+26:Intensity related to energy density
+--------
+S = cu
+========
+26:Intensity of light through a polarizer (Malus' Law)
+--------
+\avg{S} = \avg{S_0} \cos^2 \theta
+========
+26:Speed of light
+--------
+c = \sci{2.998}{8} \unit{m/s}
+========
+26:Definition of relativistic gamma factor (a.k.a., Lorentz factor)
+--------
+\gamma = 1 / \sqrt{1 - (v/c)^2}
+========
+26:Beta speed
+--------
+\beta = v/c
+========
+26:Expansion of gamma
+--------
+\gamma = 1 + \half \beta^2 + \tfrac{3}{8} \beta^4 + \ldots
+========
+26:Relativistic length contraction
+--------
+L = L_0 / \gamma
+========
+26:Relativistic time dilation
+--------
+t = \gamma t_0
+========
+26:Time desynchronization
+--------
+\Delta t = Lv/c^2
+========
+26:Relativistic redefinition of momentum
+--------
+p = \gamma mv
+========
+26:Relativistic kinetic energy
+--------
+KE = (\gamma - 1) mc^2
+========
+26:Rest energy (includes potential energy)
+--------
+RE = mc^2
+========
+26:Equivalence of mass and energy
+--------
+E = \gamma mc^2
+========
+26:Energy-momentum relationship \#1
+--------
+E^2 = p^2 c^2 + m^2 c^4
+========
+26:Energy-momentum relationship \#2
+--------
+Ev = pc^2
+========
+26:Addition of velocities
+--------
+v_{ab} = \dfrac{v_{ac} + v_{cb}}{1 + v_{ac}v_{cb} / c^2}
+========
+26:Lorentz transformation \#1
+--------
+x' = \gamma (x - vt)
+========
+26:Lorentz transformation \#2
+--------
+t' = \gamma (t - vx/c^2)
+========
+26:Space-time interval
+--------
+\tau^2 = (\Delta t)^2 - (\Delta x)^2 / c^2}
+========
+27:Planck's assumption
+--------
+E = nhf \quad n = 1,2,3,\ldots
+========
+27:Photoelectric effect
+--------
+KE_{max} = hf - W_0
+========
+27:Compton effect
+--------
+\lambda' - \lambda = (h / mc)(1 - \cos \theta)
+========
+27:Momentum of a photon
+--------
+p = h/\lambda
+========
+27:De Broglie wavelength
+--------
+\lambda = h/p
+========
+27:Defintion of h-bar (unit of angular momentum)
+--------
+\hbar = h / 2\pi
+========
+27:Heisenberg uncertainty principle \#1
+--------
+(\Delta p)(\Delta x) \ge h/4\pi = \hbar/2
+========
+27:Heisenberg uncertainty principle \#2
+--------
+(\Delta E)(\Delta t) \ge h/4\pi = \hbar/2
+========
+27:Schrodinger's wave equation
+--------
+-\dfrac{\hbar^2}{2m} \nabla^2 \psi = E_{kin}\psi
+========
+27:Probability based on wave amplitude
+--------
+P = |\psi|^2
+========
+28:Bohr's assumption \#1
+--------
+E_f - E_i = nhf
+========
+28:Bohr's assumption \#2
+--------
+L_n = nh/2\pi
+========
+28:De Broglie's assumption
+--------
+2\pi r_n = n\lambda
+========
+28:Radius of hydrogen atom
+--------
+r_0 = \sci{5.29}{-11} \unit{m}
+========
+28:Radius of electron orbit in Bohr atom
+--------
+r_n = (r_0)(n^2 / Z)
+========
+28:Ground energy of hydrogen atom
+--------
+E_0 = -13.6 \unit{eV}
+========
+28:Energy of electron orbit in Bohr atom
+--------
+E_n = (E_0)(Z^2 / n^2)
+========
+28:Principal quantum number
+--------
+n = 1,2,3,\ldots
+========
+28:Orbital quantum number
+--------
+\ell = 0,1,\ldots,(n-1)
+========
+28:Quantum mechanical angular momentum
+--------
+L = \sqrt{(\ell)(\ell + 1)} \hbar
+========
+28:Magnetic quantum number
+--------
+m_\ell = 0,\pm 1,\ldots,\pm(\ell)
+========
+28:Quantized component of angular momentum
+--------
+L_z = m_l \hbar
+========
+28:Spin quantum number
+--------
+m_s = \pm \half
+========
+29:Radius of hydrogen nucleus
+--------
+r_0 = \sci{1.2}{-15} \unit{m}
+========
+29:Radius of a typical nucleus
+--------
+r = (r_0)(A)^{1/3}
+========
+29:Binding energy from mass defect
+--------
+BE = (\Delta m)(c^2)
+========
+29:Energy equivalent of an atomic mass unit
+--------
+1 \unit{u} = 931.5 \unit{MeV}
+========
+29:Mass-energy conversion factor
+--------
+(1 \unit{u})(c^2) = \sci{1.492}{-10} \unit{J}
+========
+29:Radiation: alpha particle ($\alpha$)
+--------
+\text{2 protons + 2 neutrons}
+========
+29:Radiation: beta particle ($\beta$)
+--------
+\text{an electron or positron}
+========
+29:Radiation: gamma particle ($\gamma$)
+--------
+\text{photon of electromagnetic radiation}
+========
+29:Change in radioactive activity level over time
+--------
+A = A_0 \exp(-\lambda t)
+========
+29:Number of radioactive atoms over time
+--------
+N = N_0 \exp(-\lambda t)
+========
+29:Relationship between decay constant and half-life
+--------
+\lambda = 0.693 / T_{1/2}
+========
+29:Half-life of carbon-14
+--------
+T_{1/2} = 5730 \unit{yr}
+========
+29:Radiation level: no long-term effect
+--------
+BED < 50 \unit{rem}
+========
+29:Radiation level: certain death
+--------
+BED > 600 \unit{rem}
+========
+30:Quark content of the proton
+--------
+p = uud
+========
+30:Quark content of the neutron
+--------
+n = udd}
+========

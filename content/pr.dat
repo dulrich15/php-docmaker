@@ -1,0 +1,1712 @@
+========
+201:Analyzing Air Drag
+--------
+\newcommand{\q}[2]{
+\framebox[\textwidth]{\parbox{0.97\textwidth}{\textbf{Question #1} \\[0.1in] #2}}
+}
+
+\newcommand{\scale}{0.25}
+
+\section{Initial Set Up}
+
+Type the data from Table \ref{tbl:p201p1_01} into the appropriate cells.
+
+\tbl[side]{p201p1_01}{|c|l|}
+{
+\texttt{A1} & \texttt{dt} \\
+\texttt{B1} & \texttt{0.1} \\
+\texttt{A2} & \texttt{g} \\
+\texttt{B2} & \texttt{-9.8} \\
+\texttt{A5} & \texttt{t} \\
+\texttt{B5} & \texttt{x} \\
+\texttt{C5} & \texttt{v} \\
+\texttt{D5} & \texttt{a} \\
+\texttt{A6} & \texttt{0} \\
+\texttt{B6} & \texttt{0} \\
+\texttt{C6} & \texttt{4.9} \\
+\texttt{D6} & \texttt{=\$B\$2} \\
+\texttt{A7} & \texttt{=A6+\$B\$1} \\
+}
+{Initial set up}
+
+By preceding the content of the cell with an equal sign (as in cell \texttt{A6}) we tell Excel that it needs to calculate this formula rather than simply parrot the value back.
+
+Now highlight the selection \texttt{A7} to \texttt{A26} (the shorthand notation for this is \texttt{A7:A26}). Hit \texttt{Ctrl-D}. This will \airquote{drag-down} the formula from cell \texttt{A7} into all the other cells (see Figure \ref{fig:p201p1_01}).
+
+\fig{p201p1_01}{\scale}{First screen-shot}
+
+The dollar signs indicate the difference between a relative and absolute reference. When a dollar sign is involved (as in \texttt{\$B\$1}) the reference stays the same no matter where you paste or drag this cell. However, if there is no dollar sign, the reference maintains its relative \airquote{distances} in the new cell. For example, highlight cell \texttt{A15}. The formula in it should be \texttt{=A14+\$B\$1}. Notice how the first term (\texttt{A14}) is the cell just above the selection (like it was for cell \texttt{A5}), but the second term (\texttt{\$B\$1}) is unchanged.
+
+As you may have guessed, the goal is to represent the position of the particle in column \texttt{B}, its velocity in column \texttt{C}, and its acceleration in column \texttt{D} while column \texttt{A} represents the time elapsed.
+
+Type the data from Table \ref{tbl:p201p1_02} into the appropriate cells.
+
+\tbl[side]{p201p1_02}{|c|l|}
+{
+\texttt{B7} & \texttt{=B6+AVERAGE(C6:C7)*\$B\$1} \\
+\texttt{C7} & \texttt{=C6+AVERAGE(D6:D7)*\$B\$1} \\
+\texttt{D7} & \texttt{=\$B\$2} \\
+}
+{Formulas for velocity and acceleration}
+
+The use of the average in the above formula may seem odd at first. Suffice it to say that when we do this it makes the calculations slightly more accurate than the more straightforward formula \texttt{=C6+D6*\$B\$1} which follows from $v = v_0 + at$. Similar logic holds for how the velocity changes with acceleration.
+
+Drag these formula down into the range \texttt{B7:D26} as shown in Figure \ref{fig:p201p1_02}.
+
+\fig{p201p1_02}{\scale}{Filling in the calculations}
+
+Now we want to use a scatter plot to graph this information. Highlight the range \texttt{A6:B26} and click on the graphing wizard and choose a scatter plot with connected lines.\footnote{The location of the graphing wizard is different for Office 2003 than for Office 2007. I am using 2003. You may have to search around or ask someone where to find some of these things if you are using 2007.} You should get something like Figure \ref{fig:p201p1_03} when you are done. This represents the path of a vertical projectile under constant acceleration.
+
+The initial position is at $x_0 = 0$, the initial velocity is $v_0 = 4.9$. After 2.0 seconds, the projectile is at $x = -9.8$ with a velocity of $v = -14.7$. The acceleration is a constant $-9.8$.
+
+\fig{p201p1_03}{\scale}{Adding a graph}
+
+There are a lot of things you can do to manipulate the look and feel of these graphs: move them around, change their size, delete the legend, change the background color, alter the number of digits displayed on the axes, etc. I won't go through all those details for you---usually you can double-click on something you want to change and a menu will appear with options to choose from. Trust me: it is easy to waste a lot of time playing around with these formats!
+
+Suppose instead we want to model an object dropped from 50 meters high from rest. Change cell \texttt{B6} to \texttt{50} and cell \texttt{C6} to \texttt{0}. Your screen should now look like Figure \ref{fig:p201p1_04}.
+
+\fig{p201p1_04}{\scale}{Projectile starting from rest at $x=50$}
+
+However, we may be interested to know how long it takes the projectile to hit the ground. One way to do this is by changing the time differential in cell \texttt{B2}. Change it to \texttt{0.2}. Now the chart crosses the $x$-axis. See Figure \ref{fig:p201p1_05}. 
+
+\fig{p201p1_05}{\scale}{Increasing the time scale}
+
+Notice how in row \texttt{22} the position in column \texttt{B} is practically zero. The time in column \texttt{A} is 3.2 seconds. So, we reach $x = 0$ in about 3.2 seconds. Now might be a good time to save the workbook if you haven't already done so.
+
+\section{One Dimensional Linear Air Drag}
+
+We now want to introduce some air resistance into the system. We are going to assume that as the projectile moves faster, the air drag is larger. In other words, the particle will suffer deceleration which is proportional to its speed.
+
+Change the values back according to Table \ref{tbl:p201p1_03}.
+
+\tbl[side]{p201p1_03}{|c|l|}
+{
+\texttt{B1} & \texttt{0.1} \\
+\texttt{B6} & \texttt{0} \\
+\texttt{C6} & \texttt{4.9} \\
+}
+{Reset initial parameters}
+
+We are now going to add a new parameter to control the air drag. Type $b$ and 0.1 into cells \texttt{A3} and \texttt{B3} respectively.  This is going to represent the amount of air resistance on the projectile. 
+
+Now alter the formula in \texttt{D7} (not \texttt{D6}) to \texttt{=\$B\$2-\$B\$3*C6}. Drag this formula over the range \texttt{D7:D26}. This has the effect of introducing a deceleration which is proportional to velocity. Your screen should now look like Figure \ref{fig:p201p1_06}.
+
+\fig{p201p1_06}{\scale}{Linear air drag added to calculation}
+
+Notice how this is very similar to the previous trajectory. This is telling us that our coefficient of air drag is small. Now increase cell \texttt{B3} to 1. Your screen should now look like Figure \ref{fig:p201p1_07}.
+
+\fig{p201p1_07}{\scale}{Linear air drag turned on}
+
+Notice some differences:
+\begin{itemize}
+\item The trajectory peaks earlier (near 0.4 rather than 0.5) 
+\item The projectile hits the ground earlier (near 0.8 rather than 1.0)
+\item The second half of the trajectory is much more linear---this indicates that the projectile is moving with something close to constant velocity, a.k.a. terminal velocity. 
+\end{itemize}
+
+These differences are easier to see if you \airquote{freeze the scales} on the graph. Double-click on the numbers on the vertical axis and find the boxes that allow you to change the scale. Deselect the boxes and change the minimum to -12 and the maximum to 2. Do the same to the horizontal axis. Change the minimum to 0 and the maximum to 2.5. 
+
+Now your screen should look Figure \ref{fig:p201p1_08} which is now comparable to Figure \ref{fig:p201p1_06}. The differences are more apparent. Temporarily change the $b$ value to \texttt{0}. You should get back to the screen shown in Figure \ref{fig:p201p1_03}. Reset the $b$ value back to \texttt{1}.
+
+\fig{p201p1_08}{\scale}{Vertical scale set to compare with Figure \ref{fig:p201p1_06}}
+
+The terminal velocity can be read directly from column \texttt{C}. It looks like the value is trending somewhere less than -8.2. Can we get a better estimate? Yes, if we extend the calculations. Highlight cells \texttt{A26:D26} and drag it down to row \texttt{100}.  Your screen should look like Figure \ref{fig:p201p1_09}.
+
+\fig{p201p1_09}{\scale}{Extending the calculation}
+
+Apparently the terminal velocity is closer to -9.8. Notice how the acceleration in column \texttt{D} is practically zero at this point which is indicating that the projectile is near terminal velocity. When does the particle hit terminal velocity? Technically, never. The acceleration is always non-zero. But for this project let's agree that we will declare terminal velocity hit when the magnitude of the acceleration is less than 0.01. The acceleration just isn't large enough to make a significant different anymore. In this case, we simply scroll up until we see that number in column \texttt{D}. See Figure \ref{fig:p201p1_10}. This happens in row 73. We can say that terminal velocity is effectively reached in 6.7 seconds.
+
+\fig{p201p1_10}{\scale}{Finding terminal velocity}
+
+Finally, change the $b$ value to ten.  Your screen should look something like Figure \ref{fig:p201p1_11}.
+
+\fig{p201p1_11}{\scale}{Extreme air drag--calculation broken}
+
+Notice how the graph looks funny in the time period 0.3 to 0.7? This is because we have pushed the spreadsheet approach too far. The calculations are not precise enough and we are getting erroneous results. One foolproof way to fix this problem is to reduce our time differential in cell \texttt{B1}.  Change it to 0.02. You should now something like Figure \ref{fig:p201p1_12}.
+
+\fig{p201p1_12}{\scale}{Extreme air drag---calculation fixed}
+
+This is better, but our graph is still only linked down to row \texttt{26}. Go ahead and click on the graph. Your screen should look like Figure \ref{fig:p201p1_13}.
+
+\fig{p201p1_13}{\scale}{Highlighting the graphed data}
+
+Move your cursor until it is just on the bottom corner of the blue box in column \texttt{B}. Click and drag this box down to row \texttt{100}. The purple box should follow. Scroll back up to the top again.  You should now have Figure \ref{fig:p201p1_14}.
+
+\fig{p201p1_14}{\scale}{Graph with extended data represented}
+
+Notice that we hit $x = 0$ in between $t = 0.52$ and $t = 0.54$. (Maybe we should say $t = 0.53$?) The particle hits terminal velocity at $t = 0.70$ with a value of $v = -0.98$. We can also tell that the maximum height achieved is $x = 0.30$ at $t = 0.16$ from row \texttt{14}.
+
+Rename the sheet by double-clicking on the name \texttt{Sheet1}. Change the name to \texttt{1D linear drag}. Go ahead and save the workbork.
+
+\section{Quadratic Air Drag}
+
+We have modeled a very simplistic form of air resistance. The linear form is appropriate for small objects like raindrops. For larger objects the drag tends to be dominated by the square of the velocity. Truthfully, real air drag is a combination of both effects and more. It is possible to combine these effects using the techniques here, but I will let you explore those possibilities on your own.
+
+Quadratic air drag is simple to incorporate into our spreadsheet. First copy the sheet. Do this by dragging the sheet name while holding the \texttt{CRTL} key. Rename it \texttt{1D quadratic drag}. Change the time differential $dt$ to 0.02 and the $b$ value back to 0. Go to cell \texttt{D7} and change the equation to \texttt{=\$B\$2-\$B\$3*SIGN(C6)*C6\^{}2}.
+
+What we have done here is square the value in cell \texttt{C6}: the velocity. We have also multiplied by \texttt{SIGN(C6)} which is just +1 or -1 depending on the sign of whatever is in cell \texttt{C6}. This way the air drag always opposes the direction of the velocity. (Why didn't we have to multiply by \texttt{SIGN(C6)} in step 2?) Drag this equation down to row \texttt{100} and scroll back to the top.  Your screen should look Figure \ref{fig:p201p1_15}.
+
+\fig{p201p1_15}{\scale}{Quadratic air drag turned off}
+
+Again, this is not any different than no air drag at all.  What value of $b$ produces a reasonable curve? Try 1. You should have a graph like Figure \ref{fig:p201p1_16}.
+
+\fig{p201p1_16}{\scale}{Quadratic air drag turned on}
+
+The stats for this curve are as follows:
+\begin{itemize}
+\item The maximum height achieved is $x = 0.58$ at $t = 0.30$.
+\item We hit $x = 0$ near $t = 0.68$.
+\item Terminal velocity is -3.13.
+\item The particle hits terminal velocity at $t = 1.50$.
+\end{itemize}
+
+Apparently this type of air drag is less effective than the linear form since it reaches a higher height, the particle is in the air longer, and ends with a larger terminal velocity.
+
+\section{Projectile in Two Dimensions}
+
+Let's start over on \texttt{Sheet2}. If you don't have another sheet available, you can add one by going up to the menu bar \texttt{Insert} and click on \texttt{Worksheet}. Rename this sheet \texttt{2D linear drag}. (Don't forget to hit \texttt{Enter} when you are done). Finally you can delete them by right-clicking on their name and clicking on \texttt{Delete}. 
+
+Set up the sheet as in Table \ref{tbl:p201p1_05}, similar to what we had before.
+
+\tbl[side]{p201p1_05}{|c|l|}
+{
+\texttt{A1} & \texttt{dt} \\
+\texttt{B1} & \texttt{0.1} \\
+\texttt{A2} & \texttt{g} \\
+\texttt{B2} & \texttt{-9.8} \\
+\texttt{A3} & \texttt{b} \\
+\texttt{B3} & \texttt{0} \\
+\texttt{A5} & \texttt{t} \\
+\texttt{B5} & \texttt{x} \\
+\texttt{C5} & \texttt{y} \\
+\texttt{D5} & \texttt{vx} \\
+\texttt{E5} & \texttt{vy} \\
+\texttt{F5} & \texttt{ax} \\
+\texttt{G5} & \texttt{ay} \\
+\texttt{A6} & \texttt{0} \\
+\texttt{B6} & \texttt{0} \\
+\texttt{C6} & \texttt{0} \\
+\texttt{D6} & \texttt{4.9} \\
+\texttt{E6} & \texttt{4.9} \\
+\texttt{F6} & \texttt{0} \\
+\texttt{G6} & \texttt{=\$B\$2} \\
+}
+{Initial set up}
+
+Now add the formulas listed in Table \ref{tbl:p201p1_06}.
+
+\tbl[side]{p201p1_06}{|c|l|}
+{
+\texttt{A7} & \texttt{=A6+\$B\$1} \\
+\texttt{B7} & \texttt{=B6+AVERAGE(D6:D7)*\$B\$1} \\
+\texttt{C7} & \texttt{=C6+AVERAGE(E6:E7)*\$B\$1} \\
+\texttt{D7} & \texttt{=D6+AVERAGE(F6:F7)*\$B\$1} \\
+\texttt{E7} & \texttt{=E6+AVERAGE(G6:G7)*\$B\$1} \\
+\texttt{F7} & \texttt{0} \\
+\texttt{G7} & \texttt{=\$B\$2} \\
+}
+{Definition of velocity and acceleration}
+
+And drag them down to row \texttt{26}. High-light the range \texttt{B6:C26} and build a scatter graph like before. 
+
+Move the graph to the top of screen as shown in Figure \ref{fig:p201p1_17}.
+
+\pics[full]{p201p1_17}{
+\begin{adjustwidth*}{}{-\adjwidth}
+\centering \includegraphics[scale=\scale]{images/p201p1_17.png}
+\end{adjustwidth*}
+}{Two dimensional projectile}
+
+This looks just like before, but there is an important difference now. The horizontal axis no longer represents time. It represents the displacement in the $x$-direction. The vertical axis is different too. It now represents the displacement in the $y$-direction. This is what the trajectory of the particle would look like to a person watching from the side.
+
+Let's change the parameters a bit to see what happens. In cell \texttt{C6}, let the initial $y$-displacement be 50. See Figure \ref{fig:p201p1_18}.
+
+\fig{p201p1_18}{\scale}{Projectile launched from 50 meter height}
+
+Again, change the time differential to 0.2 in order to extend the graph a bit as in Figure \ref{fig:p201p1_19}.
+
+\fig{p201p1_19}{\scale}{Finding the range of the projectile}
+
+It looks like the range of the projectile is somewhere between 17.64 and 18.62 (closer to 18.62) because this is where the $y$ position flips sign---see column \texttt{C}. What is the velocity when it strikes the ground? The horizontal velocity is always 4.9, and the vertical velocity is about $-32$.
+
+Now change the initial vertical velocity to be $-4.9$ in cell \texttt{E6}. You should now have Figure \ref{fig:p201p1_20}.
+
+\fig{p201p1_20}{\scale}{Projectile with initial velocity downward}
+
+The range is shorter: somewhere between 2.6 and 2.8 (see rows \texttt{19:20}). What is the velocity when it strikes the ground? As before, the horizontal velocity is always 4.9. The vertical velocity is $-32$. This is the same as the previous situation. Do you see how this curve is nothing but the subset of the previous curve after it reaches its peak and crosses $y = 50$ again?
+
+Okay, drag down the formulas to row \texttt{100} and set the initial $y$ position to zero. Extend the graph to capture this data as before. Reset the time differential to 0.1. Change the horizontal and vertical velocities to 45. Your screen should look like Figure \ref{fig:p201p1_21}.
+
+\fig{p201p1_21}{\scale}{Linear air drag turned off}
+
+This is something like a home run hit in baseball. Now would be a good time to \airquote{freeze the scales} on both the horizontal and vertical axes of the graph.
+
+In order to determine the terminal velocities, we are going to want to know the magnitude of the velocity and acceleration. We can do this systematically by adding two columns to our spreadsheet. Type the data from Table \ref{tbl:p201p1_07} (you may need to move the graph).
+
+\tbl[side]{p201p1_07}{|c|l|}
+{
+\texttt{H5} & \texttt{v} \\
+\texttt{I5} & \texttt{a} \\
+\texttt{H6} & \texttt{=SQRT(D6\^{}2+E6\^{}2)} \\
+\texttt{I6} & \texttt{=SQRT(F6\^{}2+G6\^{}2)} \\
+}
+{Magnitude of velocity and acceleration}
+
+Drag these formulas down to row \texttt{100}. You should now have a screen like Figure \ref{fig:p201p1_22}. These two new columns represent the magnitude of the velocity and acceleration.
+
+\fig{p201p1_22}{\scale}{Magnitude of velocity and acceleration included.}
+
+We are now ready introduce some air resistance. Change the formulas in \texttt{F7} to \texttt{=0-\$B\$3*D6} and \texttt{G7} to \texttt{=\$B\$2-\$B\$3*E6}. Drag them down as usual. That's it---we have just added a linear air drag term. Now change the drag coefficient in cell \texttt{B3} to 0.1.  You should have something like Figure \ref{fig:p201p1_23}.
+
+\fig{p201p1_23}{\scale}{Linear air drag turned on}
+
+This has a huge effect. More than you might expect from the first section in the project. The range is reduced from something like 420 to 250. Also notice the asymmetry in the trajectory: the ball falls down much more vertically than it rises.
+
+Change the drag coefficient to one. See Figure \ref{fig:p201p1_24}.
+
+\fig{p201p1_24}{\scale}{Extreme drag (like water instead of air)}
+
+Now there is hardly any range at all (less than 50 meters) and the ball falls nearly straight down. Terminal velocity of $-9.8$ is reached in 8.1 seconds (see row \texttt{87}). This much resistance is more like what one would expect from water rather than air.
+
+\newpage
+\section{Questions}
+
+\begin{enumerate}
+\item Raindrops are small and therefore experience an air drag that is linear. Assume a drag coefficient of 30. What is the terminal velocity of a drop from rest and how long does it take to reach that value? (Hint: Reduce the time differential to 0.005).
+\item A basketball is dropped from rest. The air drag is quadratic with coefficient 0.023. What is its terminal velocity and how long does it take to reach that value? How does this compare with the raindrops in Question 1?
+\item Let's suppose a pro golfer can hit a tee shot 300 meters. Assume this is under conditions where there is linear air drag with a coefficient of 0.10. If the ball is launched at 45 degrees, what is the initial components of the velocity? (Only two significant figures required.) What is the maximum height, time of flight, and range of the trajectory? Use a time differential of 0.1 for this scenario.
+\item Use the previous spreadsheet scenario to determine the range of the ball if there was no air drag at all. Use a time differential to 0.2 to answer. How does this compare to the range equation $R = (v^2/g)\sin 2\theta$?
+\end{enumerate}
+========
+202:Precession of Mercury
+--------
+\newcommand{\q}[2]{
+\framebox[\textwidth]{\parbox{0.97\textwidth}{\textbf{Question #1} \\[0.1in] #2}}
+}
+
+\setcounter{x}{0}
+
+The purpose of this project is to derive a value for what is known as the ``anomolous precession of Mercury''.
+
+Using Newton's theory of gravity,
+
+\begin{equation*}
+F = \frac{GMm}{r^2}
+\end{equation*}
+
+it can be shown that the predicted motion of the planets is an ellipse. However, Einstein's equations of general relativity imply that Newton's formula needs adjustment. Since the adjustment is slight (on the order of $GM/c^2$), the resulting orbit is still nearly an ellipse. The difference is that the ellipse itself slowly rotates over time.
+
+This effect occurs for any deviation from Newton's inverse square law. In particular, the orbit of each planet around the sun suffers a small effect due to the gravitational attraction of the other planets (particularly Jupiter). All of these effects contribute to a slight rotation of the elliptical orbit.
+
+In the middle of the 1800s about 93\% of the observed precession in Mercury's orbit could be explained due to the other planets. The remainder was left unexplained. Le Verrier attempted to account for the discrepancy by inventing a new planet, dubbed ``Vulcan''. This was how he found Uranus, but (to date) no one has found this planet Vulcan.
+
+\tbl[full]{planetary-data}{|l|c|c|c|}
+{
+        & Orbital Radius   & Orbital      & Anomolous Precession \\
+        & (meters)         & Eccentricity & (arc-seconds per century) \\
+\hline
+Mercury & $\sci{5.79}{10}$ & 0.206        & 43.1 $\pm$ 0.5 \\
+Venus   & $\sci{1.08}{11}$ & 0.007        &  8.4 $\pm$ 4.8 \\
+Earth   & $\sci{1.50}{11}$ & 0.017        &  5.0 $\pm$ 1.2 \\
+}
+{Observed anamolous precession for inner planets}
+
+One of the great initial successes of general relativity is an accurate accounting for this anomolous precession.
+
+%\section{Before We Begin \ldots}
+%
+%A few times in class we have used the approximation
+%
+%\begin{equation}
+%\sqrt{1 + x} = 1 + \half x
+%\end{equation}
+%
+%when $x$ is small. We will be using it at least twice more in this project. I would like you justify this approximation.
+%
+%\refstepcounter{x}
+%\paragraph{Exercise \thex.} Graph the two functions $y = \sqrt{1 + x}$ and $y = 1 + \half x$ on the same set of graph paper. Use $x = \pm 2$ as your horizontal range. Make sure to plot points at every quarter unit ($x = \pm \frac{1}{4}, \pm \frac{1}{2}, \pm \frac{3}{4}, \ldots$). What do you see near $x = 0$?
+%
+%\refstepcounter{x}
+%\paragraph{Exercise \thex.} Calculate for which $x$ the ratio between $1 + \half x$ and $\sqrt(1 + x)$ is equal to 1\%.
+
+\section{Using Newton's Law of Gravity}
+
+Because Newton's law of gravity is a central convervative force, both energy and angular momentum are conserved. We are going to ignore the elliptical nature of the orbit of Mercury and assume it travels in a circle. Thus $L = mrv$.
+
+When we operate in the frame that rotates with Mercury, we need to introduce a centrifugal force of $F = mr \omega^2$, where $\omega$ is the angular rotation of the frame. 
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Show that the total force felt by Mercury in the rotating frame is given by the equation
+
+\begin{equation} \label{force-law-newton}
+\frac{F}{m} = - \frac{GM}{r^2} + \frac{\ell^2}{r^3}
+\end{equation}
+
+where $\ell = L/m$. Remember that $v = r \omega$.
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Equilibrium occurs when $F = 0$. Show this happens at 
+
+\begin{equation}
+r = \frac{\ell^2}{GM}
+\end{equation}
+
+From now on we will label this orbiting radius as $a$. The effective potential associated with the force law in \eqref{force-law-newton} is 
+
+\begin{equation} \label{effective-potential-newton}
+V = - \frac{GM}{r} + \frac{\ell^2}{2r^2}
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Let $GM = \ell = 1$ and plot the function \eqref{effective-potential-newton} between $r = 0.5$ and $r = 2.5$. You should have a graph like in Figure \ref{fig:p202p1_01}. Notice the graph has a minimum at $r = a = 1$.
+
+\fig[side]{p202p1_01}{0.15}{Effective potential}
+
+We have assumed that the orbit is circular, with a radius of $r = a = \ell^2 / GM$. In this example, that corresponds to a total energy of -0.5 units. But the orbit is not circular because the energy of the orbit is slightly higher than this amount. Because of this, the radius of the planet will oscillate back and forth in the potential well around $r = a$ as it orbits around the sun. Looking from above, the orbit might look like the pink line in Figure \ref{fig:p202p1_02}.
+
+\fig[side]{p202p1_02}{0.15}{Orbit with rapid oscillation}
+
+The time it takes the planet to oscillate back and forth in the trough is given by
+
+\begin{equation} \label{oscillation-time-formula}
+T_\text{osc} = \frac{2\pi}{\sqrt{k}}
+\end{equation}
+
+where $k$ represents the curvature of the potential well. (Compare this with the simple harmonic motion on a spring in Chapter 10.) But what is this curvature?
+
+If I am given a function, say $y = x^2 - 2x$, then it is a simple matter to plot its graph. Suppose I don't do that but that I am still interested in the shape of the graph near a particular $x$-coordinate. Is there a way to do that knowing only the equation?
+
+Yes. That is the question that differential calculus answers. The derivative of a function is a new function that tells us the slope of the curve at a particular point. The second derviative (i.e., the derivative of the derivative function) tells us the curvature of the original.
+
+You will have to take a course in calculus to know how these equations are determined. But I can tell you that for our effective potential in equation \eqref{effective-potential-newton} the first derivative is:
+
+\begin{equation}
+V' = \frac{GM}{r^2} - \frac{\ell^2}{r^3}
+\end{equation}
+
+The prime on the function name shows that we are talking about its derivative. Look familiar? This is the equation for the force law in equation \eqref{force-law-newton} with a sign change. This function tells how the potential is sloped. Does it trend up or down? How much?
+
+The second derivative is (notice the two primes now):
+
+\begin{equation}
+V'' = - \frac{2GM}{r^3} + \frac{3\ell^2}{r^4}
+\end{equation}
+
+This function represents the curvature of the effective potential. If this number is positive it is curved up like a bowl.
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Calculate the amount of curvature in the effective potential at $r = a = \ell^2/GM$. Use this to determine the oscillation frequency from equation \eqref{oscillation-time-formula}. You should get 
+
+\begin{equation} \label{oscillation-time-newton}
+T_\text{osc} = 2 \pi \sqrt{\frac{a^3}{GM}}
+\end{equation}
+
+Now, we know that the real orbit looks nothing like Figure \ref{fig:p202p1_02}. The orbit should be an ellipse. The important thing that governs the shape of the amount of time it takes to oscillation versus the orbit.
+
+The orbital time can be determined from the angular momentum $\ell = rv$. Recognizing that $v = 2\pi r / T$ and that $r = a = \ell^2/GM$, we can calculate the amount of time, $T_\text{orb}$, it takes to make a single orbit. We can combine these equations to show that
+
+\begin{equation} \label{orbital-time-newton}
+T_\text{orb} = 2 \pi \sqrt{\frac{a^3}{GM}}
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Derive equation \eqref{orbital-time-newton}. (Also known as Kepler's 3rd law.)
+
+This shows that the oscillation completes one cycle exactly when the orbit closes.\footnote{Actually, when the orbit is calculated from this simplistic analysis, one does not get an ellipse. In fact, one gets another circle with its center slightly offset from the Sun. It is ironic that this is precisely the kind of orbit Ptolemy used.} There is no precession; the orbit repeats precisely.
+
+\section{Using Einstein's Law of Gravity}
+
+We are going to repeat this analysis using the equations from general relativity. We will not derive the force law from first principles, of course. I will simply tell you that the force law that corresponds to \eqref{force-law-newton} is
+
+\begin{equation} \label{force-law-einstein}
+\frac{F}{m} = - \frac{GM}{r^2} + \frac{\ell^2}{r^3} - \frac{3\ell^2}{r^4} \frac{GM}{c^2}
+\end{equation}
+
+Since the last term is very small, we are still safe in assuming the orbit is (nearly) circular with radius equal to $r = a = \ell^2 / GM$. With this force law, the effective potential that corresponds to \eqref{effective-potential-newton} is
+
+\begin{equation} \label{effective-potential-einstein}
+U = - \frac{GM}{r} + \frac{\ell^2}{2r^2} - \frac{\ell^2}{r^3} \frac{GM}{c^2}
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Let $GM = \ell = 1$ and plot the function \eqref{effective-potential-einstein} between $r = 0.1$ and $r = 2.5$. Let $c = 4.0$ in order to magnify the effect of relativity. 
+
+You should have a graph like Figure \ref{fig:p202p1_03}. The solid line represents the relativistic equation \eqref{effective-potential-einstein} and the dotted line represents the classical equation \eqref{effective-potential-newton}. 
+
+\fig[side]{p202p1_03}{0.15}{Effective potential with magnified relativistic effect}
+
+Notice how the low point is shifted to the left quite a bit. This shows that the equilibrium orbit is closer to the sun, $r < a$.\footnote{It is not too difficult to determine the exact location. Set the force equation \eqref{force-law-einstein} to zero and solve for $r$. You end up with a quadratic equation. The first solution represents the equilibrium point we are discussing here -- the correction factor is proportional to $GM/c^2$. The second solution represents the top of the peak -- if a particle reaches $r$ less than this point it will slide down into the center. The phenomena is impossible using the Newtonian effective potential (cf. Figure \ref{fig:p202p1_01}), and is characteristic of a black hole.} However, this is with the relativistic term greatly exaggerated. In the case of the solar system, the relativistic term is nearly negligible, and we are safe in assuming that our equilibrium point is still located at $r = a$.
+
+This also implies that we are safe in continuing to use the Newtonian formula for $T_\text{orb}$ from equation \eqref{orbital-time-newton}
+
+\begin{equation} \label{orbital-time-einstein}
+T_\text{orb} = 2 \pi \sqrt{\frac{a^3}{GM}}
+\end{equation}
+
+The derivatives associated with the new potential in equation \eqref{effective-potential-einstein} are:
+\begin{equation}
+U' = \frac{GM}{r^2} - \frac{\ell^2}{r^3} + \frac{3\ell^2}{r^4} \frac{GM}{c^2}
+\end{equation}
+and
+\begin{equation}
+U'' = - \frac{2GM}{r^3} + \frac{3\ell^2}{r^4} - \frac{12\ell^2}{r^5} \frac{GM}{c^2}
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Calculate the amount of curvature in the effective potential at $r = a = \ell^2/GM$. You should get 
+
+\begin{equation}
+U'' = \frac{GM}{a^3} \left( 1 + \frac{12}{a} \frac{GM}{c^2} \right)
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} We can determine the oscillation frequency from equation \eqref{oscillation-time-formula}. Use the approximation $1 / \sqrt{1 + x} = 1 - \half x$ since the $x$ in this case is so small. Show that substituting using equation \eqref{orbital-time-einstein} yields
+
+\begin{equation} \label{oscillation-time-einstein}
+T_\text{osc} = T_\text{orb} \left( 1 + \frac{6}{a} \frac{GM}{c^2} \right)
+\end{equation}
+
+This shows that the time to oscillate is a just a smidge longer than the orbital period. Therefore the orbit precesses slowly in the direction of motion. The extra angle introduced can be calculated as follows.
+
+The angular velocity of the orbit is, by definition
+
+\begin{equation}
+\omega_\text{orb} = 2 \pi / T_\text{orb}
+\end{equation}
+
+The amount of total angular displacement during the oscillation time is given by
+
+\begin{equation}
+\Delta \phi = \omega_\text{orb} T_\text{osc}
+\end{equation}
+
+But we seek the increment beyond a full revolution, so we should subract $2 \pi$ radians. Putting this together yields:
+
+\begin{equation} \label{precession-angle-not-simplified}
+\Delta \phi = 2 \pi \left(\frac{T_\text{osc}}{T_\text{orb}} - 1 \right)
+\end{equation}
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Simplify equation \eqref{precession-angle-not-simplified}. You should get
+
+\begin{equation} \label{precession-angle}
+\Delta \phi = \frac{12 \pi}{a} \frac{GM}{c^2}
+\end{equation}
+
+This is nearly Einstein's formula. Unfortunately our simplified analysis is off by a factor of two. In addition, we have ignored the eccentricity of the elliptical orbit. When these effects are taken into account we have
+
+\begin{equation} \label{precession-angle-corrected}
+\Delta \phi = \frac{6 \pi}{a(1 - e^2)} \frac{GM}{c^2}
+\end{equation}
+
+This is the formula Einstein originally derived to explain the anomolous precession of Mercury.
+
+\refstepcounter{x}
+\paragraph{Exercise \thex.} Compare Einstein's formula \eqref{precession-angle-corrected} with the observations in Table \ref{tbl:planetary-data}. Notice these numbers are quoted in ``arc-seconds per century''. Also note that $\Delta \phi$ represents the extra angle after one complete orbit.
+
+One approach is to use the formula \eqref{orbital-time-einstein} to calculate how many revolutions each planet orbits in one century. Each of these revolutions contribute an incremental precession given by \eqref{precession-angle-corrected}. Multiply these two values to get the total precession in one century. Finally, convert this value from radians into arc-seconds (there are 3600 arc-seconds in one degree). Your answers should compare favorably with Table \ref{tbl:planetary-data}.
+========
+203:Quantum in a Box
+--------
+\def\sc{0.35}
+
+\setcounter{x}{0}
+%\reversemarginpar
+\newcommand{\ex}[1]{
+\refstepcounter{x}
+%$\triangleright$ \marginpar[\flushright \textbf{Exercise \thex}]{} #1 $\triangleleft$
+%\framebox[\columnwidth]{\textbf{Exercise \thex} #1}
+%\textbf{Exercise \thex} $\triangleright$ #1 $\triangleleft$
+%\begin{quote} \sf \textbf{Exercise \thex} $\triangleright$ #1 $\triangleleft$ \end{quote}
+%\footnote{Exercise \thex. #1}
+%\pics[side]{}{#1}{Exercise \thex}
+%\marginpar{\fbox{\parbox{\marginparwidth}{\textsf{Exercise \thex. #1}}}}
+%\fbox{\parbox{\columnwidth}{\textsf{Exercise \thex. #1}}}
+\fbox{\parbox{\columnwidth}{\textsf{Exercise \thex. #1}}}
+}
+
+\section{The Background}
+
+The purpose of this project is to calculate the standing wave functions of a quantum mechanical particle trapped in a finite potential well. Technically, we will be solving the time-independent Schr\"odinger equation:
+\begin{equation} \label{sch-eqn}
+-\dfrac{\hbar^2}{2m} \dfrac{d^2}{dx^2} \psi = (E - V) \psi
+\end{equation}
+We will walk through what you need to know for this project in this first section.
+
+\subsection{First case: $E$ greater than $V$}
+
+There are two important cases to consider when discussing equation \eqref{sch-eqn}. The first is when $E > V$. This means that the total energy of the particle is greater than its potential energy. The remainder is its kinetic energy. Although we could replace $E - V$ with a symbol for kinetic energy, it is typical not to. You will see why when 
+we discuss the second case below.
+
+The general solution of Schr\"odinger's equation \eqref{sch-eqn} in this first case is
+\begin{equation} \label{sch-soln-cos}
+\psi(x) = A \cos (kx + \phi)
+\end{equation}
+The value of $k$ is directly related to the energy of the particle:
+\begin{equation} \label{prop-real}
+%k = \dfrac{\sqrt{2m(E - V)}}{\hbar}
+\hbar k = \sqrt{2m(E - V)}
+\end{equation}
+
+\ex{Calculate the $k$ value of an electron with an energy of 1 eV. Assume the electron is free from any force potential ($V = 0$).}
+
+This $k$-value is actually the reciprocal of the de~Broglie wavelength of the particle. It is sometimes called the ``propagation vector''.
+
+\ex{Derive equation \eqref{prop-real} from the de~Broglie wavelength formula $\lambda = h/p$. You will need to use the (non-relativistic) definitions of momentum and kinetic energy and the relationship $k = 1/\lambda$.}
+
+What about $A$ and $\phi$? These are determined by the nature of the potential and any boundary conditions we have in our particular problem. The bulk of this project will be in determining their proper value.
+
+\subsection{Second case: $E$ less than $V$}
+
+The second case to deal with in solving the Schr\"odinger equation \eqref{sch-eqn} is when $E < V$. This is relevant because we are discussing a particle ``trapped'' in a potential well. There must be some $x$-values where total energy is under the potential.
+
+But this implies that the kinetic energy is negative. In a classical world, the particle is never in this region since $KE = \half mv^2$ which cannot be smaller than zero. But in the quantum world there is a non-zero solution to equation \eqref{sch-eqn} given by
+\begin{equation} \label{sch-soln-exp}
+\psi(x) = A \exp(\kappa x + \phi) 
+\quad \text{or} \quad 
+\psi(x) = A \exp(-\kappa x + \phi)
+\end{equation}
+where
+\begin{equation} \label{prop-imag}
+%\kappa = \dfrac{\sqrt{2m(V - E)}}{\hbar}
+\hbar \kappa = \sqrt{2m(V - E)}
+\end{equation}
+Like before, the $A$ and $\phi$ are determined by boundary conditions. Notice that the solution is either one of these equations---never both.\footnote{I'm not 100\% sure of this statement, but I can't recall a solution in my studies that used both at the same time. It will certainly be true in \emph{this} project.} The choice is usually obvious since we want to pick the one that produces exponential decay as the $x$ gets large rather than exponential growth.
+
+\subsection{Summary}
+
+That is all you will need to know about solving the Schr\"odinger equation \eqref{sch-eqn} for this project. The basic rule is that the solution is a simple cosine wave when the kinetic energy is positive. The wavelength is related to this kinetic energy via the de~Broglie wavelength formula \eqref{de-brog}. In the region where the potential energy exceeds the total energy of the particle (the ``forbidden region''), the wave exponentially decays away.
+
+\section{Setting up the Spreadsheet}
+
+The potential energy function $V$ in which we are interested is defined by the blue line in Figure \ref{fig:qm-pot}:
+
+%\tikzfig[side]{qm-pot}
+\tikzfig[]{qm-pot}
+{
+\begin{tikzpicture}%[xscale=0.5]
+\fill [blue!10] (-4,0) -- (-4,2) -- (-2,2) -- (-2,0) (4,0) -- (4,2) -- (2,2) -- (2,0);
+\draw (-4.2,0) -- (4.2,0);
+\foreach \x in {-4,...,4} { \draw (\x,0.1) -- (\x,-0.1) node [below=1mm] {\x}; }
+\draw (0,2.2) -- (0,-0.2);
+\foreach \y in {1,2} { \draw (0.1,\y) -- (-0.1,\y) node [left] {\y}; }
+\draw [blue] (-4,2) -- (-2,2) -- (-2,0) -- (2,0) -- (2,2) -- (4,2);
+\draw [red] (-4.2,1) -- (4.2,1);
+\end{tikzpicture}
+}{The potential well for our particle}
+
+Since we are going to discuss a particle that is ``trapped'' in this potential, we should consider the energy of the particle to be less than two. For the sake of argument, let's assume the energy value is one. (We will change this later.) This is represented in Figure \ref{fig:qm-pot} by the red line.
+
+\subsection{Getting Started}
+
+Let's start building our spreadsheet to represent this potential. I've chosen to use OpenOffice.org Calc for this project. This open source software works very similar to Microsoft Excel. There are many ways to get the program if you choose to use it. Go to \url{http://www.openoffice.org} for more details.\footnote{You can even get a completely portable version to install and carry around on your flash drive. See \url{http://portableapps.com/apps/office/openoffice_portable}.} Although some of the details will be different, you can use Excel if you prefer.
+
+Since the screen real estate on my little netbook is limited, I have eliminated all the toolbars and will be using the menus in this walk-through. Figure \ref{fig:p203p1_01} shows the \texttt{About} page from the \texttt{Help} menu.
+
+\fig{p203p1_01}{\sc}{OpenOffice.org Calc}
+
+To begin, type the data from Table \ref{tbl:input01} into the appropriate cells.
+
+%\tbl[side]{input01}{|c|l|}
+\tbl[]{input01}{|c|l|}
+{
+\texttt{A1} & \texttt{hbar} \\
+\texttt{A2} & \texttt{m} \\
+\texttt{A3} & \texttt{E} \\
+\texttt{B1} & \texttt{1} \\
+\texttt{B2} & \texttt{1} \\
+\texttt{B3} & \texttt{1} \\
+}
+{The control panel}
+
+We will use the first few rows as a kind of ``control panel'' for our document. Notice 
+that we have set $\hbar$ to be equal to one. This is a common practice among physicsists 
+and means that we are no longer working in SI units. We could put the standard value in 
+here, but the numbers get a bit unruly (a mere annoyance, but annoying nonetheless). We 
+could also put the mass of the electron in for $m$, but let's keep it simple. This implies 
+that the $E$ we are using is some non-standard unit as well. But since we are really 
+interested in the relative differences, this will be good enough.
+
+Okay---enough excuses. Let's go ahead and build our potential function. The first step is 
+to input the data from Table \ref{tbl:input02}. 
+
+%\tbl[side]{input02}{|c|l|}
+\tbl[]{input02}{|c|l|}
+{
+\texttt{A8} & \texttt{x1} \\
+\texttt{B8} & \texttt{V1} \\
+\texttt{C8} & \texttt{k1} \\
+\texttt{D8} & \texttt{wf1} \\
+\texttt{A9} & \texttt{-10} \\
+\texttt{B9} & \texttt{2} \\
+\texttt{C9} & \texttt{=SQRT(2*\$B\$2*(B9-\$B\$3))/\$B\$1} \\
+\texttt{D9} & \texttt{=EXP(C9*A9)} \\
+}{Potential function: left side}
+
+When you are done, your screen should look something like Figure \ref{fig:p203p1_02}.
+
+%\fig{p203p1_02}{\sc}{Initial setup}
+\pics{p203p1_02}{
+\includegraphics[scale=0.3]{images/p203p1_02.png}
+}{Initial setup}
+
+The first column is our horizontal distance on the graph and the second column is the
+potential energy at that point. The reason for the ``1'' suffix is that we will split
+this problem into three parts:
+\begin{enumerate}
+\item The left side with $V = 2$,
+\item The center with $V = 0$, and
+\item The right side with $V = 2$ again.
+\end{enumerate}
+The third column represents our $k$ value and corresponds to equation \eqref{prop-imag}.
+The fourth column holds our wavefunction---see equation \eqref{sch-soln-exp}. 
+
+\ex{Explain why we choose the $\exp(\kappa x)$ form for the left side of the wave
+function. Be sure to discuss the choice of the sign in front of $\kappa$.}
+
+Now we need to push these calculations to $x = -5$. Enter the following from Table
+\ref{tbl:input03}.
+
+%\tbl[side]{input03}{|c|l|}
+\tbl[]{input03}{|c|l|}
+{
+\texttt{A10} & \texttt{=A9+0.5} \\
+\texttt{B10} & \texttt{=B9} \\
+\texttt{C10} & \texttt{=SQRT(2*\$B\$2*(B10-\$B\$3))/\$B\$1} \\
+\texttt{D10} & \texttt{=EXP(C10*A10)} \\
+}
+{Building up the left side}
+
+Now drag these cells down to row \texttt{19}. Do this by selecting the range 
+\texttt{A10:D19} and type \texttt{Ctrl-D}. Your screen should now look like 
+Figure \ref{fig:p203p1_03}.
+
+\fig{p203p1_03}{\sc}{Left side built}
+
+You may not be showing as many decimals as I am. One simple way to match my picture is to
+click on the small box to the left of column \texttt{A} and above \texttt{1} which will
+highlight all the cells in the sheet. Now go to the menu item \texttt{Format >> Cells...}.
+Click on the \texttt{Numbers} tab in the pop-up window. Click \texttt{Number} in the
+\texttt{Category} selection box and \texttt{-1234.1235} in the \texttt{Format} selection
+box. The \texttt{Format code} on the bottom should read \texttt{0.0000} (see Figure 
+\ref{fig:p203p1_03b}. Click \texttt{OK} and you should be set.
+
+\fig{p203p1_03b}{\sc}{Changing the number format}
+
+Now might be a good time to save the spreadsheet (if you haven't done so already). Notice
+that OpenOffice Calc will automatically save the document in Open Document Format 
+(extention \texttt{.ods}). Microsoft Excel might refuse to read this format, so I suggest
+you would save the document in an Excel format by changing the file type to \texttt{.xls} 
+when you type in your filename.
+
+We now need to build the center and right sides of our potential well. Enter the data
+from Table \ref{tbl:input04}.
+
+%\tbl[side]{input04}{|c|l|}
+\tbl[]{input04}{|c|l|}
+{
+\texttt{A22} & \texttt{x2} \\
+\texttt{B22} & \texttt{V2} \\
+\texttt{C22} & \texttt{k2} \\
+\texttt{D22} & \texttt{wf2} \\
+\texttt{A23} & \texttt{-5} \\
+\texttt{B23} & \texttt{0} \\
+\texttt{C23} & \texttt{=SQRT(2*\$B\$2*(\$B\$3-B23))/\$B\$1} \\
+\texttt{D23} & \texttt{=COS(C23*A23)} \\
+\texttt{A24} & \texttt{=A23+0.5} \\
+\texttt{B24} & \texttt{=B23} \\
+\texttt{C24} & \texttt{=SQRT(2*\$B\$2*(\$B\$3-B24))/\$B\$1} \\
+\texttt{D24} & \texttt{=COS(C24*A24)} \\
+}
+{Building up the center}
+
+Note the differences in the formulas for columns \texttt{C} and \texttt{D}. Now drag the
+cell in row \texttt{24} down to row \texttt{43} by highlighting cells \texttt{A24:D43} and 
+typing \texttt{Ctrl-D}. Your screen should look like Figure \ref{fig:p203p1_04}.
+
+\fig{p203p1_04}{\sc}{Center built}
+
+Now the same story for the right side. Enter the data from Table \ref{tbl:input05} and 
+drag these cells down to row \texttt{57}. Your screen should look like Figure 
+\ref{fig:p203p1_05}.
+
+%\tbl[side]{input05}{|c|l|}
+\tbl[]{input05}{|c|l|}
+{
+\texttt{A46} & \texttt{x2} \\
+\texttt{B46} & \texttt{V2} \\
+\texttt{C46} & \texttt{k2} \\
+\texttt{D46} & \texttt{wf2} \\
+\texttt{A47} & \texttt{-5} \\
+\texttt{B47} & \texttt{0} \\
+\texttt{C47} & \texttt{=SQRT(2*\$B\$2*(B47-\$B\$3))/\$B\$1} \\
+\texttt{D47} & \texttt{=EXP(-C47*A47)} \\
+\texttt{A48} & \texttt{=A47+0.5} \\
+\texttt{B48} & \texttt{=B47} \\
+\texttt{C48} & \texttt{=SQRT(2*\$B\$2*(B48-\$B\$3))/\$B\$1} \\
+\texttt{D48} & \texttt{=EXP(-C48*A48)} \\
+}
+{Building up the right side}
+
+\fig{p203p1_05}{\sc}{Center built}
+
+\subsection{Tailoring the Spreadsheet}
+
+We know have the backbone of the spreadsheet built and we are about half done with the
+setup. However, there is a problem in what we have done so far. The wavefunction in 
+column \texttt{D} is not continuous---it's a broken string. Notice how the functions 
+do not touch at the interfaces when $x=-5$ or $x=5$. We need to ``tie'' these three 
+functions together in such a way that the whole curve is smooth and connected. 
+
+Type the information\footnote{Psi is the greek letter $\psi$ which is traditionally used 
+to symbolize the wave function.} from Table \ref{tbl:input06} and drag cell \texttt{E9} 
+down to row \texttt{19}, cell \texttt{E23} to row \texttt{43}, and cell \texttt{E47} to 
+row \texttt{57}.
+
+%\tbl[side]{input06}{|c|l|}
+\tbl[]{input06}{|c|l|}
+{
+\texttt{E7} & \texttt{1} \\
+\texttt{E8} & \texttt{psi1} \\
+\texttt{E9} & \texttt{=\$E\$7*D9} \\
+\texttt{E21} & \texttt{1} \\
+\texttt{E22} & \texttt{psi2} \\
+\texttt{E23} & \texttt{=\$E\$21*D23} \\
+\texttt{E45} & \texttt{1} \\
+\texttt{E46} & \texttt{psi3} \\
+\texttt{E47} & \texttt{=\$E\$45*D47} \\
+}
+{Copying the wave function}
+
+It doesn't look like we have done anything---we've simply copied our wave function into
+column \texttt{E}. But this is how we are going to ``stitch'' the functions together. 
+Type the information from Table \ref{tbl:input07}. After that, your screen should look 
+like Figure \ref{fig:p203p1_06}.
+
+%\tbl[side]{input07}{|c|l|}
+\tbl[]{input07}{|c|l|}
+{
+\texttt{E7} & \texttt{=D23/D19} \\
+\texttt{E45} & \texttt{=D43/D47} \\
+}{Stitching up the functions}
+
+\fig{p203p1_06}{\sc}{Functions are now ``stitched'' together}
+
+It is important to note that the numbers in cells \texttt{E19} and \texttt{E23} are the
+same. The same should be true of cells \texttt{E43} and \texttt{E47}. It is now time to
+build a chart to see what we are working with.
+
+\subsection{Charting The Wave Function}
+
+After saving your work (you have been saving regularly, haven't you?), move your cursor
+up to cell \texttt{N1}. Now go to the menu and click \texttt{Insert >> Chart...}. 
+%See Figure \ref{fig:p203p1_07}.
+%
+%\fig{p203p1_07}{\sc}{Inserting a chart}
+%
+A new window should pop up. In step 1, choose the chart type labeled \texttt{XY (Scatter)},
+click on the \texttt{Lines Only} picture, and the check box \texttt{Smooth lines}. 
+See Figure \ref{fig:p203p1_08}.
+
+\fig{p203p1_08}{\sc}{Choosing a chart}
+
+Click \texttt{Next >>}. Skip step 2 by clicking on \texttt{Next >>} again. Now click the 
+\texttt{Add} button. You should see something like Figure \ref{fig:p203p1_09}.
+
+\fig{p203p1_09}{\sc}{Adding data series}
+
+Click on \texttt{Name} in the \texttt{Data ranges} selection box and type \texttt{psi1} in
+the \texttt{Range for Name} input box. Then click on \texttt{X-Values} in the 
+\texttt{Data ranges} selection box and click on the button on the far right next to the 
+\texttt{Range for X-Values}. The pop-up box disappears temporarily and will now allow 
+you to select a range on your spreadsheet. Highlight the cells \texttt{A9:A19}. The pop-up 
+box will reappear and now reads \texttt{\$Sheet1.\$A\$9:\$A\$19} in the 
+\texttt{Range for X-Values} box. You can also simply type this in directly. Now click on 
+the \texttt{Y-Values} in the \texttt{Data ranges} selection box. Highlight cells 
+\texttt{E9:E19}. The left side of the wave function is now linked to the chart.
+
+Repeat this procedure for the center of the wave functions. Do this by clicking \texttt{Add}
+under the \texttt{Data series} selection box. A new \texttt{Unnamed Series} should appear. 
+Type \texttt{psi2} as the name and link the \texttt{X-Values} to cells \texttt{A23:A43} 
+and the \texttt{Y-Values} to cells \texttt{E23:E43}.
+
+Do this again for the right side. Name it \texttt{psi3} and link it to cells 
+\texttt{A47:A57} and \texttt{E47:E57}. After all this, click \texttt{Finish} and 
+scroll to the top to see your chart. Click anywhere off of the chart to get out of 
+``charting mode.'' You might want to zoom out a bit to see it all on one screen. (Do this
+under menu item \texttt{View >> Zoom...}.) Hopefully it looks something like Figure 
+\ref{fig:p203p1_10}.
+
+\fig{p203p1_10}{\sc}{Spreadsheet with chart}
+
+These defaults are nice, but we are going to change some to show off our curve a bit
+more. Click on the chart (this puts you in something like an ``object mode''). Then 
+double-click on the chart (this puts you in something like a ``chart mode''). Right click 
+and a small contextual menu pops up. You could click on \texttt{Data Ranges...} to correct 
+any errors you may have made while linking the chart.
+
+But now I want to make three adjustments. First: get rid of the legend. Right click on it 
+and click \texttt{Cut}. Or left-click and hit the \texttt{Del} key. 
+
+Second thing is to do is to change the $x$-axis. Double-click on one of the numbers. 
+A pop-up box will appear. Go to the \texttt{Scale} tab and de-select the \texttt{Minimum}, 
+\texttt{Maximum}, and \texttt{Major Interval} check boxes labeled \texttt{Automatic}. 
+Change the numbers to -10, 10, and 5, respectively. Now go to the \texttt{Numbers} tab.
+De-select the \texttt{Source Format} check box and change the \texttt{Format Code} to just
+a zero (\texttt{0}). This will suppress all of the unnecessary decimals in the chart.
+Click \texttt{OK}.
+
+Finally double-click on one of the $y$-axis numbers and change its \texttt{Format Code}
+(on the \texttt{Numbers} tab) to zero also. Click anywhere off the chart to get out of 
+charting mode. Your chart is now ready. Check it against Figure \ref{fig:p203p1_11}.
+
+\fig{p203p1_11}{\sc}{Spreadsheet with adjusted chart}
+
+Now not only do we have a nice looking chart of our wave function, but we also have the 
+classically ``forbidden'' areas highlighted in a different color.
+
+\subsection{Another complication}
+
+You might think we are now done. We have nice looking wave function for our particle with 
+energy $E = 1$ trapped in a potential $V = 2$ units high. And we do. But observe what 
+happens when we change the energy value to, say, $E = 0.5$. Do this by changing cell 
+\texttt{B3} to \texttt{0.5}. Your spreadsheet will look like Figure \ref{fig:p203p1_12}.
+
+\fig{p203p1_12}{\sc}{Changing the energy to 0.5 units}
+
+The problem is that the wave cannot have a spike like it does at $x = -5$ and $x = 5$.
+The function must be both continuous and smooth. At the interface the functions must 
+not only have the same value, but they must also have the same slope.
+
+To explain why, imagine this were a physical string. The spike in the curve is indicating
+that this energy level creates a reflected wave that is destructively out-of-phase with 
+the original. The reflected wave destroys rather than resonates into a standing wave. 
+In other words, this partiular energy level cannot support a standing wave. Remember 
+de~Broglie's explanation of the Bohr atom? Only certain energy levels can produce standing 
+waves. The same is true here.
+
+Does that mean that our spreadsheet is broken? On the contrary, it is doing precisely what
+it should. It is telling us that this is an invalid energy level for our trapped particle.
+We must look for another energy level. We will know when we find one when the slopes
+at the boundaries match. Try $E = 0.4$. This is much closer to a valid energy level. Is 
+there a way to measure how close we are? I'm glad you asked. Type the information from
+Table \ref{tbl:input08} into the spreadsheet and drag the formulas down to fill in the rest 
+of the table. Your document should look something like Figure \ref{fig:p203p1_13}.
+
+%\tbl[side]{input08}{|c|l|}
+\tbl[]{input08}{|c|l|}
+{
+\texttt{D1} & \texttt{nudge} \\
+\texttt{E1} & \texttt{1e-9} \\
+\texttt{F8} & \texttt{npsi1} \\
+\texttt{F9} & \texttt{=\$E\$7*EXP(C9*(A9+\$E\$1))} \\
+\texttt{G8} & \texttt{m1} \\
+\texttt{G9} & \texttt{=(F9-E9)/\$E\$1} \\
+\texttt{F22} & \texttt{npsi2} \\
+\texttt{F23} & \texttt{=\$E\$21*COS(C23*(A23+\$E\$1))} \\
+\texttt{G22} & \texttt{m2} \\
+\texttt{G23} & \texttt{=(F23-E23)/\$E\$1} \\
+\texttt{F46} & \texttt{npsi3} \\
+\texttt{F47} & \texttt{=\$E\$45*EXP(-C47*(A47+\$E\$1))} \\
+\texttt{G46} & \texttt{m3} \\
+\texttt{G47} & \texttt{=(F47-E47)/\$E\$1} \\
+}{Preparing to measure the slopes}
+
+\fig{p203p1_13}{\sc}{Adding the slopes to the spreadsheet}
+
+What have we done here? Remember that we want to be able to compare the slopes of the 
+three curves at their interfaces. This is what is in column \texttt{G}. It is the basic 
+rise-over-run formula. But instead of measuring the rise and run from point to point in 
+the rows we have already calculated, we are measuring the rise over a \emph{very small} 
+run. That is what the ``nudge'' value is in cell \texttt{E1} (notice how it is the 
+denominator in the slope calculation). The values in column \texttt{F} are the wavefunction 
+evaluated at $x$ plus this small nudge factor (hence ``npsi'' or the nudged psi value). The 
+difference between columns \texttt{F} and \texttt{E} is the rise of our slope.
+
+The bottom line here is that we want cells \texttt{G19} and \texttt{G23} to match just like
+we wanted cells \texttt{E19} and \texttt{E23} to match. Similarly we want \texttt{G43} and
+\texttt{G47} to match. Unfortunately there is no simple algebraic way to stitch these
+together like we did in column \texttt{E}. We just have to hunt for a solution.
+
+But just because we are hunting doesn't mean we can't be efficient. Type the following from
+Table \ref{tbl:input09}.
+
+%\tbl[side]{input09}{|c|l|}
+\tbl[]{input09}{|c|l|}
+{
+\texttt{G1} & \texttt{dm12} \\
+\texttt{H1} & \texttt{=ABS(G19-G23)} \\
+\texttt{G2} & \texttt{dm23} \\
+\texttt{H2} & \texttt{=ABS(G43-G47)} \\
+\texttt{G3} & \texttt{sbz} \\
+\texttt{H3} & \texttt{=SUM(H1:H2)} \\
+}{Checking the slope match}
+
+What we have here is a quick table indicating how far off our slopes are from matching.
+Cell \texttt{H1} is comparing the slopes at $x = -5$ and cell \texttt{H2} is comparing
+the slopes at $x = 5$. Both of these should be zero. Cell \texttt{H3} simply sums these
+two in order to get a single measure for us to track. The label \texttt{sbz} stands for
+``should be zero.'' Your spreadsheet should look like Figure \ref{fig:p203p1_14}. This 
+spreadsheet is now pretty much ready to use.
+
+\fig{p203p1_14}{\sc}{Slope double-checks are in place}
+
+In order to find our standing wave patterns all we need to do is tweak the energy level
+in cell \texttt{B3} until cell \texttt{H3} goes to zero. For example, $E = 0.36$ is the 
+best fit with two decimals. $E = 0.365$ is the best fit with three decimals.
+
+\ex{What is the best fit near $E = 0.365$ to four decimals?} % E = 0.3648
+
+\ex{There is another standing wave pattern around $E = 0.03$. What is its energy out 
+to four decimals?}
+
+\section{Find the Energy Levels}
+
+\subsection{Efficient Hunting: Goal Seek}
+
+I have one more trick up my sleeve. Change the energy level to 0.01 units. Now go to the 
+menu and click on \texttt{Tools >> Goal Seek...}. Type in \texttt{H3} for the 
+\texttt{Formula cell}, type \texttt{0.001} for the \texttt{Target value}, and type 
+\texttt{B3} for the \texttt{Variable cell}. The pop-up window should look like 
+Figure \ref{fig:p203p1_15}. 
+
+\fig{p203p1_15}{\sc}{Goal seeking}
+
+Click \texttt{OK}. A new pop-up window should read \texttt{Goal Seek successful.} 
+\texttt{Insert result (0.0408) into current cell?} Click \texttt{Yes}. The program just 
+found your first energy level. The goal seek is designed to drive the formula cell to the 
+value you specify by changing the variable cell. This is exactly what we need to find our 
+energy levels. Note that you must be fairly close to the goal in order for this to work. 
+But if you can get close, the program will do the rest.
+
+Let's try $E = 1$ again. Type \texttt{1} into cell \texttt{B3} and goal seek it. You will
+find that the actual answer is not exactly one.
+
+\ex{Find all the energy levels to four digit accuracy. There are four total. Print out
+the standing wave pattern for each of them. Go ahead and record these energy levels 
+somewhere (I've left room in row \texttt{5}) so you don't have to hunt for them again.}
+
+%\tikzfig[side]{eig-cos}
+\tikzfig[]{eig-cos}
+{
+\begin{tikzpicture}[xscale=0.25,yscale=0.5]
+
+\begin{scope}[yshift=60mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.0, 0.0000)
+(-09.5, 0.0000)
+(-09.0, 0.0001)
+(-08.5, 0.0001)
+(-08.0, 0.0004)
+(-07.5, 0.0010)
+(-07.0, 0.0027)
+(-06.5, 0.0073)
+(-06.0, 0.0196)
+(-05.5, 0.0528)
+(-05.0, 0.1420)
+(-04.5, 0.2815)
+(-04.0, 0.4152)
+(-03.5, 0.5405)
+(-03.0, 0.6547)
+(-02.5, 0.7557)
+(-02.0, 0.8412)
+(-01.5, 0.9096)
+(-01.0, 0.9595)
+(-00.5, 0.9898)
+( 00.0, 1.0000)
+( 00.5, 0.9898)
+( 01.0, 0.9595)
+( 01.5, 0.9096)
+( 02.0, 0.8412)
+( 02.5, 0.7557)
+( 03.0, 0.6547)
+( 03.5, 0.5405)
+( 04.0, 0.4152)
+( 04.5, 0.2815)
+( 05.0, 0.1420)
+( 05.5, 0.0528)
+( 06.0, 0.0196)
+( 06.5, 0.0073)
+( 07.0, 0.0027)
+( 07.5, 0.0010)
+( 08.0, 0.0004)
+( 08.5, 0.0001)
+( 09.0, 0.0001)
+( 09.5, 0.0000)
+( 10.0, 0.0000)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.0, 0.0000)
+(-09.5, 0.0000)
+(-09.0,-0.0001)
+(-08.5,-0.0001)
+(-08.0,-0.0004)
+(-07.5,-0.0010)
+(-07.0,-0.0027)
+(-06.5,-0.0073)
+(-06.0,-0.0196)
+(-05.5,-0.0528)
+(-05.0,-0.1420)
+(-04.5,-0.2815)
+(-04.0,-0.4152)
+(-03.5,-0.5405)
+(-03.0,-0.6547)
+(-02.5,-0.7557)
+(-02.0,-0.8412)
+(-01.5,-0.9096)
+(-01.0,-0.9595)
+(-00.5,-0.9898)
+( 00.0,-1.0000)
+( 00.5,-0.9898)
+( 01.0,-0.9595)
+( 01.5,-0.9096)
+( 02.0,-0.8412)
+( 02.5,-0.7557)
+( 03.0,-0.6547)
+( 03.5,-0.5405)
+( 04.0,-0.4152)
+( 04.5,-0.2815)
+( 05.0,-0.1420)
+( 05.5,-0.0528)
+( 06.0,-0.0196)
+( 06.5,-0.0073)
+( 07.0,-0.0027)
+( 07.5,-0.0010)
+( 08.0,-0.0004)
+( 08.5,-0.0001)
+( 09.0,-0.0001)
+( 09.5, 0.0000)
+( 10.0, 0.0000)
+};
+\end{scope}
+
+\begin{scope}[yshift=20mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.0,-0.0001)
+(-09.5,-0.0001)
+(-09.0,-0.0003)
+(-08.5,-0.0008)
+(-08.0,-0.0019)
+(-07.5,-0.0046)
+(-07.0,-0.0115)
+(-06.5,-0.0284)
+(-06.0,-0.0700)
+(-05.5,-0.1730)
+(-05.0,-0.4273)
+(-04.5,-0.7635)
+(-04.0,-0.9624)
+(-03.5,-0.9885)
+(-03.0,-0.8370)
+(-02.5,-0.5351)
+(-02.0,-0.1371)
+(-01.5, 0.2855)
+(-01.0, 0.6568)
+(-00.5, 0.9102)
+( 00.0, 1.0000)
+( 00.5, 0.9102)
+( 01.0, 0.6568)
+( 01.5, 0.2855)
+( 02.0,-0.1371)
+( 02.5,-0.5351)
+( 03.0,-0.8370)
+( 03.5,-0.9885)
+( 04.0,-0.9624)
+( 04.5,-0.7635)
+( 05.0,-0.4273)
+( 05.5,-0.1730)
+( 06.0,-0.0700)
+( 06.5,-0.0284)
+( 07.0,-0.0115)
+( 07.5,-0.0046)
+( 08.0,-0.0019)
+( 08.5,-0.0008)
+( 09.0,-0.0003)
+( 09.5,-0.0001)
+( 10.0,-0.0001)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.0, 0.0001)
+(-09.5, 0.0001)
+(-09.0, 0.0003)
+(-08.5, 0.0008)
+(-08.0, 0.0019)
+(-07.5, 0.0046)
+(-07.0, 0.0115)
+(-06.5, 0.0284)
+(-06.0, 0.0700)
+(-05.5, 0.1730)
+(-05.0, 0.4273)
+(-04.5, 0.7635)
+(-04.0, 0.9624)
+(-03.5, 0.9885)
+(-03.0, 0.8370)
+(-02.5, 0.5351)
+(-02.0, 0.1371)
+(-01.5,-0.2855)
+(-01.0,-0.6568)
+(-00.5,-0.9102)
+( 00.0,-1.0000)
+( 00.5,-0.9102)
+( 01.0,-0.6568)
+( 01.5,-0.2855)
+( 02.0, 0.1371)
+( 02.5, 0.5351)
+( 03.0, 0.8370)
+( 03.5, 0.9885)
+( 04.0, 0.9624)
+( 04.5, 0.7635)
+( 05.0, 0.4273)
+( 05.5, 0.1730)
+( 06.0, 0.0700)
+( 06.5, 0.0284)
+( 07.0, 0.0115)
+( 07.5, 0.0046)
+( 08.0, 0.0019)
+( 08.5, 0.0008)
+( 09.0, 0.0003)
+( 09.5, 0.0001)
+( 10.0, 0.0001)
+};
+\end{scope}
+
+\begin{scope}[yshift=-20mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.0, 0.0006)
+(-09.5, 0.0012)
+(-09.0, 0.0025)
+(-08.5, 0.0050)
+(-08.0, 0.0101)
+(-07.5, 0.0206)
+(-07.0, 0.0417)
+(-06.5, 0.0847)
+(-06.0, 0.1718)
+(-05.5, 0.3485)
+(-05.0, 0.7069)
+(-04.5, 0.9969)
+(-04.0, 0.8092)
+(-03.5, 0.2337)
+(-03.0,-0.4538)
+(-02.5,-0.9238)
+(-02.0,-0.9511)
+(-01.5,-0.5226)
+(-01.0, 0.1564)
+(-00.5, 0.7604)
+( 00.0, 1.0000)
+( 00.5, 0.7604)
+( 01.0, 0.1564)
+( 01.5,-0.5226)
+( 02.0,-0.9511)
+( 02.5,-0.9238)
+( 03.0,-0.4538)
+( 03.5, 0.2337)
+( 04.0, 0.8092)
+( 04.5, 0.9969)
+( 05.0, 0.7069)
+( 05.5, 0.3485)
+( 06.0, 0.1718)
+( 06.5, 0.0847)
+( 07.0, 0.0417)
+( 07.5, 0.0206)
+( 08.0, 0.0101)
+( 08.5, 0.0050)
+( 09.0, 0.0025)
+( 09.5, 0.0012)
+( 10.0, 0.0006)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.0,-0.0006)
+(-09.5,-0.0012)
+(-09.0,-0.0025)
+(-08.5,-0.0050)
+(-08.0,-0.0101)
+(-07.5,-0.0206)
+(-07.0,-0.0417)
+(-06.5,-0.0847)
+(-06.0,-0.1718)
+(-05.5,-0.3485)
+(-05.0,-0.7069)
+(-04.5,-0.9969)
+(-04.0,-0.8092)
+(-03.5,-0.2337)
+(-03.0, 0.4538)
+(-02.5, 0.9238)
+(-02.0, 0.9511)
+(-01.5, 0.5226)
+(-01.0,-0.1564)
+(-00.5,-0.7604)
+( 00.0,-1.0000)
+( 00.5,-0.7604)
+( 01.0,-0.1564)
+( 01.5, 0.5226)
+( 02.0, 0.9511)
+( 02.5, 0.9238)
+( 03.0, 0.4538)
+( 03.5,-0.2337)
+( 04.0,-0.8092)
+( 04.5,-0.9969)
+( 05.0,-0.7069)
+( 05.5,-0.3485)
+( 06.0,-0.1718)
+( 06.5,-0.0847)
+( 07.0,-0.0417)
+( 07.5,-0.0206)
+( 08.0,-0.0101)
+( 08.5,-0.0050)
+( 09.0,-0.0025)
+( 09.5,-0.0012)
+( 10.0,-0.0006)
+};
+\end{scope}
+
+\begin{scope}[yshift=-60mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.0,-0.0783)
+(-09.5,-0.1007)
+(-09.0,-0.1295)
+(-08.5,-0.1666)
+(-08.0,-0.2142)
+(-07.5,-0.2754)
+(-07.0,-0.3541)
+(-06.5,-0.4553)
+(-06.0,-0.5854)
+(-05.5,-0.7527)
+(-05.0,-0.9679)
+(-04.5,-0.7559)
+(-04.0, 0.1107)
+(-03.5, 0.8814)
+(-03.0, 0.8889)
+(-02.5, 0.1267)
+(-02.0,-0.7452)
+(-01.5,-0.9718)
+(-01.0,-0.3569)
+(-00.5, 0.5670)
+( 00.0, 1.0000)
+( 00.5, 0.5670)
+( 01.0,-0.3569)
+( 01.5,-0.9718)
+( 02.0,-0.7452)
+( 02.5, 0.1267)
+( 03.0, 0.8889)
+( 03.5, 0.8814)
+( 04.0, 0.1107)
+( 04.5,-0.7559)
+( 05.0,-0.9679)
+( 05.5,-0.7527)
+( 06.0,-0.5854)
+( 06.5,-0.4553)
+( 07.0,-0.3541)
+( 07.5,-0.2754)
+( 08.0,-0.2142)
+( 08.5,-0.1666)
+( 09.0,-0.1295)
+( 09.5,-0.1007)
+( 10.0,-0.0783)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.0, 0.0783)
+(-09.5, 0.1007)
+(-09.0, 0.1295)
+(-08.5, 0.1666)
+(-08.0, 0.2142)
+(-07.5, 0.2754)
+(-07.0, 0.3541)
+(-06.5, 0.4553)
+(-06.0, 0.5854)
+(-05.5, 0.7527)
+(-05.0, 0.9679)
+(-04.5, 0.7559)
+(-04.0,-0.1107)
+(-03.5,-0.8814)
+(-03.0,-0.8889)
+(-02.5,-0.1267)
+(-02.0, 0.7452)
+(-01.5, 0.9718)
+(-01.0, 0.3569)
+(-00.5,-0.5670)
+( 00.0,-1.0000)
+( 00.5,-0.5670)
+( 01.0, 0.3569)
+( 01.5, 0.9718)
+( 02.0, 0.7452)
+( 02.5,-0.1267)
+( 03.0,-0.8889)
+( 03.5,-0.8814)
+( 04.0,-0.1107)
+( 04.5, 0.7559)
+( 05.0, 0.9679)
+( 05.5, 0.7527)
+( 06.0, 0.5854)
+( 06.5, 0.4553)
+( 07.0, 0.3541)
+( 07.5, 0.2754)
+( 08.0, 0.2142)
+( 08.5, 0.1666)
+( 09.0, 0.1295)
+( 09.5, 0.1007)
+( 10.0, 0.0783)
+};
+\end{scope}
+
+\end{tikzpicture}
+}{Cosine wave patterns}
+
+\subsection{The Other Half}
+
+This is pretty slick, but one problem remains. We are only finding half of the possible 
+energy levels. The patterns you should have so far are in Figure \ref{fig:eig-cos}.
+
+You won't have the dashed lines, but they are there to remind you that this standing wave
+pattern oscillates---just like a string. So the antinodes oscillate between the maximum
+peaks and minimum troughs. Look at the four wave patterns we have found. The number of
+antinodes is always odd. There are more standing waves with an even number of antinodes 
+that we have yet to find.
+
+Go ahead and save the workbook. Then go to the menu \texttt{File >> Save As}. Save a copy
+of your document with a slightly different name. We are going to make one last adjustment.
+
+When you are ready to work in your copied workbook, make the changes listed in Table 
+\ref{tbl:input10} and drag them down to row \texttt{43}.
+
+%\tbl[side]{input10}{|c|l|}
+\tbl[]{input10}{|c|l|}
+{
+\texttt{D23} & \texttt{=SIN(C23*A23)} \\
+\texttt{F23} & \texttt{=\$E\$21*SIN(C23*(A23+\$E\$1))} \\
+}{Changing the central cosine to sine}
+
+\ex{Equation \eqref{sch-soln-cos} is the solution for the wave function in the central
+region. This involve a cosine function. How can one justify using the sine function
+that I am proposing in Table \ref{tbl:input10}?}
+
+\ex{Change the energy value to $E = 0.1$ and start goal seeking again. Find these new 
+energy levels to four digit accuracy. There are three total. Print out the standing wave 
+pattern for each of them. Go ahead and type them somewhere like you did for the cosine 
+energy levels. These wave patterns ought to look like those in Figure \ref{fig:eig-sin}.}
+
+%\tikzfig[side]{eig-sin}
+\tikzfig[]{eig-sin}
+{
+\begin{tikzpicture}[xscale=0.25,yscale=0.5]
+
+\begin{scope}[yshift=60mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.00, 0.0000)
+(-09.50,-0.0001)
+(-09.00,-0.0001)
+(-08.50,-0.0003)
+(-08.00,-0.0009)
+(-07.50,-0.0024)
+(-07.00,-0.0062)
+(-06.50,-0.0161)
+(-06.00,-0.0419)
+(-05.50,-0.1094)
+(-05.00,-0.2852)
+(-04.50,-0.5434)
+(-04.00,-0.7577)
+(-03.50,-0.9107)
+(-03.00,-0.9901)
+(-02.50,-0.9896)
+(-02.00,-0.9090)
+(-01.50,-0.7550)
+(-01.00,-0.5400)
+(-00.50,-0.2814)
+( 00.00, 0.0000)
+( 00.50, 0.2814)
+( 01.00, 0.5400)
+( 01.50, 0.7550)
+( 02.00, 0.9090)
+( 02.50, 0.9896)
+( 03.00, 0.9901)
+( 03.50, 0.9107)
+( 04.00, 0.7577)
+( 04.50, 0.5434)
+( 05.00, 0.2852)
+( 05.50, 0.1094)
+( 06.00, 0.0419)
+( 06.50, 0.0161)
+( 07.00, 0.0062)
+( 07.50, 0.0024)
+( 08.00, 0.0009)
+( 08.50, 0.0003)
+( 09.00, 0.0001)
+( 09.50, 0.0001)
+( 10.00, 0.0000)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.00, 0.0000)
+(-09.50, 0.0001)
+(-09.00, 0.0001)
+(-08.50, 0.0003)
+(-08.00, 0.0009)
+(-07.50, 0.0024)
+(-07.00, 0.0062)
+(-06.50, 0.0161)
+(-06.00, 0.0419)
+(-05.50, 0.1094)
+(-05.00, 0.2852)
+(-04.50, 0.5434)
+(-04.00, 0.7577)
+(-03.50, 0.9107)
+(-03.00, 0.9901)
+(-02.50, 0.9896)
+(-02.00, 0.9090)
+(-01.50, 0.7550)
+(-01.00, 0.5400)
+(-00.50, 0.2814)
+( 00.00, 0.0000)
+( 00.50,-0.2814)
+( 01.00,-0.5400)
+( 01.50,-0.7550)
+( 02.00,-0.9090)
+( 02.50,-0.9896)
+( 03.00,-0.9901)
+( 03.50,-0.9107)
+( 04.00,-0.7577)
+( 04.50,-0.5434)
+( 05.00,-0.2852)
+( 05.50,-0.1094)
+( 06.00,-0.0419)
+( 06.50,-0.0161)
+( 07.00,-0.0062)
+( 07.50,-0.0024)
+( 08.00,-0.0009)
+( 08.50,-0.0003)
+( 09.00,-0.0001)
+( 09.50,-0.0001)
+( 10.00, 0.0000)
+};
+\end{scope}
+
+\begin{scope}[yshift=20mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.00, 0.0002)
+(-09.50, 0.0003)
+(-09.00, 0.0008)
+(-08.50, 0.0018)
+(-08.00, 0.0041)
+(-07.50, 0.0093)
+(-07.00, 0.0211)
+(-06.50, 0.0481)
+(-06.00, 0.1095)
+(-05.50, 0.2493)
+(-05.00, 0.5678)
+(-04.50, 0.9214)
+(-04.00, 0.9858)
+(-03.50, 0.7406)
+(-03.00, 0.2629)
+(-02.50,-0.2974)
+(-02.00,-0.7642)
+(-01.50,-0.9912)
+(-01.00,-0.9069)
+(-00.50,-0.5379)
+( 00.00, 0.0000)
+( 00.50, 0.5379)
+( 01.00, 0.9069)
+( 01.50, 0.9912)
+( 02.00, 0.7642)
+( 02.50, 0.2974)
+( 03.00,-0.2629)
+( 03.50,-0.7406)
+( 04.00,-0.9858)
+( 04.50,-0.9214)
+( 05.00,-0.5678)
+( 05.50,-0.2493)
+( 06.00,-0.1095)
+( 06.50,-0.0481)
+( 07.00,-0.0211)
+( 07.50,-0.0093)
+( 08.00,-0.0041)
+( 08.50,-0.0018)
+( 09.00,-0.0008)
+( 09.50,-0.0003)
+( 10.00,-0.0002)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.00,-0.0002)
+(-09.50,-0.0003)
+(-09.00,-0.0008)
+(-08.50,-0.0018)
+(-08.00,-0.0041)
+(-07.50,-0.0093)
+(-07.00,-0.0211)
+(-06.50,-0.0481)
+(-06.00,-0.1095)
+(-05.50,-0.2493)
+(-05.00,-0.5678)
+(-04.50,-0.9214)
+(-04.00,-0.9858)
+(-03.50,-0.7406)
+(-03.00,-0.2629)
+(-02.50, 0.2974)
+(-02.00, 0.7642)
+(-01.50, 0.9912)
+(-01.00, 0.9069)
+(-00.50, 0.5379)
+( 00.00, 0.0000)
+( 00.50,-0.5379)
+( 01.00,-0.9069)
+( 01.50,-0.9912)
+( 02.00,-0.7642)
+( 02.50,-0.2974)
+( 03.00, 0.2629)
+( 03.50, 0.7406)
+( 04.00, 0.9858)
+( 04.50, 0.9214)
+( 05.00, 0.5678)
+( 05.50, 0.2493)
+( 06.00, 0.1095)
+( 06.50, 0.0481)
+( 07.00, 0.0211)
+( 07.50, 0.0093)
+( 08.00, 0.0041)
+( 08.50, 0.0018)
+( 09.00, 0.0008)
+( 09.50, 0.0003)
+( 10.00, 0.0002)
+};
+\end{scope}
+
+\begin{scope}[yshift=-20mm]
+\fill [blue!10] (-10,-1.2) rectangle (-5,1.2);
+\fill [blue!10] (5,-1.2) rectangle (10,1.2);
+\draw [help lines] (-5,0) -- (5,0) (0,-1.2) -- (0,1.2);
+\draw plot [smooth] coordinates {
+(-10.00,-0.0038)
+(-09.50,-0.0066)
+(-09.00,-0.0113)
+(-08.50,-0.0194)
+(-08.00,-0.0332)
+(-07.50,-0.0569)
+(-07.00,-0.0975)
+(-06.50,-0.1672)
+(-06.00,-0.2866)
+(-05.50,-0.4914)
+(-05.00,-0.8423)
+(-04.50,-0.9629)
+(-04.00,-0.4398)
+(-03.50, 0.3774)
+(-03.00, 0.9422)
+(-02.50, 0.8772)
+(-02.00, 0.2257)
+(-01.50,-0.5767)
+(-01.00,-0.9935)
+(-00.50,-0.7462)
+( 00.00, 0.0000)
+( 00.50, 0.7462)
+( 01.00, 0.9935)
+( 01.50, 0.5767)
+( 02.00,-0.2257)
+( 02.50,-0.8772)
+( 03.00,-0.9422)
+( 03.50,-0.3774)
+( 04.00, 0.4398)
+( 04.50, 0.9629)
+( 05.00, 0.8423)
+( 05.50, 0.4914)
+( 06.00, 0.2866)
+( 06.50, 0.1672)
+( 07.00, 0.0975)
+( 07.50, 0.0569)
+( 08.00, 0.0332)
+( 08.50, 0.0194)
+( 09.00, 0.0113)
+( 09.50, 0.0066)
+( 10.00, 0.0038)
+};
+\draw [dashed] plot [smooth] coordinates {
+(-10.00, 0.0038)
+(-09.50, 0.0066)
+(-09.00, 0.0113)
+(-08.50, 0.0194)
+(-08.00, 0.0332)
+(-07.50, 0.0569)
+(-07.00, 0.0975)
+(-06.50, 0.1672)
+(-06.00, 0.2866)
+(-05.50, 0.4914)
+(-05.00, 0.8423)
+(-04.50, 0.9629)
+(-04.00, 0.4398)
+(-03.50,-0.3774)
+(-03.00,-0.9422)
+(-02.50,-0.8772)
+(-02.00,-0.2257)
+(-01.50, 0.5767)
+(-01.00, 0.9935)
+(-00.50, 0.7462)
+( 00.00, 0.0000)
+( 00.50,-0.7462)
+( 01.00,-0.9935)
+( 01.50,-0.5767)
+( 02.00, 0.2257)
+( 02.50, 0.8772)
+( 03.00, 0.9422)
+( 03.50, 0.3774)
+( 04.00,-0.4398)
+( 04.50,-0.9629)
+( 05.00,-0.8423)
+( 05.50,-0.4914)
+( 06.00,-0.2866)
+( 06.50,-0.1672)
+( 07.00,-0.0975)
+( 07.50,-0.0569)
+( 08.00,-0.0332)
+( 08.50,-0.0194)
+( 09.00,-0.0113)
+( 09.50,-0.0066)
+( 10.00,-0.0038)
+};
+\end{scope}
+
+\end{tikzpicture}
+}{Sine wave patterns}
+
+\subsection{Final Wrap-Up}
+
+Congratulations! You have successfully solved a fundamental quantum mechanics problem. 
+Two more exercises are left.
+
+\ex{Figure \ref{fig:energy-levels} is a diagram representing the energy levels in our 
+quantum box. This is the same idea as the energy level diagrams we use in explaining
+the Bohr atom. Redraw this diagram but use the four digit energy levels you have 
+discovered through the course of this project.}
+
+%\tikzfig[side]{energy-levels}
+\tikzfig[]{energy-levels}
+{
+\begin{tikzpicture}[yscale=3]
+\draw (0,0) -- (2,0);
+\draw [->] (0,0) -- (0,2.2);
+\foreach \y in {1,2} { \draw (0.1,\y) -- (-0.1,\y) node [left] {\y}; }
+\draw [blue] (0,2) -- (2,2) node [right] {$V = 2.00$};
+%\foreach \e in {0.0408,0.1627,0.3648,0.6451,0.9994,1.4190,1.8736}
+\foreach \e in {0.04,0.16,0.36,0.65,1.00,1.42,1.87}
+{ \draw [red] (0,\e) -- (2,\e) node [right] {$E = \e$}; }
+\end{tikzpicture}
+}{Energy level diagram for this quantum box}
+
+\ex{We could easily set up the spreadsheet to analyze a phenomena called ``quantum
+tunnelling''. In this case the left and right potentials would be zero and the central
+potential would be two. Classically, a particle approaching the potential from the left
+would simply bounce and never get to the right side. But in quantum mechanics, a 
+portion of the wave function does make it through the barrier to the other side. Using
+equations \eqref{sch-soln-cos} and \eqref{sch-soln-exp} explain how this happens.}
+========

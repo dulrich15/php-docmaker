@@ -1,0 +1,816 @@
+========
+du001:1:AEP 4.24
+--------
+The wedge is another example of a simple machine. As shown in Figure \ref{fig:ma-wedge}, an application of a force $F_1$ parallel to $l$ causes the wedge to exert a force $F_2$ at right angles to $l$. Calculate the mechanical advantage of this machine. (Hint: While $F$ moves through the distance $l$, $F_2$ acts through the distance $h$.) 
+\tikzfig{ma-wedge}{
+\begin{tikzpicture}
+\draw (0,0.6) -- node [left] {$h$} (0,0) -- node [below] {$l$} (3,0) -- cycle;
+\node (f1) at (0,0.3) [forcearrow,left=5mm] {};
+\node (f2) at (1.5,0) [forcearrow,rotate=90,above=10mm] {};
+\node at (f1) [left=3mm] {$F_1$};
+\node at (f2) [above=3mm] {$F_2$};
+\end{tikzpicture}
+}{Mechanical advantage of a wedge}
+--------
+$\tan \theta$.
+--------
+The mechanical advantage is defined as
+$$MA = \frac{F_{out}}{F_{in}}$$
+Since mechanical energy is conserved, the work done by the output force is equal to the work done by the input force. Since $W = Fd$ we have
+$$MA = \frac{d_{in}}{d_{out}} = \frac{h}{l}$$
+In this case $d_{in} = h$ and $d_{out} = l$. These distances are related by the triangle in the diagram. That is,
+$$\tan \theta = h/l$$
+Therefore, the mechanical advantage of the wedge is equal to $\tan \theta$.
+========
+du002:2:mine
+--------
+(Twin paradox) An earthbound sibling observers her twin to depart from earth at a speed of 0.60c. After 10.0 years, the travelling twin returns having travelled 3.0 light-years and back. (a) Calculate the proper time the travelling twin was aboard the spaceship. (b) From the traveler's vantage point, the earth-bound twin's clocks tick slow. How much time does she observe to pass on earth? (c) During the moment of acceleration 3.0 light-years out, the clocks aboard ship go out of synch with those on earth. Calculate how far ahead the desynchronization put the clocks on the ship.
+--------
+(a) 8.0 yr; (b) 6.4 yr; (c) 3.6 yr.
+--------
+(a) The gamma factor for the travelling twin is
+$$\gamma = \frac{1}{\sqrt{1 - (0.60)^2}} = 1.25$$
+The proper time of the travelling twin is
+$$(10) = (1.25) \Delta \tau \Rightarrow \tau = 8.0$$
+As the earth-bound twin watches, only 8.0 years pass on the ship.
+\par (b) From the \emph{traveler's} point of view it is the earth that is moving away with a speed of $0.60c$. The gamma factor is also 1.25. Since the travelling twin is measuring events on earth, her clocks are not measuring proper time on earth. Using the time dilation formula, the proper time is
+$$(8) = (1.25) \Delta \tau \Rightarrow \tau = 6.4$$
+In other words, as the travelling twin watches, only 6.4 years pass on earth.
+\par (c) When the traveller returns either 6.4 years or 10.0 years have passed. Which is it? The truth is that the trip has two legs with a brief period of acceleration in the middle. As the question points out, this acceleration must cover the gap by introducing 3.6 years of percieved time for the traveller. This is the desynchronization effect. We can calculate the amount that the clocks on earth appear to shift as:
+$$\Delta t = \frac{Lv}{c^2} = \frac{(3.0c)(0.60c)}{c^2} = 1.8$$
+Notice the shortcut that $L = 3.0c$. This works because 3.0 light-years is the distance light travels in 3.0 years. Since $x = vt$, the distance is $L = (c)(3.0)$.
+\par This is the amount of desynchronization introduced by going from rest to a speed of $0.60c$. But we are slowing down to rest then accelerating in the other direction up to the same speed so the time shift is double: 3.6 yr.
+========
+du003:1:MI:P.7.8
+--------
+Show that the kinetic energy of a two-particle system can be written as $\half Mu^2 + \half mv^2$ where $M$ is the sum of the two masses, $u$ is the speed of the center of mass, $m$ is the reduced mass, and $v$ is the relative speed between the masses.
+--------
+See below.
+--------
+There are two ways to approach this problem. Start with the definition
+$$KE_t = \half m_1 v_1^2 + \half m_2 v_2^2$$
+and derive the given formula. Or the reverse. Often the reverse is easier because you are plugging things in and simplifying rather than trying to figure out how to take things apart.
+\par So we start with the given formula:
+$$\half Mu^2 + \half mv^2$$
+The quantities involved are:
+\begin{align*}
+M &= m_1 + m_2 \\
+u &= (m_1 v_1 + m_2 v_2) / (m_1 + m_2) \\
+m &= (m_1 m_2) / (m_1 + m_2) \\
+v &= v_1 - v_2
+\end{align*}
+We plug these in to get:
+\begin{align*}
+&\half (m_1 + m_2)\left(\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}\right)^2 + \half \left(\frac{m_1 m_2}{m_1 + m_2}\right)(v_1 - v_2)^2 \\
+&= \half \left(\frac{(m_1 v_1 + m_2 v_2)^2}{m_1 + m_2}\right) + \half \left(\frac{(m_1 m_2)(v_1 - v_2)^2}{m_1 + m_2}\right) \\
+&= \half \left(\frac{(m_1 v_1 + m_2 v_2)^2 + (m_1 m_2)(v_1 - v_2)^2}{m_1 + m_2}\right) \\
+&= \half \left(\frac{(m_1^2 v_1^2 + 2 m_1 m_2 v_1 v_2 + m_2^2 v_2^2 + (m_1 m_2)(v_1^2 - 2 v_1 v_2 + v_2^2)}{m_1 + m_2}\right) \\
+&= \half \left(\frac{m_1^2 v_1^2 + 2 m_1 m_2 v_1 v_2 + m_2^2 v_2^2 + m_1 m_2 v_1^2 - 2 m_1 m_2 v_1 v_2 + m_1 m_2 v_2^2}{m_1 + m_2}\right) \\
+&= \half \left(\frac{m_1^2 v_1^2 + m_2^2 v_2^2 + m_1 m_2 v_1^2 + m_1 m_2 v_2^2}{m_1 + m_2}\right) \\
+&= \half \left(\frac{m_1^2 v_1^2 + m_1 m_2 v_1^2 + m_2^2 v_2^2 + m_1 m_2 v_2^2}{m_1 + m_2}\right) \\
+&= \half \left(\frac{(m_1)(m_1 + m_2)(v_1^2) + (m_2)(m_2 + m_1)(v_2^2)}{m_1 + m_2}\right) \\
+&= \half ((m_1)(v_1^2) + (m_2)(v_2^2)) \\
+&= \half m_1 v_1^2 + \half m_2 v_2^2
+\end{align*}
+Which was to be shown.
+========
+du004:0:mine
+--------
+We are used to ignoring the effect of the centrifugal force from the earth's rotation in most of our problems. What is the ratio of this centrifugal force to an object's weight?
+--------
+0.34\%
+--------
+The formula for an object's weight is $W = mg$. The formula for the centrifugal force is $F = mr\omega^2$. The ratio of the two is:
+$$\frac{F}{W} = \frac{mr\omega^2}{mg}$$
+Clearly the mass cancels out of the ratio. We know $g$, but what is $\omega$? Well, the earth rotates once about its axis each day (thanks Copernicus). Thus,
+$$\omega = \left(\frac{1 \unit{rev}}{1 \unit{dy}}\right) \left(\frac{2 \pi \unit{rad}}{1 \unit{rev}}\right) \left(\frac{1 \unit{dy}}{86400 \unit{s}}\right) = \sci{7.2722}{-5} \unit{rad/s}$$
+Since $r$ is the radius of the earth, $r = \sci{6.378}{6}$, we have:
+$$\frac{F}{W} = \frac{(\sci{6.378}{6})(\sci{7.2722}{-5})^2}{9.80} = \sci{3.44}{-3}$$
+========
+du005:2:MI:P.9.5
+--------
+A parachutist on a particular jump at latitude 45$\dg$ N reaches a terminal velocity of 6.50 m/s when his height above the Earth's surface is 1.00 km. Ignoring the variation of gravity with height, and the effects of wind, calculate the lateral deviation when he reaches the ground due to (a) the centrifugal force and (b) the Coriolis force. In each case give both the magnitude and direction (e.g., due west).
+--------
+(a) 399 m, south. (b) 7.91 m, east.
+--------
+(a) The centrifugal force points outward from the center of rotation. On the other hand, the parachutist falls straight down, i.e., toward the center of the earth. Since she is at a latitude of 45$\dg$ there is a component of the centrifugal force that points south.
+\par Since the parachutist is at 1.00 km and moving at a constant speed (terminal velocity) of 6.50 m/s, we can calculate the time to reach the ground:
+$$x = vt \Rightarrow (1000) = (6.50)(t) \Rightarrow t = 153.85$$
+This is the amount of time that the southward component of the centripetal force operates. We should be able to calculate the slight deviation caused from this data. Since this force is proportional to mass, we can simply calculate the acceleration due to the centripetal force directly (i.e., $ma = mr\omega^2$).
+$$a_{cen} = r\omega^2 = (\sci{6.378}{6})(\sci{7.2722}{-5})^2 = 0.033730$$
+This was calculated in the previous problem. But we want only the southward component, so
+$$a = a_{cen} \sin (45\dg) = 13.400$$
+Since this force is constant, we can determine the net displacement caused via $x = vt + \half t^2$. Remember this is the in the southerly direction, so $v = 0$. Thus,
+$$x = (0)(153.85) + \half (0.033730)(153.85)^2 = 399$$
+\par (b) The magnitude of the Coriolis force is $F = 2m v \omega \sin \theta$, where $\theta$ is the angle between the angular rotation vector and the velocity. In our case this angle is 135$\dg$ since the rotation vector points up, but the velocity points down toward the center of the earth at a latitude of 45$\dg$ N. Therefore the acceleration due to the Coriolis force is:
+$$a_{cor} = (2)(6.50)(\sci{7.2722}{-5})\sin(135\dg) = \sci{6.6849}{-4}$$
+Similar to the previous calculation, we can determine the deflection caused by this acceleration using $x = vt + \half at^2$ \ldots.
+$$x = (0)(153.85) + \half (\sci{6.6849}{-4})(153.85)^2 = 7.91$$
+\par The direction of the Coriolis force is perpendicular to the plane which holds the angular rotation vector and the velocity. In our case this is either due east or west. But which? We must use the right hand rule. Using your \emph{right} hand, point your fingers in the direction of the velocity (down) then pull the tips of your fingers up (forming a right angle) toward the rotation vector (north). After you get your right hand oriented properly, you will find that your thumb is pointing in the direction of the force. In this case, the direction is east.
+========
+du006:0:mine
+--------
+Halley's comet has a highly elongated orbit. The eccentricity of its orbit is 0.967 with a 
+distance of closest approach equal to 0.586 AU. (a) What is the maximum distance Halley's 
+comet reaches before it turns around toward the sun? Express your answer in units of AU. 
+(For reference, Neptune's average distance from the sun is 30 AU.) (b) When distances are 
+measured in astronomical units (AU) and time is measured in years, Kepler's Third Law 
+simplifies to $T^2 = a^3$ for orbits around the sun. Determine the period of Halley's 
+comet in years. (Hint: Halley's original estimate was 76 years).
+--------
+(a) 34.9 AU. (b) 74.8 yr.
+--------
+(a) In terms of orbital parameters we are given $e = 0.967$ and $r_0 = 0.586$. The equation for the orbit (in polar coordinates) in general is
+$$r = r_0 \frac{1 + e}{1 + e \cos \theta}$$
+Clearly when $\theta$ is zero, $r = r_0$ which is the point of closest approach. When $\theta = 180\dg$, we have the point of farthest distance. Thus,
+$$r_1 = r_0 \frac{1 + e}{1 - e} = (0.586)\frac{1.967}{0.033} = 34.93$$
+To three significant digits we have $r_1$ = 34.9 AU.
+\par (b) The semi-major axis is the average between closest and farthest distances. Thus,
+$$a = (r_0 + r_1) / 2 = 17.76$$
+Using the modified form of Kepler's law we get:
+$$T^2 = (17.76)^3 \Rightarrow T = 74.8$$
+========
+du007:1:AM:Ex6.6b
+--------
+A rocket satellite is going around the earth in a circular orbit with radius of $\sci{4.5}{7}$ m. A sudden blast of the rocket motor increases the speed by 15\% in the direction of motion. Find (a) compute the maximum distance, and (b) the eccentricity of the new orbit.
+--------
+(a) $\sci{8.8}{7}$ m. (b) $e = 0.32$
+--------
+This problem actually is rocket science \ldots. 
+
+In general, the equation of orbit is
+$$r = r_0 \frac{1 + e}{1 + e \cos \theta}$$
+Initially, the orbit is circular, so it has an eccentricity of zero. The equation of orbit reduces to the simple $r = r_0 = \sci{4.5}{7}$ for this case. We can calculate the speed of the satellite by identifying the gravitational force as the centripetal force:
+$$\frac{GMm}{r^2} = \frac{mv^2}{r} \Rightarrow v = \sqrt{\frac{GM}{r}}$$
+The quantity $GM$ will come up frequently, so let's just calculate here once:
+$$GM = (\sci{6.673}{-11})(\sci{5.9742}{24}) = \sci{3.9866}{14}$$
+Thus the velocity around the orbit is
+$$v = \sqrt{\frac{\sci{3.9866}{14}}{\sci{4.5}{7}}} = 2976$$
+Using these numbers we can also calculate the reduced energy of the orbit:
+\begin{align*}
+E &= \half v^2 - GM/r \\
+ &= \half(2976)^2 - \sci{3.9866}{14}/\sci{4.5}{7} \\
+ &= -\sci{4.430}{6}
+\end{align*}
+Notice that the total energy is negative because this is a bound orbit. The reduced angular momentum is:
+\begin{align*}
+L &= rv \sin \phi \\
+ &= (\sci{4.5}{7})(2976) \sin 90\dg \\
+ &= \sci{1.339}{11}
+\end{align*}
+where $\phi$ is the angle between the radial vector and the velocity. That's about as much as we can do with the circular orbit. \par The blast increases both the energy and the angular momentum of the orbit. We are told the speed increases by 15\%, so the new speed is
+$$v_0 = (1.15)(2976) = 3422$$
+Since the orbit will no longer be circular, the speed of the satellite will not always have this value. But both the energy and angular momentum is conserved (after the blast). Since we know the distance and velocity at this one point, we can calculate these values for the entire orbit:
+\begin{align*}
+E &= \half v^2 - GM/r \\
+ &= \half(3422)^2 - \sci{3.9866}{14}/\sci{4.5}{7} \\
+ &= -\sci{3.004}{6}
+\end{align*}
+Notice the reduced energy is higher (less negative) than before due to the extra kinetic energy. The reduced angular momentum is:
+\begin{align*}
+L &= rv \sin \phi \\
+ &= (\sci{4.5}{7})(3422) \sin 90\dg \\
+ &= \sci{1.540}{11}
+\end{align*}
+There is now more angular momentum in the orbit as well.
+\par (a) The simplest way to answer this first part is to use that fact that the minimum distance ($r_0$) and the maximum distance ($r_1$) are the \airquote{turning points} in the effective potential diagram. Thus, we need to solve
+$$V_{eff} = - \frac{GM}{r} + \frac{L^2}{2r^2}$$
+when $V_{eff} = E = -\sci{3.004}{6}$. This becomes a quadratic equation:
+$$2Er^2 + 2GMr - L^2 = 0$$
+which has two roots. These are the two radial distances we are looking for. In our case, $a = 2E, b = 2GM, c = -L^2$, so
+$$r_0 = \frac{-GM + \sqrt{4(GM)^2 + 8EL^2}}{4E}$$
+and
+$$r_1 = \frac{-GM - \sqrt{4(GM)^2 + 8EL^2}}{4E}$$
+Remember that $E$ is negative, so these are positive numbers. Of course, we can just plug in the numbers and go, but I am going to go a little slower here. Let's first calculate the discriminant, $d = b^2 - 4ac$:
+\begin{align*}
+d &= 4(GM)^2 + 8EL^2 \\
+ &= 4(\sci{3.9866}{14})^2 + 8(-\sci{3.004}{6})(\sci{1.540}{11})^2 \\
+ &= \sci{6.5776}{28}
+\end{align*}
+Since this is positive, we know we have two roots. Thus,
+$$r_0 = \frac{-\sci{3.9866}{14} + \sqrt{\sci{1.2057}{30}}}{4(-\sci{3.004}{6})} = \sci{4.5011}{7}$$
+and
+$$r_1 = \frac{-\sci{3.9866}{14} - \sqrt{\sci{1.2057}{30}}}{4(-\sci{3.004}{6})} = \sci{8.7699}{7}$$
+Notice that the value for $r_0$ is consistent with the original statement of the problem, so we seem to be on the right track.
+\par (b) The simplest way to calculate the eccentricity of the orbit is to use the definition:
+$$e = \frac{r_1 - r_0}{r_1 + r_0}$$
+In our case,
+$$e = \frac{\sci{8.7699}{7} - \sci{4.5011}{7}}{\sci{8.7699}{7} + \sci{4.5011}{7}} = 0.3217$$
+========
+du008:1:STP:1.32
+--------
+The acceleration due to gravity ($g$ = 9.80 m/s$^2$), should actually vary depending on height according to Newton's law of gravitation ($F = GMm/r^2$). To a first approximation, it can be shown that the revised acceleration due to gravity is given by $$g' = g(1 - 2h/r_e)$$ where $h$ is the height of the object from the surface of the earth and $r_e$ is the radius of the earth. Use this formula to answer the following question. \par One test particle is 250 meters above the surface of the earth and another is at 275 meters directly above the first. How will the 25 meters separation between the particles be increased in the approximately 7 seconds it takes for the first particle to hit the ground?
+--------
+3.9 mm.
+--------
+We need to know the amount of time it takes for the first particle to hit the ground. We can use $x = vt + \half at^2$:
+$$(250) = (0)(t) + \half(9.8)(t)^2 \Rightarrow t = 7.1428$$
+which is consisent with the \probtext{approximately 7 seconds} mentioned in the problem.
+\par If we simply assume that the acceleration due to gravity is a constant 9.80 m/s$^2$, then the particles always maintain their 25 m separation. In order for this problem to yields interesting results we cannot ignore the $1/r^2$ nature of gravitation. Therefore we need to use the revised formula for $g'$ given in the problem. Notice that the acceleration is slower the higher one gets because the sign is negative.
+\par We are really interested in the \emph{difference} between the acceleration at the different heights. In other words,
+$$\Delta a = g' - g = -2 \Delta x / r_e$$
+Since the particles are 25 m apart, $\Delta x$ = 25. Thus,
+$$\Delta a = -2(9.80)(25)/(\sci{6.378}{6}) = -\sci{7.6827}{-5}$$
+The higher particle accelerates at a slightly slower rate than the lower particle. In the free-fall frame of the lower particle, the higher one would appear to be pulling away -- slowly drifting \emph{up} with an acceleration of $\sci{7.6827}{-5}$ m/s$^2$. After 7.1428 seconds, the displacement would be:
+\begin{align*}
+x &= vt + \half at^2 \\
+ &= (0)(7.1428) + \half(\sci{7.6827}{-5})(7.1428)^2 \\
+ &= \sci{3.9197}{-3}
+\end{align*}
+In other words, the 25 m separation between the two particles in increased by 3.9 mm just before the first hits the surface of the earth.
+========
+du009:1:EFT:PrjA-Q5
+--------
+To one significant figure, an Earth-bound clock and the satellite clocks of the GPS system (at an altitude of $\sci{2.66}{7}$ m) go out of synchronism by about 50,000 nanoseconds per day due to their difference in altitude alone. Find the correct value to three-digit accuracy. Ignore any relativistic effects due to the speed of the clocks.
+--------
+45,600 ns.
+--------
+We need to use the gravitational time dilation formula for this one. We have
+$$\Delta \tau = (1 + GM/rc^2) \Delta t$$
+where $\Delta t$ is the amount of time the clock would measure if outside the gravitational well completely. So, the time dilation at the surface of the earth is
+\begin{align*}
+\frac{\Delta \tau}{\Delta t} &= 1 + \frac{GM}{rc^2} \\
+    &= 1 + \frac{\sci{3.9866}{14}}{(\sci{6.378}{6})(\sci{3.00}{8})^2} \\
+    &= 1 + \sci{6.945}{-10}
+\end{align*}
+The time dilation at the GPS orbit is
+\begin{align*}
+\frac{\Delta \tau}{\Delta t} &= 1 + \frac{GM}{rc^2} \\
+    &= 1 + \frac{\sci{3.9866}{14}}{(\sci{2.66}{7})(\sci{3.00}{8})^2} \\
+    &= 1 + \sci{1.665}{-10}
+\end{align*}
+The time dilation is smaller since the satellites are farther out of the gravitational well. The difference between these two is
+$$(1 + \sci{6.945}{-10}) - (1 + \sci{1.665}{-10}) = \sci{5.28}{-10}$$
+This is the difference in the rate at which time is measured between these two heights \emph{per second}. Since there are 86,400 seconds in a day, the time differential each day is
+$$(\sci{5.28}{-10})(86400) = \sci{4.56}{-5}$$
+Remember there are $10^9$ nanoseconds in each second, so the difference between the two clock rates per day is 45,600 nanoseconds.
+========
+du010:0:MTW Box 1.6
+--------
+Consider a bullet is that is fired and hits a target 10 meters away in 0.020 seconds. Due to gravity, the bullet must be fired at a slight angle up. It can be shown that the maximum height the bullet reaches during its flight is approximately 0.49 millimeters. Now consider a ball that is thrown and hits a target 10 meters away in 2.0 seconds. The maximum height of the ball will be 4.9 meters. \par The curvature of these two trajectories can be compared using the following formula for the radius of curvature: $$r = d^2/8h$$ where $d$ represents the range of the projectile and $h$ represents its maximum height. Clearly the curvature of the two trajectories are different, but you will show that the curvature in \emph{space-time} is the same. This is one of the justifications for reinterpreting the action of gravity as a kind of \airquote{curvature in time}. \par (a) Calculate the curvature of the trajectories for the bullet and ball. (b) Repeat using the distance in time, $ct$, instead of $d$ within the radius of curvature calculation.
+--------
+(a) Bullet: 25,500 m, Ball: 2.55 m. (b) Both: $\sci{9.2}{15}$ m.
+--------
+(a) The radius of curvature for the bullet is
+$$r = \frac{10^2}{8 \cdot \sci{4.9}{-4}} = 25,510$$
+But the radius of curvature for the ball is
+$$r = \frac{10^2}{8 \cdot 4.9} = 2.551$$
+\par (b) For the bullet, the \airquote{distance in time} is given by 
+$$ct = (\sci{3}{8})(0.020) = \sci{6}{6}$$
+So the radius of curvature in space-time is
+$$r = \frac{(\sci{6}{6})^2}{8 \cdot \sci{4.9}{-4}} = \sci{9.2}{15}$$
+Which, coincidentally, is just short of a light-year. Now, the \airquote{distance in time} for the ball is
+$$ct = (\sci{3}{8})(2.0) = \sci{6}{8}$$
+So the radius of curvature in space-time is
+$$r = \frac{(\sci{6}{8})^2}{8 \cdot 4.9} = \sci{9.2}{15}$$
+Which is the same as for the bullet.
+========
+du011:1:MP:15.6
+--------
+An example of a gravitational lens is the \airquote{Einstein Cross} depicted in Figure \ref{fig:dju-einstein-cross}.\footnote{Source: http://hubblesite.org/newscenter/archive/releases/1990/20/}
+\fig{dju-einstein-cross}{0.25}{Gravitational Lens G2237 + 0305, Einstein Cross}
+The four outer points of light are images of a quazar that is directly behind some galaxy. The light from the quazar bends around the galaxy and reaches earth from four different directions. According to general relativity, the angle of deflection for a ray of light is given by
+$$\varphi = \frac{4}{b}\frac{GM}{c^2}$$
+The observed angular separation between the images is related to this deflection by
+$$\alpha = 2 \varphi \frac{d_2}{d_1}$$
+where $d_1$ is the distance between the quazar and the galaxy, and $d_2$ is the distance between the quazar and the earth. (See Figure \ref{fig:dju-deflection}).
+\fig{dju-deflection}{0.5}{Geometry for gravitational lens}
+Use this information to answer the following question.
+\par A certain star is 80.0 light-years from Earth. Directly along the line of sight from Earth to the star, and at a distance of 20.0 light-years from the star, is a white dwarf star, with a mass equal to the Sun's mass and a radius of 7000 km. The deflection of light from the star by the white dwarf causes us to observe two images of the star, as shown in Figure \ref{fig:dju-deflection}. Find the angle $\alpha$ between the two images. Quote your answer in degrees.
+--------
+0.386 degrees.
+--------
+For the sun, the factor $GM/c^2$ is 1.475 km. So, the deflection angle in this problem is
+$$\varphi = \frac{4}{\sci{7.00}{6}}(1475) = \sci{8.43}{-4} \unit{rad}$$
+Therefore, according to the formula given, the angular separation should be
+$$\alpha = (2)(\sci{8.43}{-4})\frac{80.0}{20.0} = \sci{6.74}{-3} \unit{rad}$$
+Since there are 57.3 degrees in one radian, the final answer is
+$$\alpha = (\sci{6.74}{-3})(57.3) = 0.386$$
+========
+du012:0:VW 3.1
+--------
+For an oscillator with $m$ = 0.010 kg and $k$ = 36 N/m, (a) what value of $b$ would make the amplitude decrease from $A$ to $0.37A$ in 1.0 s? (b) What value of $b$ would produce critical damping?
+--------
+(a) 0.02 kg/s. (b) 1.2 kg/s.
+--------
+(a) For a lightly damped system (the notion of amplitude is not relevant to a over-damped system), the amplitude decreases according to the formula
+$$A = A_0 \exp(-\half \gamma t)$$
+where $\gamma = b/m$. For our case,
+\begin{align*}
+&0.37A = A \exp \left( -\frac{1}{2} \frac{b}{0.010}(1.0) \right) \\
+&\Rightarrow 0.37 = \exp \left( -\frac{b}{0.020} \right) \\
+&\Rightarrow \ln(0.37) = -\frac{b}{0.020} \\
+&\Rightarrow -0.9943 = -\frac{b}{0.020} \\
+&\Rightarrow b = 0.0199
+\end{align*}
+and
+$$\gamma = b/m = (0.0199)/(0.010) = 1.99$$
+(b) Critical damping occurs when 
+$$\gamma = 2 \omega_0$$
+For this system, we have
+$$\omega_0 = \sqrt{\frac{k}{m}} = \sqrt{\frac{36}{0.010}} = 60.0$$
+Thus,
+$$b/m = 2 \omega \Rightarrow (b)/(0.010) = (2)(60.0) \Rightarrow b = 1.200$$
+========
+du013:1:VW 5.8
+--------
+The graph in Figure \ref{fig:dju-resonance} shows the mean power absorption $\avg{P}$ in watts, as a function of driving frequency in hertz. Find the numerical values of (a) $\omega_0$, and (b) $\gamma$. (c) If the driving force is removed, how many seconds will it take for the energy of the system to reach 5\% of its initial value? \fig{dju-resonance}{0.3}{Power absorption}
+--------
+(a) 600 s$^{-1}$, (b) 19 s$^{-1}$, (c) 0.079 s
+--------
+(a) The natural frequency of the system is where the resonance curve peaks. This occurs at 96 Hz on the graph. We convert that to the angular frequency according to
+$$\omega_0 = 2 \pi f_0 = (2\pi)(96) = 603.1$$
+(b) The gamma value is the width of the resonance curve at half the maximum. The maximum is at 20 W. The curve hits 10 W at 93 Hz and 99 Hz. This is a width of 6 Hz, but we need to convert this to rad/s:
+$$2\gamma = (2\pi)(6) \implies \gamma = 18.85$$
+(c) The average amplitude for a damped oscillator follows the formula
+$$E = E_0 \exp(-2\gamma t)$$
+since the energy is proportional to the amplitude squared. If the energy drops to 37\% of its original value, we have
+$$0.05 = \exp(-(37.70)(t)) \Rightarrow t = 0.07946$$
+========
+du014:1:mine
+--------
+The logistic map, $$x_{n+1} = k x_n (1 - x_n)$$ is a nonlinear system sometimes used to model population growth where $k$ is related to birth and death rates. When $k < 1$, the system is \airquote{attracted} to zero regardless of the initial state, $x_0$. Between $k$ = 1 and 3, zero no longer attracts. Between $k$ = 3.0 and 3.5 the attractor \jargon{bifurcates} or oscillates between two states. The attractor continues to bifurcate until a value of approximately $k$ = 3.57. Beyond this point, the iteration does not settle down. In this chaotic region the solution is extremely sensitive to initial conditions (as opposed to the \airquote{attractive} characteristic when $k < 3.0$). \par (a) Let $k$ = 2. Start with $x_1$ = 0.25 and iterate until $n$ = 10 to show that the system is attracted to 0.5. (b) Let $k$ = 3.2. Start with $x_1$ = 0.25 and iterate until $n$ = 15 to show that the steady state solution oscillates between 0.51 and 0.80. (c) Start with $x_1$ = 0.2500 and let $k$ = 3.8. Iterate until $n$ = 20. (d) Start with $x_1$ = 0.2501 and let $k$ = 3.8. Iterate until $n$ = 20. Notice how the patterns diverges significantly from that in part (c) after $n$ = 10.
+--------
+See below.
+--------
+(a) When $k$ = 2.0, the values for $x_n$ are
+\begin{center}
+\begin{tabular}{cc||cc}
+$n$ & $x_n$ & $n$ & $x_n$ \\
+\hline 
+ 1 & 0.2500 & 6 & 0.5000 \\
+ 2 & 0.3750 & 7 & 0.5000 \\
+ 3 & 0.4688 & 8 & 0.5000 \\
+ 4 & 0.4980 & 9 & 0.5000 \\
+ 5 & 0.5000 & 10 & 0.5000 \\
+\end{tabular}
+\end{center}
+(b) When $k$ = 3.2, the values for $x_n$ are
+\begin{center}
+\begin{tabular}{cc||cc||cc}
+$n$ & $x_n$ & $n$ & $x_n$ & $n$ & $x_n$ \\
+\hline
+ 1 & 0.2500 & 6 & 0.5415 & 11 & 0.7993 \\
+ 2 & 0.6000 & 7 & 0.7945 & 12 & 0.5134 \\
+ 3 & 0.7680 & 8 & 0.5225 & 13 & 0.7994 \\
+ 4 & 0.5702 & 9 & 0.7984 & 14 & 0.5131 \\
+ 5 & 0.7842 & 10 & 0.5151 & 15 & 0.7995 \\
+\end{tabular}
+\end{center}
+(c) When $k$ = 3.8, the values for $x_n$ are
+\begin{center}
+\begin{tabular}{cc||cc||cc||cc}
+$n$ & $x_n$ & $n$ & $x_n$ & $n$ & $x_n$ & $n$ & $x_n$ \\
+\hline
+ 1 & 0.2500 & 6 & 0.4625 & 11 & 0.3168 & 16 & 0.6505 \\
+ 2 & 0.7125 & 7 & 0.9447 & 12 & 0.8824 & 17 & 0.8640 \\
+ 3 & 0.7784 & 8 & 0.1986 & 13 & 0.5550 & 18 & 0.4466 \\
+ 4 & 0.6555 & 9 & 0.6049 & 14 & 0.9385 & 19 & 0.9892 \\
+ 5 & 0.8582 & 10 & 0.9082 & 15 & 0.2192 & 20 & 0.2171 \\
+\end{tabular}
+\end{center}
+(d) When $k$ = 3.8, the values for $x_n$ are
+\begin{center}
+\begin{tabular}{cc||cc||cc||cc}
+$n$ & $x_n$ & $n$ & $x_n$ & $n$ & $x_n$ & $n$ & $x_n$ \\
+\hline
+ 1 & 0.2501 & 6 & 0.4646 & 11 & 0.3059 & 16 & 0.7783 \\
+ 2 & 0.7127 & 7 & 0.9452 & 12 & 0.8068 & 17 & 0.6557 \\
+ 3 & 0.7781 & 8 & 0.1967 & 13 & 0.5924 & 18 & 0.8579 \\
+ 4 & 0.6561 & 9 & 0.6004 & 14 & 0.9176 & 19 & 0.4632 \\
+ 5 & 0.8574 & 10 & 0.9117 & 15 & 0.2874 & 20 & 0.9449 \\
+\end{tabular}
+\end{center}
+========
+du015:1:PBE 184
+--------
+Estimate the height at which atmospheric pressure is half the value at sea level, making clear your assumptions.
+--------
+5.8 m.
+--------
+
+========
+du016:0:mine
+--------
+Suppose $a = 2.0 \exp(i\pi/2)$ and $b = 3.0 \exp(i\pi/3)$. Calculate the magnitude of $a + b$.
+--------
+4.8
+--------
+Complex numbers are easy to multiply and divide when in polar form ($z = r \exp(i\theta)$). They are easy to add and subtract when in rectangular form ($z = x + iy$). So the first step is to convert these complex numbers from polar to rectangular form. We have
+\begin{align*}
+\Re(a) &= 2.0 \cos(\pi/2) = 0.000 \\
+\Im(a) &= 2.0 \sin(\pi/2) = 2.000 \\
+\Re(b) &= 3.0 \cos(\pi/3) = 1.500 \\
+\Im(b) &= 3.0 \sin(\pi/3) = 2.598
+\end{align*}
+Remember to use radians to calculate the sine and cosine. To summarize, we now have
+\begin{align*}
+a &= 2.0 \exp(i\pi/2) = 0.000 + 2.000 i \\
+b &= 3.0 \exp(i\pi/3) = 1.500 + 2.598 i \\
+\end{align*}
+Now we can add them.
+\begin{center}
+\begin{tabular}{cc@{ = }c@{ + }c}
+ & a & 0.000 & 2.000 i \\
+ + & b & 1.500 & 2.598 i \\
+\hline
+ & c & 1.500 & 4.598 i
+\end{tabular}
+\end{center}
+The magnitude of this complex number is
+$$\vmag(c) = \sqrt{\Re(c)^2 + \Im(c)^2} = \sqrt{(1.500)^2 + (4.598)^2} = 4.836$$
+BTW, the angle associated with this complex number is
+$$\vang(c) = \tan^{-1} (\Im(c) / \Re(c)) = \tan^{-1} ((4.598)/(1.500)) = 1.255$$
+So $c$ in polar form is
+$$c = (4.836) \exp (1.255 i)$$
+========
+du017:0:MI 4.8
+--------
+A rocket expels burnt fuel at a constant speed of 3000 m/s relative to the rocket. Calculate the mass of fuel that must be burnt to boost the speed of a 1 kg mass from rest to 1\% of the speed of light, that is, $\sci{3.0}{6}$ m/s.
+--------
+
+--------
+
+========
+du018:9:AM, Example 3.7
+--------
+The damping factor of a spring suspension system is one-tenth the critical value. If the undamped frequency is $\omega_0$, find the resonant frequency, and the quality factor of the resonant peak.
+--------
+
+--------
+
+========
+du019:1:PBE, Problem 64 (modified)
+--------
+A particle of rest mass $m$ is traveling so that its total energy is just twice its rest energy. It collides with a stationary particle with the same rest mass to form a new particle. What is the rest mass of the new particle?
+--------
+
+--------
+
+========
+du020:9:PBE, Problem 59
+--------
+To an observer, two bodies of equal rest mass collide head on with equal but opposite velocities $0.8c$ and cohere. To a second observer, one body is initially at rest. Find the apparent velocity of the other, moving mass before the collision and compare its initial energy in the two frames of reference.
+--------
+
+--------
+
+========
+du021:9:mine
+--------
+Consider the set of all quadratic functions, $f(x) = ax^2 + bx + c$, where $a$, $b$, and $c$ are real numbers. These functions form an abstract vector space when we define vector addition as $(f + g)(x) = f(x) + g(x)$ and scalar multiplication as $(af)(x) = a * f(x)$. What is the dimension of this vector space? Prove your statement by explicitly choosing a set of ``vectors'' that form a basis for this space.
+--------
+
+--------
+
+========
+du022:9:FL-1, 4-1
+--------
+Using the principle of virtual work, analyze the following. A weight of 50 newtons is suspended from the midpoint of a wire $ACB$ where $AC$ = $CB$ = 5 meters. The angle in the wire is 90$\dg$. Find the tension in the wire.
+--------
+
+--------
+
+========
+du023:1:mine
+--------
+A 1 kilogram mass travels force-free for a total of 2 meters in 2 seconds. Let $t_1$ represent the time it takes to travel the first meter and $t_2$ the second meter. Consider two possible worldlines for the particle: $W_1$ in which $t_1$ = $t_2$ = 1.00 seconds and $W_2$ in which $t_1$ = 0.90 seconds and $t_2$ = 1.10 seconds. (a) Calculate the non-relativistic and relativistic action for each worldline. (b) Calculate the same results in which the times are in nanoseconds (i.e., the total time is $\sci{2}{-9}$ seconds, etc.) (c) Discuss the significance of these four values.
+--------
+
+--------
+
+========
+du024:2:mine (particle refraction)
+--------
+A particle travels 20 meters in 20 seconds. At 10 meters, the particle encounters a small region where the potential energy increases sharply from 0 joules to 4 joules. Before and after this small region, the potential is constant. Determine the amount of time to the nearest second before the particle reaches the increased potential. (Hint: There are only 20 possible answers. Create a table of possible values and calculate the action for each. Note that half of these possible answers could be eliminated without any calculations at all).
+--------
+
+--------
+
+========
+du025:2:PT, Vol 44, pg 151
+--------
+Consider an 0.25 kilogram apple thrown vertically upward in a uniform gravitational field and divide its worldline into four straight line segments each of duration 0.25 seconds. Let the height of the apple be as tabulated in Table \ref{tbl:least-action-apple}. (a) Calculate the total action for this worldline. Take the potential energy on each segment to be the value at its center. (b) Verify this scenario is the minimum action by choosing a different set of heights and calculating the action for your worldline.
+
+\tbl{least-action-apple}{cc}
+{
+Time (s) & Height (m) \\
+\hline
+0.00 & 0.00 \\
+0.25 & 1.17 \\
+0.50 & 1.72 \\
+0.75 & 1.67 \\
+1.00 & 1.00 \\
+}{World line of apple for least action calculation}
+--------
+(a) -2.04 joule-seconds (b) Something less negative\ldots
+--------
+(a) The action of each segment is $S = (KE - PE) \Delta t$. In the first segment ($t$ = 0.00 to 0.25), the apple travels 1.17 meters. So its average speed is 
+$$\avg{v} = \frac{1.17}{0.25} = 4.68$$
+and its average kinetic energy is
+$$\avg{KE} = \half mv^2 = \half (0.25)(4.68)^2 = 2.7378$$
+The average height is simply $\half(1.17)$ = 0.585 meters, so its average potential energy is
+$$mgh = (0.25)(9.8)(0.585) = 1.4333$$
+Therefore the action for this segment is
+$$S = (2.7378 - 1.4333)(0.25) = 0.32613$$
+The calculations for the other three segments are similar. The results are in Table \ref{tbl:least-action-apple}. The total action for this path is simply the sum of all the individual action calculations. In this case that is -2.0379 joule-seconds.
+
+\tbl{least-action-apple}{ccccccc}
+{
+Time & Height & Speed & $KE$ & $\avg{h}$ & $PE$ & Action\\
+\hline
+0.00 & 0.00 & & & & & \\
+0.25 & 1.17 &  4.68 & 2.7378 & 0.585 & 1.4333 &  0.3261 \\
+0.50 & 1.72 &  2.20 & 0.6050 & 1.445 & 3.5403 & -0.7338 \\
+0.75 & 1.67 & -0.20 & 0.0050 & 1.695 & 4.1528 & -1.0369 \\
+1.00 & 1.00 & -2.68 & 0.8978 & 1.335 & 3.2708 & -0.5932 \\
+\hline
+Total & & & & & & -2.0379 \\
+}{Least action calculation}
+
+\par
+(b) Let's reduce the height in the second row to 1.00 meters. The new calculations are listed in Table \ref{tbl:least-action-apple2}.
+
+\tbl{least-action-apple2}{ccccccc}
+{
+Time & Height & Speed & $KE$ & $\avg{h}$ & $PE$ & Action\\
+\hline
+0.00 & 0.00 & & & & & \\
+0.25 & 1.00 &  4.00 & 2.0000 & 0.500 & 1.2250 &  0.1938 \\
+0.50 & 1.72 &  2.88 & 1.0368 & 1.360 & 3.3320 & -0.5738 \\
+0.75 & 1.67 & -0.20 & 0.0050 & 1.695 & 4.1528 & -1.0369 \\
+1.00 & 1.00 & -2.68 & 0.8978 & 1.335 & 3.2708 & -0.5932 \\
+\hline
+Total & & & & & & -2.0102 \\
+}{Non-least action calculation}
+
+Now the total is -2.0102 joule-seconds which is larger than the answer in part (a) and is one verification of the principle least action. Notice how each change affects two rows in the table. A reduction in action within one row is more than compensated by a larger gain from the other row.
+========
+du026:9:mine
+--------
+We have been using the non-relativistic approximation $y = -\half gt^2$ for the height of a mass falling from rest under a constant gravitational force of $-mg$. It can be shown that the relativistic version is 
+$$y = -gb^2(1 - \sqrt{1 + t^2/b^2})$$
+where $b = c/g$. Calculate how long it would take a relativistic particle to deviate 0.01\% from the Newtonian approximation. (Hint: Quote your answer in years).
+--------
+
+--------
+
+========
+du027:9:VW 1.5
+--------
+Calculate (a) the complex amplitude, (b) the amplitude, and (c) the phase constant, for the vibration given by $$x = 10 \cos \omega t + 17 \sin \omega t$$
+--------
+(a) $10-17i$, (b) 20, (c) -60$\dg$.
+--------
+(a) The vibration is the sum of two parts 
+\begin{align*}
+x_1 &= 10 \cos \omega t \\
+x_2 &= 17 \sin \omega t
+\end{align*}
+The first part corresponds to a phasor completely in the real dimension and the second part corresponds to a phasor completely in the imaginary direction. But since sine lags 90$\dg$ its sign is negative, so
+$$x = 10 - 17i$$
+\par (b) The amplitude is given by
+$$A = \sqrt{(10)^2 + (-17^2)} = 19.72$$
+which to two significant digits is 20.
+\par (c) The phase constant is
+$$\phi = \tan^{-1}{(-17)/(10)} = 59.53$$
+which to two significant digits is 60$\dg$.
+========
+du028:9:mine
+--------
+A particle approaches a 2$\times$2 meters square region of ``curved space'' (see Figure \ref{fig:pyramid-metric}).
+
+\tikzfig{pyramid-metric}
+{
+\begin{tikzpicture}
+\coordinate (1) at (-2,-3);
+\coordinate (2) at (0,-2);
+\coordinate (3) at (1.5,-1.5);
+\coordinate (4) at (2,0);
+\coordinate (5) at (3,2);
+
+\draw (-2,-2) rectangle (2,2);
+\draw (-2,-2) -- (2,2);
+\draw (-2,2) -- (2,-2);
+\begin{scope}[dotted]
+\foreach \x in {0,0.2,...,2} \draw (2,\x) -- (\x,\x) -- (\x,2);
+\foreach \x in {0.2,0.4,...,2} \draw (2,-\x) -- (\x,-\x) -- (\x,-2);
+\foreach \x in {0.2,0.4,...,2} \draw (-2,\x) -- (-\x,\x) -- (-\x,2);
+\foreach \x in {0,0.2,...,2} \draw (-2,-\x) -- (-\x,-\x) -- (-\x,-2);
+\end{scope}
+
+\node [fill=white] at (0,-1) {A};
+\node [fill=white] at (1,0) {B};
+\node [fill=white] at (0,1) {C};
+\node [fill=white] at (-1,0) {D};
+
+\draw [red,->] (1) -- (2) -- (3) -- (4) -- (5);
+\fill (2) circle (0.05);
+\fill (3) circle (0.05);
+\fill (4) circle (0.05);
+\end{tikzpicture}
+}{Pyramid metric}
+
+The metric in this curved space region is constant in each of the four regions given by Table \ref{tbl:pyramid-metric}.
+
+\tbl{pyramid-metric}{cccc}
+{
+Region & $g_{xx}$ & $g_{xy}$ & $g_{yy}$ \\
+\hline
+A & 1 & 0 & 2 \\
+B & 2 & 0 & 1 \\
+C & 1 & 0 & 2 \\
+D & 2 & 0 & 1 \\
+}{Pyramid metric}
+
+If the particle approaches region A on a trajectory with an initial slope of 0.5, what is the slope of the trajectory after it leaves region B? (Hint: When the metric is constant, the particle travels in a straight line. So this problem reduces to determining the refraction of the particle when the particle encounters each of the three metric changes: outside to region A; region A to region B; region B to outside).
+--------
+2.0
+--------
+
+========
+du029:9:Cf. chapter 25 of MTW
+--------
+The total proper time for a particle to fall from rest into a black hole is given by the following formula: 
+$$t = \half r_0 \sqrt{r_0/2M} (\eta + \sin \eta)$$
+where $\eta$ is related to the distance from the black hole via 
+$$r = \half r_0 (1 + \cos \eta)$$
+(a) Calculate the time it takes to fall from 4 times the event horizon ($r_0 = 8M$) to reach the event horizon. (b) Calculate the remaining time required to reach the singularity in the center. (c) Would it be more fun if the mass of the black hole were larger or smaller? Explain.
+--------
+
+--------
+
+========
+du030:9:Cf. PBE, Problem 48
+--------
+If gravitational forces alone prevent a spherical, rotating neutron star from disintegrating, estimate the minimum mean density of a star that has a rotation period of one millisecond.
+--------
+$\sci{1.4}{11}$ kg/m$^3$
+--------
+
+========
+du031:9:Cf. PBE, Problem 43
+--------
+In Arthur C. Clarke's novel 2001, an object in free space has the form of a very large plane slab 222 meters thick. A test body released 100 m away from the surface of the slab, initially at rest relative to it, takes 20 minutes to fall to its surface. Use Gauss' Law to estimate the density of the slab, assumed homogeneous.
+--------
+1490 kg/m$^3$
+--------
+
+========
+du032:1:Cf. PBE, Problem 51
+--------
+A planet is in a circular orbit about a massive star. The star undergoes a spherically 
+symmetric explosion in which 1\% of its mass is suddenly ejected to a distance well 
+beyond that of the planet's orbit. Find the eccentricity of the new orbit of the planet, 
+assuming the planet itself is unaffected by the explosion.
+--------
+0.01
+--------
+
+========
+du033:1:Cf. PBE, Problem 50
+--------
+The planet Jupiter has a radius equal to 11.2 times the Earth's radius, a mass equal to 
+318 times the Earth's mass and a period of rotation about its axis of 10.2 hours. Calculate
+(a) the minimum velocity with which a rocket would need to leave the Jovian surface in 
+order to escape entirely from the gravitational attraction of Jupiter, and (b) the radius
+of a circular orbit around Jupiter in which a satellite would remain above the same point
+on the Jovian surface. (You may take the escape velocity from the Earth to be 11.2 km/s
+and the radius of a geosynchronous orbit to be 44200 km).
+--------
+(a) 59.7 km/s. (b) 171,000 km
+--------
+
+========
+du034:1:Cf. PBE, Problem 49
+--------
+An astronaut marooned on the surface of an asteroid, of radius $r$ and mean density equal
+to that of earth, finds that he can escape by jumping. On Earth, he can jump about one
+meter high. What is the maximum value of $r$?
+--------
+2.5 km
+--------
+
+========
+du035:9:VW 3.1
+--------
+For an oscillator with $m$ = 0.010 kg and $k$ = 36 N/m, (a) what value of $b$ would make the amplitude decrease from $A$ to $0.37A$ in 1.0 s? (b) What value of $b$ would produce critical damping?
+--------
+(a) 0.02 kg/s. (b) 1.2 kg/s.
+--------
+(a) For a lightly lightly damped system (the notion of amplitude is not relevant to a over-damped system), the amplitude decreases according to the formula
+$$A = A_0 \exp(-\half \gamma t)$$
+where $\gamma = b/m$. For our case,
+\begin{align*}
+&0.37A = A \exp \left( -\frac{1}{2} \frac{b}{0.010}(1.0) \right) \\
+&\Rightarrow 0.37 = \exp \left( -\frac{b}{0.020} \right) \\
+&\Rightarrow \ln(0.37) = -\frac{b}{0.020} \\
+&\Rightarrow -0.9943 = -\frac{b}{0.020} \\
+&\Rightarrow b = 0.0199
+\end{align*}
+and
+$$\gamma = b/m = (0.0199)/(0.010) = 1.99$$
+(b) Critical damping occurs when 
+$$\gamma = 2 \omega_0$$
+For this system, we have
+$$\omega_0 = \sqrt{\frac{k}{m}} = \sqrt{\frac{36}{0.010}} = 60.0$$
+Thus,
+$$b/m = 2 \omega \Rightarrow (b)/(0.010) = (2)(60.0) \Rightarrow b = 1.200$$
+========
+du036:9:VW 5.8
+--------
+The graph in figure \ref{fig:dju-resonance} shows the mean power absorption $\avg{P}$ in watts, as a function of driving frequency in the resonance region. Find the numerical values of (a) $\omega_0$, and (b) $\gamma$. (c) If the driving force is removed, how many seconds will it take for the energy of the system to reach 5\% of its initial value? \fig{dju-resonance}{0.3}{Power absorption}
+--------
+(a) 600 s$^{-1}$, (b) 38 s$^{-1}$, (c) 0.079 s
+--------
+(a) The natural frequency of the system is where the resonance curve peaks. This occurs at 96 Hz on the graph. We convert that to the angular frequency according to
+$$\omega_0 = 2 \pi f_0 = (2\pi)(96) = 603.1$$
+(b) The gamma value (equal to $b/m$) is the width of the resonance curve at half the maximum. The maximum is at 20 W. The curve hits 10 W at 93 Hz and 99 Hz. This is a width of 6 Hz, but we need to convert this to rad/s:
+$$\gamma = (2\pi)(6) = 37.70$$
+(c) The average energy for a damped oscillator follows the formula
+$$E = E_0 \exp(-\gamma t)$$
+where $E_0$ is the initial energy in the system. If the energy drops to 37\% of its original value, we have
+$$0.05 = \exp(-(37.70)(t)) \Rightarrow t = 0.07946$$
+========
+du037:1:CP 29.2 (pg 770)
+--------
+The diameter of the pupil of the eye is about 5 mm. Find the intensity of light of wavelength 600 nm such that one photon per second passes through the pupil.
+--------
+$\sci{4.22}{-15}$ watts per square meter
+--------
+Intensity is power over area and the area involved here the eye's pupil. We have:
+$$A = \pi r^2 = (\pi)(\sci{5}{-3})^2 = \sci{7.8540}{-5}$$
+Since power is energy per second, the power is equal to energy in one photon. The frequency of this photon is given by $c = f\lambda$ so
+$$\sci{3.00}{8} = (f)(\sci{6.00}{-7} \implies f = \sci{4.9965}{14}$$
+and the energy is
+$$E = hf = (\sci{6.626}{-34})(\sci{4.9965}{14}) = \sci{3.3107}{-19}$$
+By definition, the intensity is
+$$I = \frac{P}{A} = \frac{\sci{3.3107}{-19}}{\sci{7.8540}{-5}} = \sci{4.2153}{-15}$$
+========
+du038:1:mine
+--------
+When an electron and a positron (its antimatter twin) collide they typically annihillate in a burst of electromagnetic energy. Assume all the energy from the mass of the pair (each equal to $\sci{9.11}{-31}$ kg) is converted into two photons of energy. What is the wavelength of these photons?
+--------
+$\sci{2.43}{-12}$ meters
+--------
+The total mass involved is twice the value given in the problem---one for each particle. Thus,
+$$m = (2)(\sci{9.11}{-31}) = \sci{1.822}{-30}$$
+The energy involved in this mass is given by
+$$E = mc^2 = (\sci{1.822}{-30})(\sci{3.00}{8})^2 = \sci{1.6398}{-13}$$
+But since there are two photons, each carries $\sci{8.199}{-14}$ joules of energy. Using Planck's formula, $E = hf$, the frequency must be
+$$\sci{8.199}{-14} = (\sci{6.626}{-34})(f) \implies f = \sci{1.2356}{20}$$
+The wavelength is given by $c = f\lambda$, so
+$$\sci{3.00}{8} = (\sci{1.2356}{20})(\lambda) \implies \sci{2.4263}{-12}$$
+This is in the gamma ray portion of the electromagnetic spectrum.
+========
+du039:1:mine
+--------
+Use Wien's law to estimate the temperature at the surface of the sun given that its radiation spectrum peaks at 500 nm.
+--------
+5800 kelvin
+--------
+This is a straight-forward application of the formula
+$$\lambda_\text{max} = \frac{\sci{2.898}{-3}}{T}$$
+In our case we have:
+$$\sci{5.00}{-7} = \frac{\sci{2.898}{-3}}{T} \implies T = 5796$$
+========
+du040:1:?? Some QED problem
+--------
+
+--------
+
+--------
+
+========
+du041:1:?? Some QED problem
+--------
+
+--------
+
+--------
+
+========
+du042:1:?? Some solid state problem
+--------
+
+--------
+
+--------
+
+========
+du043:1:?? Some solid state problem
+--------
+
+--------
+
+--------
+
+========
+du044:0:mine
+--------
+The pion used to be thought of as the particle that mediates the attractive interaction between nucleons. For example, a proton can convert into a neutron by absorbing a negative pion. Knowing that the quark content of the proton is $uud$ and the neutron is $udd$, what must the quark content of the negative pion be? Justify your answer.
+--------
+
+--------
+
+========

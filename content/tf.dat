@@ -1,0 +1,1601 @@
+========
+01
+--------
+Using inductive logic, no single experience can prove anything.
+--------
+Using inductive logic, no single experience can disprove anything.
+--------
+Induction is the logical progression from experience to physical law. It is always possible that in a particular experience there may be causes we have not isolated. So multiple experiments are always required. But a single experiment can disprove a theory.
+========
+01
+--------
+The four fundamental interactions are electromagnetism, gravity, and two nuclear forces.
+--------
+The four fundamental interactions are elasticity, magnetism, gravity, and the nuclear force.
+--------
+Elasticity is a consequence of the electrostatic attraction of atoms and molecules. Electricity and magnetism are now known to be two manifestations of a single force called electromagnetism. In addition, there are two nuclear forces not one.
+========
+01
+--------
+Newton's laws are built on the concept of force as the cause of motion.
+--------
+Newton's laws are built on the concept of velocity as the cause of motion.
+--------
+Velocity measures the amount of motion. Force is what causes it to change.
+========
+01
+--------
+Each unit conversion equation is equivalent to a fraction equal to one.
+--------
+Each unit conversion equation involves scientific notation.
+--------
+Since a unit conversion is essentially two things equal to one another, if we divide both sides by one of the values the other side is simply the number one.
+========
+01
+--------
+The derivative of a function represents the sensitivity of the function.
+--------
+The derivative of a function represents the direction of the function.
+--------
+Since the derivative records how much the function changes under a small change in the driving variable, the derivative represents sensitivity.
+========
+02
+--------
+Vectors convert geometric problems into algebra.
+--------
+Vectors convert calculus problems into algebra.
+--------
+Vectors are essentially directed line segments, which are geometric quantities. The power of vectors are in dealing with multi-dimensional problems.
+========
+02
+--------
+Every vector addition involves a triangle.
+--------
+Vector addition does not involve trigonometry.
+--------
+Each vector can be thought of as a movement from one place (or state) to another. We add them by considering the movement from one place to another to another. These three points define a triangle which can be analyzed using trigonometry.
+========
+02
+--------
+Vector addition obeys the standard laws of arithmetic.
+--------
+Vector addition does not commute.
+--------
+Yes, vector addition does obey the laws of addition. It commutes, so $a + b = b + a$, has an inverse, so $a + (-a) = 0$, and is associative: $a + (b + c) = (a + b) + c$. All of these basic rules can be verified using the triangular definition of vector addition.
+========
+02
+--------
+Geometrically, scalar multiplication stretches (or shrinks) the size of the vector.
+--------
+Geometrically, scalar multiplication changes the direction of the vector.
+--------
+Scalar multiplication can be thought of as repeated vector addition. Since the multiple vectors involved are all the same, they all point in the same direction. Therefore the final result will also. Except for the trivial scalar multiplication by one, the length of the result will be different.
+========
+02
+--------
+Every vector equation implies an equality between components.
+--------
+Even though the vector components are equal, the vectors themselves may not be.
+--------
+There is a direct correspondence between vectors and their components. If one knows the magnitude and direction, one also knows the components. So, if two vectors are equal (same magnitude and direction) so are all of their components.
+========
+03
+--------
+The path-length of a particle cannot be smaller than its net displacement.
+--------
+The path-length of a particle can be smaller than its net displacement.
+--------
+By definition, the distance defined by the path-length follows the particle whereas the net displacement is the straight-line distance between the beginning and end (as the crow flies). Since the shortest distance between two points is a straight line, so is the net displacement.
+========
+03
+--------
+Velocity takes into account both speed and direction.
+--------
+Velocity takes into account only the speed of the object.
+--------
+Velocity is a vector and has both direction and magnitude. The magnitude of the velocity vector is the object's speed.
+========
+03
+--------
+The formula $x = vt$ only works if the velocity does not change.
+--------
+The formula $x = vt$ only works if we ignore air drag.
+--------
+This formula will only work if the velocity is constant with or without air drag. For example, terminal velocity is a situation where this formula is valid.
+========
+03
+--------
+On the surface of the earth, the acceleration due to gravity is 9.8 meters per second per second.
+--------
+On the surface of the earth, the acceleration due to gravity is 9.8 meters per second.
+--------
+Acceleration is the rate at which velocity changes. Velocity is measured in meters per second. The acceleration is therefore how many meters per second are gained (or lost) each second.
+========
+03
+--------
+When an object is dropped from rest, its initial velocity is zero.
+--------
+When an object is dropped from rest, its final velocity is zero.
+--------
+``From rest'' means at the beginning. ``To rest'' means at the end.
+========
+03
+--------
+The amount of air drag is related to the speed of the object.
+--------
+The amount of air drag is independent of the speed of the object.
+--------
+The formula for air drag is quite complicated, but one thing we know: the faster the object the larger the air drag.
+========
+03
+--------
+Terminal velocity occurs when the air drag on an object counter-balances its weight.
+--------
+Terminal velocity is the rate of deceleration due to air drag.
+--------
+An object falls because of its weight. Its motion through the air generates a counter-balancing drag. When the two are equal, the net acceleration on the object is zero. The velocity at which this occurs is called terminal velocity.
+========
+03
+--------
+In projectile motion, the horizontal component has constant velocity (ignoring air drag).
+--------
+In projectile motion, the vertical component has constant velocity (ignoring air drag).
+--------
+For a projectile in free-fall, the acceleration is down. In other words, there is no acceleration horizontally. So the vertical component of velocity is under constant acceleration and the horizontal component is under zero acceleration---or constant velocity.
+========
+03
+--------
+The range equation $R = (v_0^2/g) @@@sin 2@@@theta$ assumes the vertical displacement is zero.
+--------
+The range equation $R = (v_0^2/g) @@@sin 2@@@theta$ assumes the horizontal displacement is zero.
+--------
+Range is the overall horizontal motion when the vertical motion comes back---that is a net zero vertical displacement.
+========
+03
+--------
+In heavy air drag a projectile falls nearly straight down.
+--------
+In heavy air drag a projectile falls at the same angle it is launched.
+--------
+The air drag opposes both the horizontal and vertical components of velocity. However, the vertical undergoes acceleration due to gravity. So, the horizontal velocity is driven to zero, but the vertical is not. This means that in air drag, a projectile will fall nearly straight down. If there is no air drag, the projectile will fall at the same angle it is launched.
+========
+04
+--------
+An object is said to be in equilibrium when all the forces and torques balance out.
+--------
+An object is said to be in equilibrium when all motion stops.
+--------
+Force changes the motion of the object and equilibrium means no net force. So an object in equilibrium will not change its motion. If the object is at rest, it will remain so. If the object is moving with constant velocity, it will remain so.
+========
+04
+--------
+An object subject to a single force cannot be in equilibrium.
+--------
+An object subject to a single force may be in equilibrium.
+--------
+Equilibrium means that the net force is zero. This can happen if there are no forces, or if the various forces on the object balance out. A single force cannot balance itself.
+========
+04
+--------
+A system in stable equilibrium tends to pull itself back to its equilibrium state.
+--------
+A system in stable equilibrium tends to push itself away from its equilibrium state.
+--------
+Equilibrium means the net force is zero. This can happen whether the forces are pulling against one another or pushing into one another. The equilibrium is stable if the forces push into one another.
+========
+04
+--------
+No net force does not imply that the object is at rest.
+--------
+No net force implies that the object is at rest.
+--------
+No net force implies that the motion of the object will not change whether that is at rest or moving with constant velocity.
+========
+04
+--------
+The SI unit for weight is called the newton.
+--------
+The SI unit for weight is called the slug.
+--------
+The slug is the British imperial unit for mass. The imperial unit for weight is the pound. Since weight is a force, it is measured in newtons.
+========
+04
+--------
+The mechanical advantage of a system is the ratio of the force output to the input force.
+--------
+The mechanical advantage of a system is the product of the input and output forces.
+--------
+The mechanical advantage measures the efficiency of the machine. A machine is designed to multiply force, so the efficiency is measured as the ratio of what goes out against what goes in.
+========
+04
+--------
+The tension in an ideal string is the same everywhere.
+--------
+The tension in an ideal string is proportional to height.
+--------
+A string transmits tension: you pull here and it is felt there. An ideal string will do this ideally.
+========
+04
+--------
+The normal force is perpendicular to the surface of support.
+--------
+The normal force is parallel to the surface of support.
+--------
+``Normal'' is a mathematical term that means perpendicular. The force of support is always perpendicular to surface of support.
+========
+04
+--------
+If an object is sliding, kinetic friction applies.
+--------
+Even when an object is at rest, kinetic friction applies.
+--------
+``Kinetic'' means motion. So kinetic friction applies when the object is moving, not when it is at rest---that's static friction.
+========
+04
+--------
+The magnitude of static friction is whatever it needs to be to create balance.
+--------
+The magnitude of static friction is given by $F_s = @@@mu_s N$.
+--------
+The second statement is certainly untrue, because the static friction may be less than this value. It is only what is necessary to create balance. If static friction is unable to create balance, kinetic friction then comes into play.
+========
+05
+--------
+Inertia is the property of a system that tends to maintain its state of motion.
+--------
+Inertia is the property of a system that tends to bring it to rest.
+--------
+Inertia is the tendency for an object to resist any change to its state of motion. Friction is what tends to bring things to rest. Without friction, things would have a tendency to continue moving with constant speed in straight lines---this is Newton's first law.
+========
+05
+--------
+The principle of relativity states that measurements within a reference frame cannot determine the velocity of that frame.
+--------
+The principle of relativity states that measurements within a reference frame cannot determine the acceleration of that frame.
+--------
+The acceleration of a reference frame can be detected through the existence of inertial forces. But any straight-line constant speed motion cannot be detected: the laws of physics are independent of the velocity of the frame used to apply them.
+========
+05
+--------
+A reference frame in which Newton's first law holds is called an inertial frame.
+--------
+A reference frame in which Newton's first law holds is called a Newtonian frame.
+--------
+There is no such thing as a ``Newtonian frame''.
+========
+05
+--------
+According to Newton's second law, the direction of acceleration is in the direction of the net force.
+--------
+According to Newton's second law, the direction of acceleration is opposed the velocity of the object.
+--------
+Force causes acceleration, so these two are aligned. The net force may or may not oppose the object's velocity.
+========
+05
+--------
+Another way to express Newton's second law is that any unbalanced force will produce acceleration.
+--------
+Another way to express Newton's second law is that every force is balanced by an equal and opposite one.
+--------
+The net force is the remained of the forces that is not balanced. It may seem like the false statement is actually Newton's third law, but it is not. The third law is about the pair of forces acting on two interacting objects. This statement is about a single object and is not true in general (otherwise nothing would ever move).
+========
+05
+--------
+Each part of a system involves a separate application of Newton's second law.
+--------
+Every system involves a single application of Newton's second law.
+--------
+Newton's second law is about the net force applied at a particular point.
+========
+05
+--------
+In problems involving the second law, it's best to align the coordinate system with the net force.
+--------
+In problems involving the second law, one must align the coordinate system vertically.
+--------
+The second statement might be true if the net force is vertical (like free-fall), but it is certainly not always true. The rule of thumb is to align with the net force if possible.
+========
+05
+--------
+Inertial forces are artifacts of a non-inertial frame.
+--------
+Inertial forces are found in every reference frame.
+--------
+Inertial forces are the apparent forces required to enforce the law of inertia (straight-line with constant speed). In an inertial frame there are no inertial forces on force-free particles.
+========
+05
+--------
+A reference frame in free-fall is an inertial frame of reference.
+--------
+A reference frame in free-fall is not an inertial frame of reference.
+--------
+Actually, this is a bit of a trick question. This idea is called the equivalence principle and was one of the key insights Einstein needed to develop general relativity. But if you imagine being in an elevator in free-fall, that floating sensation is precisely what it means to be in an inertial frame.
+========
+05
+--------
+Newton's third law implies that every interaction involves an exchange of momentum.
+--------
+Newton's third law implies that every interaction involves an exchange of mass.
+--------
+Although an interaction can be mediated by the exchange of mass (and in a sense, quantum field theory explains all the non-gravitational forces this way), it need not be. But because of the connection between momentum and force from the second law, the third law does at least imply an exchange of momentum.
+========
+06
+--------
+The period of cyclical motion is the amount of time required to complete one cycle.
+--------
+The period of cyclical motion is the number of cycles per second.
+--------
+This is simply the definition of the cycle's period. Frequency is defined as the number of cycles per second. So, the period and the frequency are reciprocals of each other.
+========
+06
+--------
+Whenever a path is curved, this curvature can be characterized by a radius of curvature.
+--------
+Whenever a path is curved, this curvature can be characterized by its tangential velocity.
+--------
+It is the centripetal acceleration rather than the tangential velocity which controls the curvature of the path. This is characterized geometrically by the radius of curvature.
+========
+06
+--------
+Circular motion cannot be maintained without a force.
+--------
+Circular motion does not require a centripetal force.
+--------
+The principle of inertia states that a force-free particle will move in a straight line. A circle is not straight. So some sort of force is required for circular motion.
+========
+06
+--------
+The force that causes uniform circular motion points toward the center of the circle.
+--------
+The force that causes uniform circular motion points away from the center of the circle.
+--------
+If the circular motion is not uniform, the force may not be pointing toward the center (although there must at least be a component that does). But if the motion is uniform---the speed is constant---then the force must point to the center of the circle.
+========
+06
+--------
+Calling a force centripetal describes its effect rather than its cause.
+--------
+Calling a force centripetal describes its cause rather than its effect.
+--------
+Fundamentally there are only four forces: gravity, electromagnetism, and the two nuclear forces. There are secondary forces such as elastic, tension, weight which can be described as being the cause of motion. But the centripetal force is different---it is the force required to maintain uniform circular motion. This net force can be supplied by any combination of the previous forces.
+========
+06
+--------
+The planets do not orbit the sun in perfect circles.
+--------
+The orbits of the planets are circular.
+--------
+Although very nearly circular, the orbits of the planets are slightly elliptical. This was known by the ancient Greeks, but they tried to explain it with a combination of circular orbits. But Kepler showed that the elliptical shape describes the motion of the planets better.
+========
+06
+--------
+A central force is one that always points toward a particular point in space.
+--------
+A central force is only felt at one point in space.
+--------
+A force that is only felt at a particular point in space might be called a contact force, although there really is no example of such a force.
+========
+06
+--------
+Polar coordinates describes the location of an object by a distance and an angle.
+--------
+Polar coordinates describes the location of an object by three angles.
+--------
+I don't even know if one can describe the location of an object by three angles. Polar coordinates are define relative to the ``pole''.
+========
+06
+--------
+Kepler's three laws follow from Newton's universal law of gravity.
+--------
+Kepler's three laws follow from the definition of centripetal acceleration.
+--------
+This is one of the great triumphs of Newtonian mechanics: the explanation of the motion of the planets by mechanical principles and the inverse square law of gravity.
+========
+06
+--------
+Newton's law of gravity applied to the surface of the earth explains an object's weight.
+--------
+Newton's law of gravity applied to the surface of the earth explains an object's inertia.
+--------
+Gravity is the cause of weight. Inertia is a fundamental quality of matter with no further explanation (yet).
+========
+07
+--------
+The multiplication of force in simple machines is at the cost of increased displacement.
+--------
+The multiplication of force in simple machines is at the cost of increased velocity.
+--------
+This is why work is defined the way it is. In order for a block-and-tackle system to have a mechanical advantage of two, one must pull the rope twice as far to lift the weight with half the force.
+========
+07
+--------
+If there is no movement, there is no work done.
+--------
+Work occurs whenever a force is applied to a system.
+--------
+Multiple forces can work on a system without creating movement---this is called equilibrium. No work is done in an equilibrium situation.
+========
+07
+--------
+Work is negative is the force opposes the displacement.
+--------
+Work can never be negative.
+--------
+Work is defined by the component of force that is in line with the displacement. If that component is against the displacement, the work will be negative.
+========
+07
+--------
+Power is the rate at which a machine performs work.
+--------
+Power is force times displacement.
+--------
+Force times displacement is how work is defined, not power.
+========
+07
+--------
+Kinetic energy is the ability to do work by virtue of a system's motion.
+--------
+Potential energy is the ability to do work by virtue of a system's motion.
+--------
+The word kinetic is from the Greek for motion. Potential energy is related to the configuration of the system relative to equilibrium.
+========
+07
+--------
+When a system is pushed out of stable equilibrium, potential energy is created.
+--------
+When a system is pushed out of stable equilibrium, kinetic energy is created.
+--------
+The word kinetic is from the Greek for motion. Potential energy is related to the configuration of the system relative to equilibrium.
+========
+07
+--------
+Internal forces can convert energy between kinetic and potential forms.
+--------
+Internal forces cannot convert energy between kinetic and potential forms.
+--------
+Yes, they can. It is the main thing they do. Non-conservative internal forces will can also destroy energy, but conservative forces will maintain the overall energy level.
+========
+07
+--------
+Non-conservative forces destroy mechanical energy.
+--------
+Non-conservative forces destroy heat energy.
+--------
+Non-conservative forces (like friction) convert mechanical energy into heat energy. From a mechanical perspective, this heat energy is lost. It is possible to revert some of this energy back to mechanical but not all.
+========
+07
+--------
+The turning points are where the potential energy equals the total energy on an energy diagram.
+--------
+The turning points are where the potential energy is twice the total energy on an energy diagram.
+--------
+The points where the total energy equals the potential energy will have no kinetic energy by definition. No kinetic energy means no motion, so this is where the motion turns and run back where it came from---like a ball tossed in the air returns to the ground.
+========
+07
+--------
+Action is minimized along the path that obeys Newton's laws.
+--------
+Action is conserved along the path that obeys Newton's laws.
+--------
+It is called the principle of least action because the total action is minimized. Energy is conserved (if the forces are conservative), but not the action.
+========
+08
+--------
+Momentum combines the idea of inertia and motion.
+--------
+Momentum combines the idea of velocity and acceleration.
+--------
+Actually, I don't know what the combination of velocity and acceleration would be. By definition, momentum is mass times velocity.
+========
+08
+--------
+Leibniz' @@@foreign{vis viva} is twice the kinetic energy of an object.
+--------
+Leibniz' @@@foreign{vis viva} is the same as the kinetic energy of an object.
+--------
+Similar, but not the same. Kinetic energy is defined through the idea of work. The idea of @@@foreign{vis viva} was an empirical guess by Leibniz regarding the right way to define motion. It was a good guess because it is so similar to kinetic energy, but still not the same.
+========
+08
+--------
+In the energy-momentum perspective, we don't need to know the details of the interaction.
+--------
+In the energy-momentum perspective, we need to know the details of the interaction.
+--------
+Yes, that's the main advantage of the energy-momentum perspective---the details are unimportant. We know that what goes in must come out. (Assuming the forces are conservative, which is true for the fundamental interactions.)
+========
+08
+--------
+A perfectly inelastic collision involves the sticking together of the two objects.
+--------
+A perfectly inelastic collision is when the two objects bounce.
+--------
+An elastic collision bounces perfectly (no loss in overall kinetic energy), an inelastic collision bounces a bit, and a perfectly inelastic collision sticks.
+========
+08
+--------
+The coefficient of restitution quantifies the elasticity of a collision.
+--------
+The coefficient of static friction quantifies the elasticity of a collision.
+--------
+The coefficient of restitution (COR) is the ratio of the difference in velocity going out to that coming in to the collision. If the COR is equal to one, kinetic energy is conserved and we have an elastic collision. If the COR is zero, the collision is perfectly inelastic.
+========
+08
+--------
+Momentum is conserved in any collision.
+--------
+Momentum is conserved only in elastic collisions.
+--------
+Momentum is always conserved (this as a consequence of Newton's third law). Kinetic energy is conserved in an elastic collision also. Mechanical energy will be conserved if the interaction is conservative (like a gravitational slingshot). Total energy is ultimately conserved if we take into account heat energy, though this fact is a bit impractical to use in general.
+========
+08
+--------
+The lab frame is a frame of reference in which one of the colliding objects is at rest.
+--------
+The center of mass frame is a frame of reference in which one of the colliding objects is at rest.
+--------
+Both the lab frame and the center of mass (CM) frame are important in analyzing collisions. By definition the lab frame moves with one of the interacting parts (usually labeled the second one---the primary one smashes into it). The center of mass is the frame in which the total momentum of the system is zero.
+========
+08
+--------
+A rocket moves by pushing against its own exhaust.
+--------
+A rocket moves by being sucked into the vacuum of space.
+--------
+It is a common misconception that a vacuum sucks. Nature may abhor a vacuum, but what really happens is that the air pressure all around us pushes into any existing vacuum. The vacuum does nothing (by definition, really). A rocket moves by throwing parts of itself away. By the conservation of momentum, if one part moves one way the rest must move the other way.
+========
+08
+--------
+A gravitational sling-shot is an elastic collision.
+--------
+A gravitational sling-shot is a perfectly inelastic collision.
+--------
+Since gravity is conservative, the interaction conserves mechanical energy. After the interaction has occurred, the potential energy is zero (this never quite happens for gravity, but it can become negligible) so the initial kinetic energy is returned to kinetic energy---which describes an elastic collision. Besides, a perfectly inelastic collision is when the object stick, which I am pretty sure NASA would classify as a scrubbed mission.
+========
+08
+--------
+Quantum field theory involves the exchange of energy and momentum.
+--------
+Energy and momentum are undefined in quantum field theory.
+--------
+Many classical concepts loose their meaning in quantum field theory (e.g., force), but both momentum and energy remain. This is one of the reasons to study these concepts: they work in every known physical context.
+========
+09
+--------
+An object in which the deformation is negligible is called a rigid object.
+--------
+An object which can rotate is called a rigid object.
+--------
+Any extended object can rotate. What makes an object rigid is its resistance to deformation.
+========
+09
+--------
+Fixed rotation means that the axis of rotation is fixed.
+--------
+Free rotation means that the object is free to rotate about a fixed axis.
+--------
+Even though worded slightly different, these two statements are both talking about a fixed axis. Free rotation is when the axis is free to move.
+========
+09
+--------
+An angle of one radian produces an arc-length equal to the radius of the circle.
+--------
+An angle of one radian produces an arc-length equal to the circumference of the circle.
+--------
+I guess you could say that an angle of one revolution produces an arc-length equal to the circumference of the circle. Degrees, radians, and revolutions are the main ways to characterize rotation.
+========
+09
+--------
+Angular displacement is not a vector.
+--------
+Angular displacement is a vector.
+--------
+Although we sometimes talk about angular velocity as a vector, we should not talk about angular displacement as one. Angular displacement can be said to have magnitude (the angle of rotation) and direction (the axis of rotation). But in three dimensions, these displacements do not obey a vector addition law like standard displacement.
+========
+09
+--------
+An analogy exists between the equations of angular motion with those of linear motion.
+--------
+An analogy exists between the equations of angular motion and the law of gravity.
+--------
+Although angular displacement is not a vector, the mathematical relationships between angular displacement, velocity and acceleration are the same as those for linear motion. This mathematical structure is all that is needed to derive the formulas for constant acceleration. As such, the logic works the same for angular motion.
+========
+09
+--------
+Tangential components are tangent to the circular motion of rotation.
+--------
+Tangential components are perpendicular to the circular motion of rotation.
+--------
+Well, tangential means tangent. The perpendicular component is called centripetal.
+========
+09
+--------
+Rolling implies a constraint between the tangential velocity and the velocity of the center of mass.
+--------
+Rolling implies a constraint between the angular acceleration and the velocity of the center of mass.
+--------
+In fact, the constraint is $v_t = v_@@@text{cm}$. The second statement would be true if it said ``angular velocity''.
+========
+09
+--------
+Centrifugal and Coriolis forces are the inertial forces in a rotating frame.
+--------
+The Coriolis force is the only inertial forces in a rotating frame.
+--------
+Both the centrifugal force and the Coriolis forces involve $omega$ which is the angular speed of the rotating frame.
+========
+09
+--------
+The centrifugal force on an object from the earth's rotation is negligible compared to its weight.
+--------
+The centrifugal force on an object from the earth's rotation is over twice the value of its weight.
+--------
+In the lecture notes we derived the fact that the centrifugal force from the earth's rotation is 0.31% of the magnitude of the object's weight. 
+========
+09
+--------
+Generalized coordinates are chosen to align with the natural constraints of a system.
+--------
+Generalized coordinates cannot be chosen to align with the natural constraints of a system.
+--------
+This is one of the major advantages of the generalized coordinate method. Constraints are typically difficult to calculate because they depend upon the state of the other parts of the system. So all the calculations are intertwined. Using generalized coordinates, one typically is able to simplify this calculation by isolating out the contribution from the constraints.
+========
+10
+--------
+Torque is proportional to the distance from the axis of rotation.
+--------
+Torque is inversely proportional to the distance from the axis of rotation.
+--------
+Either way one calculates torque (either using tangential force or lever arm), the torque increases as the distance from the axis of rotation increases.
+========
+10
+--------
+The lever arm of a force is the perpendicular distance between its line of action and the axis of rotation.
+--------
+The lever arm of a force is the distance between the point of application and the axis of rotation.
+--------
+The lever arm is associated with the line of action because the same force applied anywhere along this line (in the same direction) will produce the same torque.
+========
+10
+--------
+For two dimensional motion, equilibrium implies three balancing equations.
+--------
+For two dimensional motion, equilibrium implies two balancing equations.
+--------
+We get two just from the linear motion: $@@@sum F_x = 0$ and $@@@sum F_y = 0$. The third is the torque equation: $@@@sum @@@tau = 0$.
+========
+10
+--------
+The location of the axis of rotation is arbitrary if the system is in equilibrium.
+--------
+The axis of rotation must be at the center of mass if the system is in equilibrium.
+--------
+If the system is in equilibrium, there is no rotation at all. This means that there really is no axis of rotation. But to calculate the torques, we need to pick one. Any axis we choose must have balance torques---otherwise the object would rotate there.
+========
+10
+--------
+Torque can also be calculated using the tangential component of the force applied.
+--------
+Torque must be calculated using the line of action and lever arm.
+--------
+I mention two different ways to calculate the torque: tangential force and lever arm. They are geometrically equivalent.
+========
+10
+--------
+In a force couple, the two lines of action are parallel.
+--------
+In a force couple, the two lines of action are perpendicular.
+--------
+The line of action points in the direction of the force. In a force couple, the net force is zero because the forces point in opposite directions. This means that the center of mass will be unaffected. The net torque produces pure rotation.
+========
+10
+--------
+The moment of inertia measures the tendency of an object to maintain its angular motion.
+--------
+The moment of inertia measures the tendency of a rotating object to resist flying apart.
+--------
+Inertia is the tendency for an object to maintain its linear motion. The moment of inertia is its angular analog.
+========
+10
+--------
+The principal axes are the lines about which free rotation will not ``wobble''.
+--------
+The principal axes are the lines about which an object must rotate.
+--------
+An object can be forced to rotate about any axis one chooses. But only around the principal axes will the rotation occur without any kind of kick-back or wobble.
+========
+10
+--------
+Gyroscopic precession describes the rotation of the angular momentum around the axis of rotation.
+--------
+Gyroscopic progression describes the rotation of the angular momentum around the axis of rotation.
+--------
+There is no such thing as ``gyroscopic progression''.
+========
+10
+--------
+Rotation is a second form of kinetic energy.
+--------
+Rotation does not involve kinetic energy.
+--------
+Yes, any form of motion involves kinetic energy.
+========
+11
+--------
+Kepler's second law follows from the conservation of angular momentum.
+--------
+Kepler's third law follows from the conservation of angular momentum.
+--------
+Kepler's third law follows from the inverse square law of gravity. Kepler's second law is true for any central force.
+========
+11
+--------
+The point at which a planet comes closest to the sun is called perihelion.
+--------
+The point at which a planet moves slowest is called perihelion.
+--------
+By definition, the closest approach is called perihelion. By Kepler's second law this also happens to be the point at which the planet is moving the fastest.
+========
+11
+--------
+The more eccentric the ellipse, the farther the focus is from the center.
+--------
+The more eccentric the ellipse, the farther the focus is from the edge.
+--------
+An ellipse with no eccentricity is a circle. The focus of a circle is exactly at the center. As the eccentricity increases, the focus moves away from center toward the edge of the ellipse.
+========
+11
+--------
+The minimum point on the effective potential corresponds to a purely circular orbit.
+--------
+The maximum point on the effective potential corresponds to a purely circular orbit.
+--------
+The minimum point on any energy diagram is a point of stable equilibrium. If the object finds itself there, it will remain there. But the effective potential only describes the radial motion: i.e., the radius of the object is constant. This describes circular motion.
+========
+11
+--------
+The effective potential allows us to calculate the size of the orbit.
+--------
+The effective potential is insufficient to allow us to calculate the size of the orbit.
+--------
+The turning points on the effective potential diagram indicate the apsides of the ellipse. Adding these values together gives us the major axis of the ellipse.
+========
+11
+--------
+Kepler's laws do not take into account the gravitational interactions between the planets.
+--------
+Kepler's laws do take into account the gravitational interactions between the planets.
+--------
+The derivation of Kepler's laws from the inverse square law of gravity only involves the gravitational pull from the sun. This accounts for the vast majority of the motion of the planets.
+========
+11
+--------
+Any deviation from the central inverse square law of gravity will cause orbital precession.
+--------
+Orbital precession is caused by the central inverse square law of gravity.
+--------
+The central inverse square law causes the baseline elliptical orbit. Slight deviations are what cause this baseline motion to drift---which is called orbital precession.
+========
+11
+--------
+General relativity adds a new term to the gravitational effective potential.
+--------
+The effective potential cannot be used in general relativity.
+--------
+Many concepts do not work as expected in general relativity. Even the effective potential approach is a bit different. But its fundamental use to identify turning points to define the motion of the planets is the same as in Newtonian mechanics.
+========
+11
+--------
+The quantity $GM/c^2$ is characteristic of the effects of general relativity.
+--------
+The quantity $GMc^2$ is characteristic of the effects of general relativity.
+--------
+$GM/c^2$ is the key quantity. For the earth this is 4.4 millimeters---if you could crush the earth into a ball with a radius less than 4.4 millimeters, you would create a black hole.
+========
+11
+--------
+Black holes do not require a lot of mass, just extreme mass density.
+--------
+Black holes must have a mass at least 4 times the size of our sun.
+--------
+$GM/c^2$ is the key quantity. For the earth this is 4.4 millimeters---if you could crush the earth into a ball with a radius less than 4.4 millimeters, you would create a black hole.
+========
+12
+--------
+The amplitude of simple harmonic motion decreases when energy is lost due to damping.
+--------
+The amplitude of simple harmonic motion increases when energy is lost due to damping.
+--------
+The frequency of simple harmonic motion depends upon the details of the system: its inertia and ``springy-ness''. The other basic parameter for the motion is the amplitude and the energy is proportional to its square. When the energy goes down, so will the amplitude.
+========
+12
+--------
+The frequency of a pendulum does not depend on its mass.
+--------
+The frequency of a pendulum depends on its mass.
+--------
+The amplitude is related to energy, the frequency is related to the system details. The mass of a spring system is one of those details. But for a pendulum, the restoring force is gravity rather than the spring. So which are the critical details also depends on the system. In this case, the length of the pendulum and the acceleration due to gravity are the critical factors. One way to understand this is that the restoring force depends on mass through $mg$, so the inertia of the pendulum is on both sides of the equation---inertia and restoring force---so it cancels out.
+========
+12
+--------
+The elastic force from a spring is not constant.
+--------
+The elastic force from a spring is constant.
+--------
+The restoring force of the spring increases as it is stretched, so the force is certainly not constant. 
+========
+12
+--------
+Simple harmonic motion is a result of a force linear in displacement.
+--------
+Simple harmonic motion is a result of a constant force.
+--------
+We know the results of a constant force: constant acceleration. This goes all the way back to the beginning of Physics 201. A force that increases with displacement will have the tendency to slow the object down, bring it to a stop, and pull it back. If the force is exactly linear, we will have simple harmonic motion.
+========
+12
+--------
+Resonance occurs when the system is driven at just the right frequency.
+--------
+Resonance occurs when the system is driven with just the right amplitude.
+--------
+This frequency is the natural frequency of the system: its rate of oscillation with no driving force at all. When the driver's frequency is aligned with the system, the amplitude increases---this is how we see resonance. But the key driver is frequency.
+========
+13
+--------
+Imagining atoms with springs between is a reasonable approximation.
+--------
+Imagining atoms with springs between is a silly approximation.
+--------
+Springy atoms are reasonable because any system near equilibrium is mathematically equivalent to the simple mass on an ideal spring. No matter how complex or weird the system, this is always a good first approximation.
+========
+13
+--------
+Most solids have Young's moduli that are rather large.
+--------
+Most solids have Young's moduli that are less than one.
+--------
+Young's modulus is multiplied by the strain to equal stress. This may seem backward (like putting the effect before the cause), but is consistent with $F = ma$, the godfather of all physics equations. Since the strain is typically small, the modulus must be large to compensate. In this way, Young's modulus represents the ``rigidity'' of the object (a kind of resistance to change, like mass).
+========
+13
+--------
+There are three components of elasticity: tension/compression, shear, and volume deformation.
+--------
+There are two components of elasticity: tension and shear.
+--------
+There are three. Remember it.
+========
+13
+--------
+There is no SI unit for strain.
+--------
+The SI unit for strain is newtons per square meter.
+--------
+Since strain is a ratio of lengths, the units cancel. Strain (multiplied by 100) is the percent change in the length of the object.
+========
+13
+--------
+When Hooke's law is invalid, it under-predicts the strain of an object.
+--------
+When Hooke's law is invalid, it over-predicts the strain of an object.
+--------
+Think taffy. For a given force the strain far exceeds that of a simple spring. The actual strain is larger, so Hooke's law is under-predicting the response.
+========
+14
+--------
+Fluid pressure has no directional characteristic.
+--------
+Fluid pressure is a vector.
+--------
+Pressure is force over area. Force is a vector so it has a direction. However, the area also has an orientation in space---which is typically captured by the normal vector to the surface. As such, area also has direction. (!) Now, we can't really divide two vectors. Mathematically, this is a dot product. But the point is that in the definition of pressure, we only consider the magnitude of the force. Also, pressure (by definition, even when talking about stress) is experience all around the object. Since its the same in all directions, we don't need to keep track of any particular direction.
+========
+14
+--------
+One way to ``define'' an ideal fluid is that it has a zero shear modulus.
+--------
+The shear modulus of an ideal fluid can take any value.
+--------
+Actually, the shear modulus of a fluid is related to its viscosity. But since we are talking about a fluid that is ideal, there is no viscosity and no shear modulus.
+========
+14
+--------
+The pressure in a static fluid is independent of horizontal distance.
+--------
+The pressure in a static fluid is independent of vertical distance.
+--------
+The only reason fluid pressure depends on vertical distance is because that is the way gravity points. If there were no gravity, both statements would be true.
+========
+14
+--------
+Fluid pressure is proportional to depth.
+--------
+Fluid pressure is inversely proportional to depth.
+--------
+The deeper you get, the larger the pressure.
+========
+14
+--------
+A hydraulic car lift operates using Pascal's principle.
+--------
+A hydraulic car lift operates using Bernoulli's principle.
+--------
+Bernoulli's principle deals with fluids in motion. But in hydraulics the fluid is stationary.
+========
+14
+--------
+The mechanical advantage of an hydraulic lift is the ratio of the areas involved.
+--------
+The mechanical advantage of an hydraulic lift is the product of the areas involved.
+--------
+Mechanical advantage is defined through the ratio of the forces involved. By definition, the force is pressure times area. By Pascal's principle, the pressures are equal so they cancel---leaving the ratio of areas.
+========
+14
+--------
+When an object sinks, the buoyant force is smaller than its weight.
+--------
+When an object sinks, there is no buoyant force acting on it.
+--------
+If the object is in the fluid it is always subject to a buoyant force. The key question is whether this force exceeds its weight or not. Remember: even when the object is sinking (because its weight exceeds its buoyancy) it sinks at a slower rate than in free fall.
+========
+14
+--------
+The density of an object determines whether it will float or not.
+--------
+The weight of an object determines whether it will float or not.
+--------
+The volume displaced determines the buoyant force (Archimedes' principle). So a larger object will feel more buoyant regardless of its weight.
+========
+14
+--------
+An incompressible, non-viscous fluid is called an ideal fluid.
+--------
+A fluid is ideal if it flows under pressure.
+--------
+Well, it would be a poor fluid that didn't flow under pressure (I think we call that a solid). Incompressible means that the density of the fluid is constant and lack of viscosity neglects friction effects.
+========
+14
+--------
+Steady flow is when the velocity of the fluid does not change.
+--------
+Steady flow is when the velocity of the fluid is the same everywhere.
+--------
+The velocity of the fluid is related to the cross-sectional area according to the continuity equation. So, the velocity may be different as we travel along the length of the current. But steady flow is when this velocity field does not change with time. (The word change implies time---uniform implies space.)
+========
+15
+--------
+Kelvin is the SI base unit for temperature.
+--------
+Celsius is the SI base unit for temperature.
+--------
+Celsius is nice, but Kelvin is better.
+========
+15
+--------
+The change in length of a liquid is often used to measure temperature.
+--------
+The change in length of a solid rod is often used to measure temperature.
+--------
+Liquids tend to expand more than solids, so they make better thermometers. Just think of the standard (old-school) thermometer filled with alcohol.
+========
+15
+--------
+A thermocouple generates a voltage that depends on a difference in temperature.
+--------
+A thermocouple generates a voltage when the temperature increases.
+--------
+You know the second statement is false because it is not complete: increase relative to what? The ``couple'' in thermocouple is due to the measurement of a difference.
+========
+15
+--------
+Each degree Celsius is the same ``size'' as a degree Kelvin
+--------
+Each degree Fahrenheit is the same ``size'' as a degree Celsius
+--------
+Perhaps a better way to say this is that a temperature differential gives the same number in Celsius and Kelvin, but in Fahrenheit we need to introduce a factor of 1.8 to convert. So no conversion is necessary between Celsius and Kelvin temperature differentials.
+========
+15
+--------
+Change in length is proportional to modest changes in temperature.
+--------
+Change in length is proportional to all changes in temperature.
+--------
+The ``proportional'' implies a specific mathematical form which is not true in general. This is kind of like how Hooke's law approximates the force in a spring for small displacements.
+========
+15
+--------
+The addition or removal of heat does not always causes a change in temperature.
+--------
+The addition or removal of heat always causes a change in temperature.
+--------
+This is common and is called an isothermal process. If you connect your system to a very large temperature bath, the necessary heat will flow in or out of the bath in order to maintain the temperature.
+========
+15
+--------
+There are 4186 joules of mechanical energy in a calorie of heat.
+--------
+There are 4.186 joules of mechanical energy in a calorie of heat.
+--------
+The only trick here is that a Calorie of food (on a food label, for example) is actually 1000 calories (notice the capitalization). So a Calorie of food is 4186 joules of energy. But the question asks about a thermodynamic calorie.
+========
+15
+--------
+There are three forms of heat flow: convection, conduction, and radiation.
+--------
+There are two forms of heat flow: convection and conduction.
+--------
+Heat can flow through fluids (convection), solids (conduction), and the electromagnetic field (radiation).
+========
+15
+--------
+Thermal conductivity is a measure of how fast heat flows through a substance.
+--------
+Thermal conductivity is a measure of how much heat an object can hold.
+--------
+Conduction typically means ``flow through'' (like electrons flow through a wire). Heat capacity is the measure of how much heat an object can hold.
+========
+15
+--------
+The Stefan-Boltzmann law of radiation requires the use of absolute temperature.
+--------
+Either Celsius or Kelvin can be used with the Stefan-Boltzmann law of radiation.
+--------
+We must use Kelvin (or absolute temperature). Remember: we can only use Celsius when calculating a temperature differential---because it's the same as calculating it with Kelvin. If this didn't happen, we would use Kelvin for every calculation in this class.
+========
+16
+--------
+An ``isotherm'' is a curve of constant temperature.
+--------
+An ``isotherm'' is a curve of constant pressure.
+--------
+See ``therm'', think temperature.
+========
+16
+--------
+The number of particles in a mole is $@@@sci{6.022}{23}$.
+--------
+The number of particles in a mole is $@@@sci{6.022}{-23}$.
+--------
+The number of anything cannot be smaller than one, so clearly the second statement is wrong.
+========
+16
+--------
+An ideal gas is an good model for real gases that have sufficiently high temperatures.
+--------
+An ideal gas is an good model for real gases that have sufficiently low temperatures.
+--------
+Gases become closer to ideal the hotter they are (although there is a limit when they transition to plasma). At low temperature, they liquefy and freeze.
+========
+16
+--------
+$T$ = 273 K and $P$ = 101.3 kPa are the conditions know as standard temperature and pressure.
+--------
+$T$ = 0 K and $P$ = 0 kPa are the conditions know as standard temperature and pressure.
+--------
+These values are standard because they represent typical conditions. Zero pressure is pretty atypical, and zero temperature is impossible.
+========
+16
+--------
+Atomic collisions in an ideal gas are assumed to be elastic.
+--------
+Atomic collisions in an ideal gas are assumed to be completely inelastic.
+--------
+Completely inelastic means that the objects stick together. In an ideal gas, they bounce perfectly---which is elastic.
+========
+16
+--------
+At constant temperature, the pressure is inversely proportional to the volume.
+--------
+At constant temperature, the pressure is proportional to the volume.
+--------
+If you squish a balloon (increase the pressure), does it get bigger or smaller?
+========
+16
+--------
+The ideal gas constant is Boltzmann's constant multiplied by Avogadro's number.
+--------
+The ideal gas constant is Boltzmann's constant divided by Avogadro's number.
+--------
+One way to remember this is that the ideal gas constant is associated with moles through $PV = nRT$. The version with Boltzmann's constant, $PV = NkT$, involves the number of molecules and $N = n N_A$. In order for these to work together, we must have $R = N_A k$.
+========
+16
+--------
+When in constant random motion, atoms or molecules tend to have the same distribution of speed for a given temperature.
+--------
+When in constant random motion, atoms or molecules tend to have the same speed for a given temperature.
+--------
+When a gas is in thermal equilibrium, the individual molecules do not all have the same speed---some are fast and some are slow. The spread is given by the Maxwell distribution curve.
+========
+16
+--------
+A monatomic ideal gas is collection of single atoms (no molecules).
+--------
+A monatomic ideal gas is composed of a single atom.
+--------
+That would be a silly gas to have just one atom! Monatomic refers to the molecules: they only have one atom. Typically we are talking about the Nobel gases, like helium or argon.
+========
+16
+--------
+Fick's law of diffusion is structurally similar to the law for the conduction of heat.
+--------
+Fick's law of diffusion is structurally similar to the law for the radiation of heat.
+--------
+Diffusion is a kind of conduction: motion through a solid (or liquid).
+========
+17
+--------
+Work is negative when it is done on the system.
+--------
+Work is negative when it is done by the system.
+--------
+The context of thermodynamics is steam engines, so work done by the system is define as positive. Therefore work is negative if it is done on the system. It requires outside effort, so that's negative.
+========
+17
+--------
+The internal energy depends only on the mechanical state of the system.
+--------
+The internal energy depends on the method by which the system arrives at a given state, not on the state itself.
+--------
+The internal energy is related to the distribution of the energy within the molecules of the gas. Since it only depends on this distribution, not how it got there, the first statement is correct.
+========
+17
+--------
+Mechanical forces can affect the internal energy of an object.
+--------
+Mechanical forces cannot affect the internal energy of an object.
+--------
+Rubbing your hands increases their internal energy (they get warmer). So there is a equivalency between mechanical work and internal energy.
+========
+17
+--------
+An isochoric process is one that occurs under constant volume.
+--------
+An isochoric process is one that occurs with no transfer of heat.
+--------
+You just have to remember that ``choric'' means constant volume. You know ``thermal'' is temperature and ``baric'' is pressure (think barometer), so the one that is left must mean volume.
+========
+17
+--------
+The second law of thermodynamics states that heat flows from hot to cold.
+--------
+The second law of thermodynamics states that heat energy is conserved.
+--------
+The first law says that energy is conserved. There is no law that says heat energy is conserved because it isn't. There are many ways to state the second law and this is one of them.
+========
+17
+--------
+If we want to extract energy from a reservoir to do work, we must have available a colder reservoir.
+--------
+If we want to extract energy from a reservoir to do work, we must have available a warmer reservoir.
+--------
+We need the colder reservoir. The heat will flow either way, but if we are trying to extract energy from somewhere we need the heat to flow out in order to harness some of it on the way out.
+========
+17
+--------
+Between two set temperatures, the efficiency of an irreversible heat engine can be made larger.
+--------
+Between two set temperatures, the efficiency of an reversible heat engine can be made larger.
+--------
+The efficiency of a reversible heat engine only depends on the two temperatures---it cannot be made more efficient. But we can remove inefficiencies from an irreversible engine to improve its efficiency.
+========
+17
+--------
+Reversible processes do not alter the total entropy of the universe.
+--------
+Reversible processes increase the total entropy of the universe.
+--------
+What is special about reversible processes is that they conserve entropy. Irreversible processes always increase the total entropy. In fact, this could be a good working definition of entropy.
+========
+17
+--------
+When an irreversible process occurs, the energy available for doing work decreases.
+--------
+When an irreversible process occurs, the energy available for doing work may or may not decreases.
+--------
+Irreversible processes increase entropy. Entropy is related to the amount of work lost due to spontaneous heat flow. So the total work available must go down.
+========
+17
+--------
+The Carnot engine is reversible because the heat flow occurs only under constant temperature.
+--------
+The Carnot engine is reversible because there is no net heat flow.
+--------
+No heat flow, no engine. The spontaneous flow of heat is irreversible, but because the heat flows only at constant temperature it is not spontaneous.
+========
+18
+--------
+Radiation always carries energy from place to place.
+--------
+Radiation always carries momentum from place to place.
+--------
+Radiation always involves the transfer of energy, whether it is a particle or wave. The distinction is that waves transport this energy without the bulk motion of any mass (or momentum).
+========
+18
+--------
+A wave is a disturbance traveling through a medium.
+--------
+A wave is the movement of mass through a medium.
+--------
+By definition, a wave is when the medium stays where it is but the disturbance runs through it. Diffusion or convection involve the movement of mass or the flow of the fluid, but not wave motion.
+========
+18
+--------
+A longitudinal wave is one in which the disturbance occurs in the direction of travel.
+--------
+A longitudinal wave is one in which the disturbance occurs perpendicular to the direction of travel.
+--------
+It's one or the other. I personally always have trouble remembering which it is. The wave on a string is transverse, the wave in sound (compression wave) is longitudinal.
+========
+18
+--------
+The velocity of the wave is the product of its frequency and wavelength.
+--------
+The velocity of the wave is the ratio of its frequency and wavelength.
+--------
+Dimensional analysis helps with this one: just look at the units. Frequency is cycles per second and wavelength is meters per cycle. Multiply these to get meters per second.
+========
+18
+--------
+The mass per unit length of a string is called its ``linear density''.
+--------
+The mass per unit length of a string is called its ``density modulus''.
+--------
+The word modulus has to do with the stress/strain relationship. Although density typically is talking about the amount per unit volume, in this case we are talking about mass per unit length.
+========
+18
+--------
+The brain interprets the frequency of a sound wave in terms of ``pitch''.
+--------
+The brain interprets the amplitude of a sound wave in terms of ``pitch''.
+--------
+Frequency goes with pitch. Amplitude goes with volume (loudness).
+========
+18
+--------
+The speed of sound in an ideal gas is dependent on the temperature of the gas.
+--------
+The speed of sound in an ideal gas is independent of the temperature of the gas.
+--------
+Yes, the speed of sound does depend on the temperature. The rule of thumb is $v = 331 + 0.6 T_@@@text{cel}$.
+========
+18
+--------
+The threshold of hearing is a sound intensity of $10^{-12}$ W/m$^2$.
+--------
+The threshold of hearing is a sound intensity of $10^{12}$ W/m$^2$.
+--------
+This should be a small number, so the latter is clearly incorrect.
+========
+18
+--------
+If sound intensity level increases by 10 dB, the new sound seems approximately ten as loud as the original sound.
+--------
+If sound intensity level increases by 2 dB, the new sound seems approximately twice as loud as the original sound.
+--------
+This has to do with the way the logarithm formula for intensity level works. The formula is calibrated to make the first statement work. The second is approximately correct but not exactly.
+========
+18
+--------
+Sound waves are longitudinal in nature.
+--------
+Sound waves are transverse in nature.
+--------
+It's one or the other. I personally always have trouble remembering which it is. The wave on a string is transverse, the wave in sound (compression wave) is longitudinal.
+========
+19
+--------
+A dipole radiation source can be thought of as two monopoles out of phase.
+--------
+A dipole radiation source can be thought of as two monopoles in phase.
+--------
+Well, you can kind of just look at the structure of the words here. Di-pole meaning two and mono-pole meaning one. So it's natural to think of a dipole as two monopoles. Technically one should add that a dipole is two monopoles out of phase with one another with negligible distance between them. One might think that they would therefore cancel each other out, but it doesn't. That is what makes the dipole interesting.
+========
+19
+--------
+Superposition of waves is linear because the result is the additive sum of the disturbances.
+--------
+Superposition of waves is linear because the energy in each wave adds to the sum.
+--------
+The amplitude of the disturbances add, not the energy. The energy is related to the square of the amplitude so the distinction is important.
+========
+19
+--------
+Waves that are exactly in of phase are said to exhibit constructive interference.
+--------
+Waves that are exactly out of phase are said to exhibit constructive interference.
+--------
+By definition. ``In phase'' means that when one wave is up so is the other, so they both contribute to a larger sum. When they are out of phase that is destructive interference.
+========
+19
+--------
+The bending of a wave around an obstacle or the edges of an opening is called diffraction.
+--------
+The bending of a wave around an obstacle or the edges of an opening is called oscillation.
+--------
+Oscillation is just the basic up-and-down motion of any vibration or wave. The spreading action of a wave is called diffraction.
+========
+19
+--------
+High-frequency waves tend to have a low diffraction.
+--------
+Low-frequency waves tend to have a low diffraction.
+--------
+The angle of diffraction is proportional to the wavelength, so large wavelengths will have a lot of diffraction. But large wavelength is low frequency, so the first statement is true.
+========
+19
+--------
+Two overlapping waves with slightly different frequencies give rise to the phenomenon of beats.
+--------
+Two overlapping waves with slightly different frequencies give rise to the phenomenon of resonance.
+--------
+Nope, this is beats. Resonance is something completely different and really is related to vibration rather than waves in particular.
+========
+19
+--------
+The beat frequency is the difference of two wave frequencies causing the beat.
+--------
+The beat frequency is the average of two wave frequencies causing the beat.
+--------
+This just kind of how the math works. One way to think about it is that if the two waves start out with constructive interference, over time they move into destructive interference (and back) because of the difference in their frequencies.
+========
+19
+--------
+A standing wave is said to be standing because it does not travel in one direction or the other.
+--------
+A standing wave is said to be standing because it is stationary.
+--------
+What is standing is the energy flow. Typically in a waves, the energy radiates in a particular direction. A standing wave is unique because the energy is just sitting there. Stationary implies no motion at all, so the second statement is clearly wrong.
+========
+19
+--------
+Anti-nodes on a standing wave are the points of maximum displacement.
+--------
+Nodes on a standing wave are the points of maximum displacement.
+--------
+Just got to remember that a node is the ``special'' spot on the standing wave---that is the spots that don't move at all. Anti-nodes are the opposite: the points of maximum displacement.
+========
+19
+--------
+The fundamental frequency of a system open at both ends is the same as that same system fixed at both ends.
+--------
+The fundamental frequency of a tube open at only one end is one-third that of a tube open at both ends.
+--------
+The second statement is not even kind of right---there is no one-third in any of the standing wave formula. The first statement is true because the key is that the reflection type is the same at both ends. With soft reflection there is polarity shift after either reflection, with hard reflection there is a polarity shift at both ends.
+========
+20
+--------
+The surface in a wave with constant phase is called a wave fronts.
+--------
+The surface in a wave with constant phase is called a phasor.
+--------
+The wave fronts are used to make a connection between the wave pattern in the medium and the much simpler idea of a ray of radiation. A phasor is kind of vector and a completely different idea which is introduced later in class.
+========
+20
+--------
+Geometric optics is the study of light behavior ignoring its wave character.
+--------
+Geometric optics is the study of light behavior ignoring its polarization.
+--------
+Geometric optics is the study of light rays: how they move and bend. It is possible to take polarization into account (although we don't in this class). But we ignore wave effects like diffraction and interference.
+========
+20
+--------
+Upon reflection, the angle of reflection is the same as the angle of incidence.
+--------
+Upon reflection, the angle of reflection is not the same as the angle of incidence.
+--------
+Reflection is like a ball bouncing off of a wall: the angle going out equals the angle going in.
+========
+20
+--------
+Diffuse reflection is when an irregular surface reflects light rays in various directions.
+--------
+Specular reflection is when an irregular surface reflects light rays in various directions.
+--------
+Diffuse reflection is like the light reflected from the wall: it's bright, but no clear image. Specular reflection is what happens in a mirror: incoming parallel rays reflect in parallel.
+========
+20
+--------
+A ``virtual image'' is formed when light rays seem to originate from behind a plane mirror.
+--------
+A ``real image'' is formed when light rays seem to originate from behind a plane mirror.
+--------
+The image in a mirror is virtual because the light does not actually go through the image because the image is behind the mirror.
+========
+20
+--------
+The focal point of a spherical mirror is at one-half the distance to its center.
+--------
+The focal point of a spherical mirror is at twice the distance to its center.
+--------
+Remember the the focal point is inside the center rather than outside. The reason it is one-half is due to the law of reflection.
+========
+20
+--------
+A light source placed at the focus of a parabolic mirror will yield a perfectly parallel beam of light.
+--------
+A light source placed at the focus of a circular mirror will yield a perfectly parallel beam of light.
+--------
+The parabola is the only shape which will focus all the parallel rays through a single point (the focus). A circular mirror will focus only the rays around the center to nearly the focal point (not exactly, but usually close enough).
+========
+20
+--------
+The magnification of a mirror is the ratio of the image height to the object height.
+--------
+The magnification of a mirror is the ratio of the object height to the image height.
+--------
+Its standard to have any metric like this to compare the final to the initial, or the effect to the cause. When we say something is twice as much, the calculation is the ratio of the latter to the former. So, in this case we need to calculate the ratio of the image to the object.
+========
+20
+--------
+Magnification is positive for an upright object.
+--------
+Magnification is negative for an upright object.
+--------
+Positive usually means up and this conforms to that convention.
+========
+20
+--------
+In general, the refractive index depends on the wavelength of the light used.
+--------
+In general, the refractive index is independent of the wavelength of the light used.
+--------
+This is called dispersion and is pretty typical.
+========
+21
+--------
+The two slits in Young's double-slit experiment act as coherent sources of light.
+--------
+The two slits in Young's double-slit experiment act as incoherent sources of light.
+--------
+They must be coherent or the interference pattern will not be stable.
+========
+21
+--------
+The brightness of the fringes in Young's double-slit experiment decrease from the center.
+--------
+The brightness of the fringes in Young's double-slit experiment are the same.
+--------
+The fall-off in the brightness is due to the increased distance: the intensity falls of with an inverse square law. Since the edges are farther away from the source, the intensity drops.
+========
+21
+--------
+Historically, Young's experiment provided strong evidence that light has a wave-like character.
+--------
+Historically, Young's experiment provided strong evidence that light has a particle-like character.
+--------
+The interference pattern was the key. You can't get interference with classic particles and Newton's laws.
+========
+21
+--------
+An interferometer works by utilizing the interference of light.
+--------
+An interferometer works by utilizing the diffraction of light.
+--------
+The interferometer takes a beam of light and splits it in two. It is constructed to bring those two halves back together to examine the interference pattern.
+========
+21
+--------
+The diffraction pattern from a single slit consists of a bright central band surrounded by less-bright bands.
+--------
+The diffraction pattern from a single slit consists of a bright central band only.
+--------
+The second statement is what you might expect with a particle model for light: a shadow with fuzzy edges based on how they interact with the aperture. The key is the extra bands that show up: they exhibit a kind of self-interference in the beam of light.
+========
+21
+--------
+Two point objects are just resolved when the first dark fringe of one image falls on the central bright fringe of the other.
+--------
+Two point objects are can always be resolved.
+--------
+Diffraction will always effect the apparent size of the objects. This can be minimized but never completely eliminated.
+========
+21
+--------
+A diffraction grating produces bright fringes that are much narrower than those from a double slit.
+--------
+A diffraction grating produces bright fringes that are much wider than those from a double slit.
+--------
+The extra slits create more geometries for constructive and destructive interference. So there are more bands packed in the same space.
+========
+21
+--------
+Attenuation describes that fact that the intensity of light gets smaller as it moves through an optically dense medium.
+--------
+Attenuation describes that fact that light gets slower as it moves through an optically dense medium.
+--------
+Attenuation is like friction for waves in that it reduces the energy content of the wave as it travels. But the energy of a wave is related to its amplitude, not its speed. So as the energy level drops so does the intensity.
+========
+21
+--------
+The polarization of light follows from its transverse nature.
+--------
+The polarization of light follows from its longitudinal nature.
+--------
+Longitudinal waves vibrate along the line of propagation. As such, they only have one degree of freedom so cannot be polarized. A transverse waves vibrates across the line of propagation, which has two degrees of freedom. Polarization specifies how the vibration occurs within these degrees of freedom.
+========
+21
+--------
+Light cannot be transmitted through two perpendicular polarizers.
+--------
+Light can be transmitted through two perpendicular polarizers.
+--------
+The first polarizer will only transmit the vibration that is parallel to its orientation. Said differently, it blocks all the vibration perpendicular to its orientation. This means that when the beam gets to the second polarizer, there is no vibration left for it to transmit.
+========
+22
+--------
+Classical waves can energy but not momentum.
+--------
+Classical waves can carry both energy and momentum.
+--------
+Because a classical wave does not involve any mass transfer (the medium only vibrates in place), it cannot carry momentum either.
+========
+22
+--------
+The Michelson-Morley experiment was designed to detect the ``ether wind''.
+--------
+The Michelson-Morley experiment was designed to detect the ``ether bang''.
+--------
+There is no such thing as an ether bang.
+========
+22
+--------
+The speed of light is a universal speed limit.
+--------
+Under special circumstances, objects can move faster than light.
+--------
+Nope: nothing moves faster than light. Every increment that gets us closer to light speed requires more and more energy. You can get close but no matter how hard you try you can't get there.
+========
+22
+--------
+Einstein received the Nobel Prize in Physics for his work in quantum theory in 1921.
+--------
+Einstein received the Nobel Prize in Physics for his work in relativity in 1921.
+--------
+At the time, relativity was too controversial for the Nobel Prize. In the year 1905, Einstein published four major papers (sometimes called his ``miracle year''): special relativity, photoelectric effect, brownian motion, and a second relativity paper with $E = mc^2$. Because he essentially developed relativity individually we have a tendency to associate his name with it. But he also played a large role in the early development of quantum mechanics.
+========
+22
+--------
+A photon has energy proportional to its frequency.
+--------
+A photon has energy proportional to its wavelength.
+--------
+The relationship is $E = hf$.
+========
+22
+--------
+Superfluids and superconductivity are manifestations of quantum mechanics.
+--------
+Superfluids and superconductivity are manifestations of classical thermodynamics.
+--------
+``Superstuff'' is beyond classical theory: you cannot explain these unusual phenomena with Newton's laws. Something else is needed. That something is quantum mechanics.
+========
+22
+--------
+Classically, the electrons orbiting in an atom have a lifetime less than nanoseconds.
+--------
+Classically, the electrons orbiting in an atom are relatively stable.
+--------
+Yep, electromagnetic theory predicts that any charged particle will radiate energy when it accelerates. Since the electron orbit is constantly accelerating, the electron should be constantly radiating. If you crunch the numbers, all the kinetic energy of the electron would be radiated away in $10^{-11}$ seconds or so.
+========
+22
+--------
+Quantum mechanics states that electrons have both wave and particle properties.
+--------
+Quantum mechanics states that electrons have no particle properties at all.
+--------
+This is called wave-particle duality. Though very different, both light and electrons have this quality. In fact every elementary particle has this characteristic.
+========
+22
+--------
+Quantum electrodynamics (QED) combines the theories of special relativity and quantum mechanics.
+--------
+Quantum electrodynamics (QED) combines the theories of general relativity and quantum mechanics.
+--------
+Only special relativity and quantum mechanics are combined in QED. Gravity is the last remaining hold-out for the ``theory of everything''. A Nobel Prize is waiting for you if you can combine general relativity and quantum mechanics.
+========
+22
+--------
+The electron is an example of a fermion and the photon is an example of a boson.
+--------
+The electron is an example of a boson and the photon is an example of a fermion.
+--------
+Both electrons and photons have this wave-particle duality. But that does not mean they are the same. Perhaps the most fundamental distinction is this one: boson versus fermion. Fermions resist collapsing into the same state (this is called the Pauli exclusion principle) which is why the atoms do not collapse and form matter. Bosons mediate the interactions between fermions; photons mediate the electromagnetic force for example. Fermions are exclusive and bosons are gregarious.
+========

@@ -1,0 +1,2073 @@
+========
+01:Vectors and Equilibrium
+--------
+ 6 : Force tables        : P18,19,25,27
+ 6 : Force table rings   : E02
+   : Physics string      : E03
+18 : Force table pulleys : P14
+   : Graph paper         : E08,C03
+ 6 : Protractors         : E05
+ 6 : Bubble levels       : E02
+24 : 12'' rulers         : E05
+ 6 : Hanging weight sets : P35 or D34
+   : Slotted weights     : P20--22
+ 6 : Scissors            : E03
+--------
+
+--------
+\section{Force Table}
+
+First, make sure the force table is level. With the center pin of the force table in place, set up two tension vectors with an angle between them of 135$\dg$. One should use a mass of 250 grams, and the other a mass of 450 grams.
+
+Find the mass required to balance the system so that the pin can be removed without affecting the center ring (see Figure \ref{fig:force-table}). When the force table is balanced in this way, the three vectors add to zero (i.e. the resultant is equal to zero). You have now completed one method of vector addition.
+
+\tikzfig[side]{force-table}{
+\begin{tikzpicture}
+\draw [fill=black!20] (0,0) circle (1.7);
+\node (0) [draw,circle,inner sep=0.5mm] at (0,0) {};
+\node (a) [fill,circle,inner sep=0.5mm,label=0:{250 g}] at (0:2) {};
+\node (b) [fill,circle,inner sep=0.5mm,label=180:{450 g}] at (135:2) {};
+\node (c) [fill,circle,inner sep=0.5mm,label=0:{?}] at (282:2) {};
+\draw [->] (0) -- (a);
+\draw [->] (0) -- (b);
+\draw [->] (0) -- (c);
+\draw [->] (0.5,0) arc (0:135:0.5);
+\node at (67:0.5) [label=0:{135\dg}] {};
+\draw [->] (0.4,0) arc (0:282:0.4);
+\node at (180:0.4) [label=180:{?}] {};
+\end{tikzpicture}
+}{Setting up the force table}
+
+\section{Vector Addition}
+
+Now add the original two vectors geometrically on graph paper (see Figure \ref{fig:vector-add}). Remember that your vectors must be drawn to scale (use 50 g = 1 cm). Confirm that the magnitude and direction of the resultant is comparable with your results from the force table.
+
+\tikzfig[side]{vector-add}{
+\begin{tikzpicture}
+\node (0) [fill,circle,inner sep=0.5mm] at (0,0) {};
+\node (a) [fill,circle,inner sep=0.5mm] at (0:2.5) {};
+\node (b) [fill,circle,inner sep=0.5mm] at ($(a)+(135:4.5)$) {};
+\draw [->] (0) -- (a) node [pos=0.5,below=1mm] {2.5 cm};
+\draw [->] (a) -- (b) node [pos=0.5,above right] {4.5 cm};
+\draw [->] (b) -- (0) node [pos=0.5,left=1mm] {?};
+\end{tikzpicture}
+}{Vector addition from Figure \ref{fig:force-table}}
+
+Finally, add all three vectors by calculating their components. Verify that the magnitude of the vector sum is close to zero. Your answer should be close to zero since the force table is in equilibrium).
+
+\section{Additional Trials}
+
+\begin{items}
+\item Repeat the procedure for a different set of weights and a different angle.
+\item Repeat the procedure with four weights.
+\end{items}
+========
+02:Projectiles
+--------
+ 6 : Meter sticks         : B14
+ 6 : Ballistic launchers  : P57--58
+ 6 : Super balls          : Prep bench, \par Fellman drawer
+ 6 : Steel balls          : E01
+ 6 : Plastic balls        : E01
+ 6 : Meter sticks         : B14
+ 6 : Vernier calipers     : E02
+ 6 : Photogates           : D29 or D35
+ 6 : Carbon paper         : Prep room \par staff's tall \par file cabinet, \par top drawer
+12 : Wood stacking blocks : P65
+--------
+
+--------
+\section{Launching For Height}
+
+In this section, we will be using the ballistic launcher. It will be set up to launch vertically using superballs. Set up the photogate so that it measures the velocity of the ball just as it leaves the launcher (see Figure \ref{fig:lab-01-001}). Measure the diameter of the ball and input this length into the computer.
+
+Pay careful attention to how the center of the ball is aligned with the photogate. The full diameter of the ball must block the light path. This is because the photogate actually measures the length of time the beam is blocked. It calculates the velocity by dividing this duration into the input length. If the alignment is not correct, the \airquote{measured} velocities will be too high.
+
+\tikzfig[side]{lab-01-001}
+{
+\begin{tikzpicture}
+\fill (-0.5,-0.1) rectangle +(1,0.2);
+\draw [fill=black!20] (-0.15,-0.5) rectangle +(0.3,-1);
+\draw [fill=black!20] (0,-1.2) -- (-0.4,-1.6) -- (0.4,-1.6) -- cycle;
+\draw [dashed] (0,-1) -- (0,3.5);
+\foreach \t in {0,1,2,3} \draw [fill=white] (0,3.5-0.5*\t^2) circle (0.1);
+\draw [|-|] (0.8,0) -- (0.8,3.5) node [pos=0.5,fill=white] {$h$};
+\draw [fill=black!20] (2.5,0) circle (0.15);
+\draw [fill=white] (2.5,0) circle (0.1);
+\fill (2,0) +(0,-0.5) -- +(1,-0.5) -- +(1,0.1) -- +(0.8,0.1) -- +(0.8,-0.3) -- +(0.2,-0.3) -- +(0.2,0.1) -- +(0,0.1) -- cycle;
+\node at (2.5,-1) {Top View};
+\draw [dotted] (-2,0) -- (4,0);
+\end{tikzpicture}
+}{Vertical launcher with proper photogate alignment.}
+
+Using the first launch position, record the vertical launch velocity of the superball. (Do it several times to get an average.) Now measure the height difference between the photogate and the top of the trajectory of the superball (average several trials). What is the calculated value for the height based on the average velocity? Do you need to know the mass of the ball to calculate the height?
+
+Repeat this process for the second and third launch positions. This time, calculate the expected height before you actually measure it.
+
+How did the calculated and measured heights compare in each case? Was there a trend in your results? Give a possible explanation for any discrepancy.
+
+\section{Launching For Range}
+
+You will not need the photogate and computer for the remainder of the lab.
+
+Adjust the ballistic launcher to fire at an angle (record the angle). Start with a shallow angle (less than 45$\dg$). Place a piece of paper over the carbon paper to measure the average range of the ballistic launcher. You may need to raise the paper with some blocks of wood to measure the range properly (see Figure \ref{fig:lab-01-002}) 
+
+\tikzfig{lab-01-002}
+{
+\begin{tikzpicture}
+\begin{scope}[xshift=-0.25cm,yshift=-0.25cm]
+\draw [fill=black!20,rotate=-45] (-0.15,-0.5) rectangle +(0.3,1);
+\draw [fill=black!20] (0,-0.2) -- (-0.4,-0.6) -- (0.4,-0.6) -- cycle;
+\end{scope}
+\foreach \x in {0,1,...,5} \draw [fill=white] (\x,\x-\x^2/4) circle (0.1);
+\draw [dotted] (-1,0) -- (5,0);
+\draw [|-|] (0,-0.4) -- (4,-0.4) node [pos=0.5,fill=white] {$R$};
+\end{tikzpicture}
+}{Horizontal launcher with proper range measurement.}
+
+There are three different launch positions, make sure that you are using the same one each time. Get at least five data points, average them, and find the standard deviation.
+
+Use the range equation to calculate the initial velocity of the projectile.
+$$R = \frac{v^2}{g} \sin 2\theta$$
+By treating this as a textbook problem, what factor(s) do we ignore in our calculation?
+
+Predict which one will go farther, the steel ball or the plastic ball. Test your prediction (only once please!). Was once enough to tell the difference? Speculate on the reason for the difference in the range of the two balls.
+
+By varying the launch angle, find the angle that launches the plastic ball the farthest. What angle is predicted by theory? Why does this differ from the actual result that you found?
+========
+03:Strings and Pulleys
+--------
+ 6 : Airtracks            : B09,B10
+ 6 : Aircarts             : D23
+12 : Wood stacking blocks : P65
+Various : Slotted weights : P20--22
+   : Physics string       : E03
+ 6 : Scissors             : E03
+ 6 : Meter sticks         : B14
+ 6 : Meter stick holders  : E10
+ 6 : Meter stick stands   : E10
+24 : Pulleys              : ???
+--------
+
+--------
+\section{Inclined Plane}
+
+Set up the air track with one end tilted up under two blocks of wood. Measure the horizontal distance from the leg on the table to the raised leg. Measure the vertical distance on the track between these two points. Measure the diagonal distance along the track. Confirm your measurements by plugging them into the Pythagorean Theorm. Which of two of the three measurements are most reliable? Use them to calculate the angle of incline. What is the theoretical mechanical advantage of this inclined plane? 
+
+Measure the mass of the air cart. What hanging mass is required to just lift the cart up the track? Confirm by setting up the masses and turning on the air. Explain any discrepencies.
+
+Now turn off the air. How much hanging mass is required to lift the cart? What is the mechanical advantage of this system? What is the efficiency of this machine?
+
+\section{Feynman's Lever}
+
+Using a meter stick and one stand as a pivot, set up the lever system in Figure \ref{fig:lab-04-001}.  Place the pivot at 20 cm, a 100 g mass at 40 cm, a 60 g mass at 60 cm, and attach the pulley at 100 cm.
+
+\tikzfig{lab-04-001}{
+\begin{tikzpicture}
+
+\draw [fill=black!20] (-4,-0.2) rectangle (1,0);
+\draw [fill=black!20] (0,-0.2) -- (-0.4,-0.8) -- (0.4,-0.8) -- cycle;
+\draw (-4,0) -- (-4,1);
+\fill (-4.3,1.4) -- (-4.2,1) -- (-4.1,1.4) -- cycle;
+\draw (-4.2,1) circle (0.2);
+\draw (-4.4,1) -- (-4.4,-0.5);
+\draw (-4.6,-0.5) rectangle +(0.4,-0.4);
+\draw (-1.3,0) rectangle +(0.6,0.6);
+\draw (-2.2,0) rectangle +(0.4,0.4);
+
+\end{tikzpicture}
+}{Feynman's problem in virtual work.}
+
+Using the principle of virtual work, one can show that the amount of hanging mass to support the system ought to be 55 g.  Place that amount on the hanger (remember that the mass of the hanger counts in the 55 g).  This will probably \emph{not} balance the system.  What mass does balance the system?  What has been not taken into account that explains this discrepancy?
+
+\section{Block and Tackle}
+
+Set up the block and tackle system drawn in Figure \ref{fig:lab-04-002}.  Can a 50 g mass can support twice its mass as shown?  If not, why not?  What is the efficiency of the system?
+
+\tikzfig[side]{lab-04-002}{
+\begin{tikzpicture}
+\draw (-0.2,-0.4) circle (0.2); 
+\fill (-0.3,0) -- (-0.2,-0.4) -- (-0.1,0) -- cycle;
+
+\draw (0.2,-2.4) circle (0.2); 
+\fill (0.1,-2.8) -- (0.2,-2.4) -- (0.3,-2.8) -- cycle;
+\draw (0.0,-2.8) rectangle (0.4,-3.2);
+\draw (0.0,-3.2) rectangle (0.4,-3.6);
+
+\fill (0.4,0) circle (0.1);
+\draw (0.4,0) -- (0.4,-2.4);
+\draw (0,-0.4) -- (0.0,-2.4);
+\draw (-0.4,-0.4) -- (-0.4,-2.8);
+\draw (-0.6,-2.8) rectangle (-0.2,-3.2);
+
+\draw [fill=black!20] (-1,0) rectangle (1,0.2);
+\end{tikzpicture}
+}{A simple block and tackle with MA = 2.}
+
+Now set up the block and tackle system drawn in Figure \ref{fig:lab-04-003}.  Can a 50 g mass can support four times its mass as shown?  If not, why not?  What is the efficiency of the system?  Is this value consistent with the previous result?
+
+\tikzfig[side]{lab-04-003}{
+\begin{tikzpicture}
+\draw (-0.2,-0.4) circle (0.2); 
+\fill (-0.3,0) -- (-0.2,-0.4) -- (-0.1,0) -- cycle;
+
+\draw (0.2,-2.4) circle (0.2); 
+\fill (0.1,-2.8) -- (0.2,-2.4) -- (0.3,-2.8) -- cycle;
+\draw (0.0,-2.8) rectangle (0.4,-3.2);
+\draw (0.0,-3.2) rectangle (0.4,-3.6);
+
+\draw (0.6,-0.4) circle (0.2); 
+\fill (0.5,0) -- (0.6,-0.4) -- (0.7,0) -- cycle;
+
+\draw (1.0,-2.4) circle (0.2); 
+\fill (0.9,-2.8) -- (1.0,-2.4) -- (1.1,-2.8) -- cycle;
+\draw (0.8,-2.8) rectangle (1.2,-3.2);
+\draw (0.8,-3.2) rectangle (1.2,-3.6);
+
+\fill (1.2,0) circle (0.1);
+\draw (1.2,0) -- (1.2,-2.4);
+\draw (0.8,-0.4) -- (0.8,-2.4);
+\draw (0.4,-0.4) -- (0.4,-2.4);
+\draw (0,-0.4) -- (0.0,-2.4);
+\draw (-0.4,-0.4) -- (-0.4,-2.8);
+
+\draw (-0.6,-2.8) rectangle (-0.2,-3.2);
+
+\draw [fill=black!20] (-1,0) rectangle (1.8,0.2);
+\end{tikzpicture}
+}{A simple block and tackle with MA = 4.}
+========
+04:Tension and Friction
+--------
+ 6 : Air tracks             : B09, B10
+ 6 : Air carts              : D23
+ 6 : Bubble levels          : E02
+ 6 : Smart pulleys          : D33
+ 6 : Pasco universal clamps : D32
+   : Physics string         : E03
+ 6 : Scissors               : E03
+ 6 : Hanging weight sets    : P35 or D34
+Various : Slotted weights   : P20--22
+--------
+
+--------
+\section{Horizontal Air Track}
+
+Attach the smart pulley to the air track and make sure it is level. Measure the mass of the cart. Attach the weight with the string and run the string over the smart pulley. Turn on the air and use the smart pulley to measure the acceleration of the air cart pulled by the weight of two different masses: 20 and 40 g.
+
+\tikzfig{lab-02-001}{
+\begin{tikzpicture}
+\coordinate (p) at (0.3,0.1);
+\draw (p) circle (0.2);
+\fill (p) -- (0,0) -- (0,-0.1) -- cycle; 
+\draw [fill=black!20] (-5,0) rectangle (0,-0.2);
+\draw [fill=white] (-4.7,-0.1) rectangle (-3.5,0.5);
+\draw (-3.5,0.3) -- (0.3,0.3);
+\draw (0.5,0.1) -- (0.5,-0.5);
+\draw (0.3,-0.5) rectangle (0.7,-0.9);
+\end{tikzpicture}
+}{Air track with cart and hanging mass.}
+
+In order to calculate the expected acceleration, do the following. Do not plug in any numbers yet -- we are looking to derive a relevant equation for the experiment.
+
+\begin{items}
+\item Sketch a free body diagram of the hanging mass ($m_1$). Remember: free body diagrams are sketches of one body and all forces acting on that body. What are the two forces acting on the hanging mass?
+\item Apply Newton's second law to the hanging mass. (Pay attention to signs!) Remember that this is not an equilibrium problem: the string tension is \emph{not} equal to the weight of the mass. Solve for the tension in the connecting string.
+\item Now sketch a second free body diagram of the cart ($m_2$). What are the three forces acting on the cart? The two forces in the vertical direction cancel, so only the horizontal force enters into Newton's second law.
+\item Apply Newton's second law to the horizontal motion of the cart and solve for the acceleration of the system.
+\end{items}
+
+Plug in the values for your previous trials. How does the theory compare with your measured values?
+
+Calculate the acceleration you would expect if the air cart were pulled by a mass of 25 g. Verify your answer by actually trying it out.
+
+\section{Static Friction}
+
+You will not need the computer for the remainder of the lab.
+
+Use the same set up as in previous section but without the air turned on so there is plenty of friction. Begin with a small mass hanging over the pulley. Increase the mass hanging until the cart just begins to slide. This is the threshold of the static friction force. Calculate the coefficient of static friction for the system.
+
+Now add a 50 g mass to the cart. Calculate the extra hanging mass that can be supported without sliding. Verify your calculation by adding the appropriate amount of mass to the hanger.
+
+\tikzfig{lab-02-001}{
+\begin{tikzpicture}
+\coordinate (p) at (0.3,0.1);
+\draw (p) circle (0.2);
+\fill (p) -- (0,0) -- (0,-0.1) -- cycle; 
+\draw [fill=black!20] (-5,0) rectangle (0,-0.2);
+\draw [fill=white] (-4.7,-0.1) rectangle (-3.5,0.5);
+\draw (-4.3,0.5) rectangle (-3.9,0.9);
+\draw (-3.5,0.3) -- (0.3,0.3);
+\draw (0.5,0.1) -- (0.5,-0.5);
+\draw (0.3,-0.5) rectangle (0.7,-0.9);
+\end{tikzpicture}
+}{Air track with cart and hanging mass for friction study.}
+========
+05:Rotating Frames
+--------
+ 6 : Rotational apparatus : P03,08,09,10
+ 6 : Scissors             : E03
+   : Physics string       : E03
+ 6 : Hanging weight sets  : P35 or D34
+ 6 : Stopwatches          : E04
+--------
+New rotational platform base with both centripetal force accessory kit 
+posts attached, as well as the square black mass, and clamp-on pulley
+--------
+\section{Initial Set-up}
+
+When an object of mass $m$ is placed in a frame rotating with an angular velocity of $\omega$, it experiences a centrifugal force given by: 
+$$F = mr\omega^2$$
+where $r$ is the distance of the mass from center of rotation. Further, if $T$ represents the period of the rotation we have $\omega = 2\pi/T$.  This allows us to rewrite the previous equation as
+$$F = 4\pi^2mr/T^2$$
+Today we will be verifying this equation.
+
+First you must level the rotational apparatus. This experiment requires the apparatus to be extremely level. If the track is not level, the experimental results will be wildly different from the theoretical results. 
+
+\tikzfig[side]{lab-06-001}{
+\begin{tikzpicture}
+\clip (-3,-1.5) rectangle (3,2);
+\draw [fill=black!20] (-0.1,-0.1) -- (-0.4,-1.5) -- (0.4,-1.5) -- (0.1,-0.1) -- cycle;
+\draw [fill=black!20] (-2,0) rectangle (2,-0.1);
+\fill (-0.3,-0.1) rectangle (0.3,-0.3);
+\draw [fill=black!20] (-0.3,0) rectangle (0.3,2);
+\draw [fill=black!20] (-1.3,0) rectangle (-1.1,1.6);
+\fill (-2,0) rectangle (-1.6,0.3);
+\draw (-1.2,1.5) -- (-0.8,0.3);
+\draw (-0.8,0.3) -- (0,0.3) -- (0,1.7);
+\draw [fill=white] (0,0.3) circle (0.05);
+\draw [fill=white] (-0.2,1.2) rectangle (0.2,1.3);
+\fill (-0.6,0.3) circle (0.05);
+\fill (-0.8,0.5) circle (0.05);
+\fill (-1.0,0.3) circle (0.05);
+\draw [fill=white] (-0.8,0.3) circle (0.2);
+\end{tikzpicture}
+}{Centripetal apparatus initial leveling.}
+
+Carry out the following steps:
+\begin{items}
+\item Purposely make the apparatus unbalanced by attaching the black 300 g square mass onto the end of the aluminum track that is nearest the brass object with 3 hooks (see Figure \ref{fig:lab-06-001}).
+\item Adjust the leveling screw on one of the legs of the base until the end of the track with the square mass is aligned over the leveling screw on the other leg of the base.
+\item Now rotate the track 90$\dg$ so it is parallel to one side of the A-shaped base and adjust the other leveling screw until the track will stay in this position.
+\item The track is now level and it should remain at rest regardless of its orientation. Once level, do not move the base of your apparatus! Remove the 300 g square mass and set it aside. You will no longer need it for the rest of the experiment.
+\end{items}
+
+Now we practice timing. Try to spin the rotating platform at a nearly constant rate. Measure the time it takes to make ten complete rotations. You can see the marker bob up and down -- try to keep it in the same position during the whole measurement. Divide this time by ten to obtain the period of motion. You will be doing this quite a bit, so practice until you are comfortable. This will take at least two people -- one to spin, the other to count and use the stop watch. Remember to start counting with zero so that when you count one it corresponds to one revolution.
+
+\section{First Trial}
+
+Attach a clamp-on pulley and a small hanging mass to the end of the apparatus arm. Calculate the weight of the hanging mass. We will be using later in our calculation.
+
+Now select a radius by aligning the line on the side post with any desired position on the measuring tape. While pressing down on the side post to assure that it is vertical, tighten the thumb screw on the side post to secure its position. Record this radius.
+
+The 3-hooked-object must hang perfectly vertically. On the center post, adjust the spring bracket vertically until the string from which the 3-hooked object hangs is aligned with the vertical line on the post. If there is too much slack in the string, wind the extra string securely around the hook it is fastened to.
+
+Align the indicator bracket on the center post with the orange marker. This is done by sliding the bracket vertically and tightening the thumb screw when it is at the correct level.
+
+\tikzfig[side]{lab-06-002}{
+\begin{tikzpicture}
+\clip (-3,-1.5) rectangle (3,2);
+\draw [fill=black!20] (-0.1,-0.1) -- (-0.4,-1.5) -- (0.4,-1.5) -- (0.1,-0.1) -- cycle;
+\draw [fill=black!20] (-2,0) rectangle (2,-0.1);
+\fill (-0.3,-0.1) rectangle (0.3,-0.3);
+\draw [fill=black!20] (-0.3,0) rectangle (0.3,2);
+\draw [fill=black!20] (-1.3,0) rectangle (-1.1,1.6);
+
+\draw (-1.2,1.5) -- (-1.2,0.5);
+\draw (-1.2,0.3) -- (0,0.3) -- (0,1.7);
+\draw [white] (-0.2,1.2) rectangle (0.2,1.3);
+\draw [fill=white] (-0.2,0.8) rectangle (0.2,0.9);
+\draw (0,0.3) -- (-2.3,0.3);
+\draw (-2.3,0.1) circle (0.2);
+\fill (-2,-0.1) -- (-2.3,0.1) -- (-2,0);
+\draw (-2.5,0.1) -- (-2.5,-0.5);
+\fill (-2.6,-0.5) rectangle (-2.4,-0.7);
+\fill (-1.0,0.3) circle (0.05);
+\fill (-1.2,0.5) circle (0.05);
+\fill (-1.4,0.3) circle (0.05);
+
+\draw [fill=white] (-1.2,0.3) circle (0.2);
+\draw [fill=white] (0,0.3) circle (0.05);
+\end{tikzpicture}
+}{Centripetal apparatus with weight and no rotation. Note lower marker location.}
+
+Once these adjustments have been made, remove the mass that is hanging over the pulley, and remove the clamp-on pulley.
+
+Rotate the apparatus, increasing the speed until the orange indicator is centered in the indicator bracket on the center post. This indicates that the string supporting the hanging object is once again vertical thus the 3-hooked-object is at the desired radius. The centripetal force the spring provides is equal to the earlier weight of the hanging mass.
+
+\tikzfig[side]{lab-06-003}{
+\begin{tikzpicture}
+\clip (-3,-1.5) rectangle (3,2);
+\draw [fill=black!20] (-0.1,-0.1) -- (-0.4,-1.5) -- (0.4,-1.5) -- (0.1,-0.1) -- cycle;
+\draw [fill=black!20] (-2,0) rectangle (2,-0.1);
+\fill (-0.3,-0.1) rectangle (0.3,-0.3);
+\draw [fill=black!20] (-0.3,0) rectangle (0.3,2);
+\draw [fill=black!20] (-1.3,0) rectangle (-1.1,1.6);
+
+\draw (-1.2,1.5) -- (-1.2,0.5);
+\draw (-1.2,0.3) -- (0,0.3) -- (0,1.7);
+\draw [white] (-0.2,1.2) rectangle (0.2,1.3);
+\draw [fill=white] (-0.2,0.8) rectangle (0.2,0.9);
+\draw [fill=white] (0,0.3) circle (0.05);
+\fill (-1.0,0.3) circle (0.05);
+\fill (-1.2,0.5) circle (0.05);
+\fill (-1.4,0.3) circle (0.05);
+\draw [fill=white] (-1.2,0.3) circle (0.2);
+
+\node at (-2.3,0.3) [forcearrow,rotate=180,left] {};
+\node at (-2.3,0.3) [left] {$F_\text{cfg}$};
+\end{tikzpicture}
+}{Centripetal apparatus while rotating. Note the same lower marker location as before.}
+
+Maintaining this speed, use a stopwatch to time ten revolutions. Use this information to calculate the speed of the 3-hooked-object.
+
+Remove the 3-hooked-object from the apparatus and measure its mass.
+
+Use these values to verify the equation $F = mr\omega^2$.
+
+\section{Additional Trials}
+
+If the mass of the 3-hooked-object were changed to half of its current value, what happens to the centripetal force?  Since the spring is set up for a particular force, what will the required speed be to create equilibrium? 
+
+Now carry out the experiment by removing the two outside masses from the 3-hooked object, effectively reducing its mass by half. Verify the equation $F = mr\omega^2$ is obeyed once again.
+
+Repeat the experiment using a different radius for the 3-hooked-object.
+========
+06:Energy in Motion
+--------
+ 6 : Racquetballs              : Prep bench, \par Fellman drawer
+ 6 : Meter sticks              : B14
+ 6 : Ballistic launchers       : P57-58
+12 : Superballs                : Prep bench, \par Fellman drawer
+ 6 : Photogates                : D29 or D35
+ 6 : Airtracks                 : B09,B10
+ 6 : Aircarts with flag        : D23
+12 : Wood stacking blocks      : P65
+ 6 : Height-finder protractors : E01
+ 6 : 12'' rulers               : E05
+--------
+
+--------
+\section{Gravitational Potential Energy}
+
+Drop a racquetball from the height of one of the counters, and measure the height of the bounce. Do this at least five times to get an average of the bounce height.
+
+What is the initial potential energy of the ball? What is the potential energy at the height of the first bounce?
+
+How much mechanical energy was lost? Identify two ways in which mechanical energy could have been dissipated.
+
+\section{Conservation of Energy in Vertical Motion}
+
+This section is a repeat of the first part of the projectile lab earlier in the term. In this case we will use energy to analyze the motion.
+
+Set up the photogate so that it measures the velocity of the ball just as it leaves the launcher. Using the first launch position, record the vertical launch velocity of the superball. (Do it several times to get an average.)
+
+\begin{itemize}
+\item How much kinetic energy does the ball have when it is launched?
+\item How much kinetic energy does the ball have as it reaches the top of its trajectory?
+\item What must be the increase in potential energy between these two points?
+\end{itemize}
+
+Now measure the height difference between these two points (average several trials), and calculate the corresponding change in the potential energy of the superball. Does this value agree with your answer for the previous step?
+
+Repeat this process for the second and third launch positions. This time, calculate the expected height before you actually measure it. Do you need to know the mass of the ball to calculate the height?
+
+How did the calculated and measured heights compare in each case? Was there a trend in your results? Give a possible explanation for any discrepancy.
+
+\section{Conservation of Energy on an Incline}
+
+Set up the air track with one end tilted up. Compress the bumper of the air cart against the bottom end of the track, and then release it quickly so that it travels a good distance up the track before starting back down. 
+
+Use the photogate to measure the velocity of the cart shortly after it is released, and also record the highest position reached by the cart.
+
+\begin{itemize}
+\item How much kinetic energy does the cart have as it is passing through the photogate?
+\item How much kinetic energy does the cart have at its highest position on the track?
+\item What must be the increase in potential energy between these two points?
+\end{itemize}
+
+Think of a way to measure the difference in potential energy between these two points. Do the values agree within the range of uncertainty?
+
+Try the process one more time for a different initial velocity.
+========
+07:Air Cart Collisions
+--------
+ 6 : Airtracks            : B09,B10
+12 : Aircarts with flag   : D23
+12 : Photogates           : D29 or D35
+   : Slotted weights : P20--22
+ 6 : Rulers               : E05
+ 6 : Scissors             : E03
+   : Green tape           : Prep bench
+--------
+
+--------
+You will be setting up multiple collisions, adding weight to the air carts when necessary. For each one, use the photogates to measure the velocities of each cart both before and after the collision. 
+
+Remember that the photogates do not recognize direction, so you must include the appropriate signs for velocity. Also, be sure to verify the green flags clear the photogates in order to get an accurate velocity measurement (see Figure \ref{fig:lab-03-001}). You may want to replace the flags if they do not hang straight. 
+
+\tikzfig[side]{lab-03-001}{
+\begin{tikzpicture}
+\draw [fill=black!20] (-5,0) rectangle (0,-0.2);
+\draw [dotted] (-5.5,0.8) -- (0.5,0.8);
+\draw [fill=white] (-4.7,-0.1) rectangle (-3.5,0.5);
+\draw [fill=white] (-4.1,0.5) -- (-4.1,0.9) -- (-4.4,0.9) -- (-4.4,0.7) -- (-4.1,0.7);
+\draw [fill=white] (-2.2,-0.1) rectangle (-1.0,0.5);
+\draw [fill=white] (-1.6,0.5) -- (-1.6,0.9) -- (-1.9,0.9) -- (-1.9,0.7) -- (-1.6,0.7);
+\fill (-3.7,0.7) rectangle (-3.5,1.2);
+\fill (-1.2,0.7) rectangle (-1.0,1.2);
+\node at (-3.5,1.2) [pin=45:{Photogates}] {};
+\node at (-1.2,1.2) [pin=135:{}] {};
+\end{tikzpicture}
+}{Air track collisions with photogate positions.}
+
+Measure the lengths of the flags and the masses of all the carts. 
+
+For this lab, I am using the convention that $v$ refers to initial velocities and $u$ refers to final velocities.
+
+\section{Inelastic Collisions}
+
+Use the air carts with velcro so they stick together after colliding. Input the correct lengths into the computer. Place the second cart between the photogates and slide the first into it.
+
+When the second mass is initially at rest ($v_2 = 0$) the equation for the final velocity is:
+$$u_1 = u_2 = u = \left(\frac{m_1}{m_1 + m_2}\right) v_1$$
+
+Perform the following trials:
+\begin{items}
+\item A cart collides inelastically with another initially at rest having approximately the same mass.
+\item A cart collides inelastically with another initially at rest having approximately twice as much mass.
+\item A cart collides inelastically with another initially at rest having approximately half as much mass.
+\end{items}
+
+Verify that the total momentum before and after these collisions is conserved.
+
+\section{Elastic Collisions}
+
+Now use the air carts with springs so they bounce after colliding. Input the correct lengths into the computer. Place the second cart between the photogates and slide the first into it.
+
+When the second mass is initially at rest ($v_2 = 0$) the equation for the final velocity is:
+
+$$u_1 = \left(\frac{m_1 - m_2}{m_1 + m_2}\right) v_1$$
+$$u_2 = \left(\frac{2m_1}{m_1 + m_2}\right) v_1$$
+
+Perform the following trials:
+\begin{items}
+\item A cart collides elastically with another initially at rest having approximately the same mass.
+\item A cart collides elastically with another initially at rest having approximately twice as much mass.
+\item A cart collides elastically with another initially at rest having approximately half as much mass.
+\end{items}
+
+Verify that both the total momentum and the total kinetic energy of these systems is conserved.
+
+\section{Explosive Fission}
+
+Continue to use the carts with springs. Place both carts in between the photogates. Tie the carts together with the thread. Release the carts by cutting the thread and measure the resulting velocities.
+
+Perform the following trials:
+\begin{items}
+\item A cart separates explosively from another having approximately the same mass.
+\item A cart separates explosively from another having approximately twice as much mass.
+\item A cart separates explosively from another having approximately half as much mass.
+\end{items}
+
+What is the total initial momentum in all three trials? Confirm that momentum is conserved after the collision. Where is the kinetic energy of the system coming from?
+========
+08:Torque and Angular Momentum
+--------
+ 6 : Rotational apparatus   : Room 225, Cupboard 69-70
+ 6 : Bubble levels          : E02
+ 6 : Smart pulleys          : D33
+ 6 : Pasco universal clamps : D32
+   : Thread                 : E03
+ 6 : Scissors               : E03
+ 6 : Vernier calipers       : E02
+ 6 : 12'' rulers            : E05
+ 6 : Hanging weight sets    : P35 or D34
+--------
+Old introductory rotational apparatus (big box only) 
+--------
+\section{Initial Trial}
+
+For this exercise, we will be using a rotational apparatus. Make sure the platter is level. Using the rotating platter alone, apply a torque to it by wrapping string around one of the center spools, then running the string over the smart pulley and hanging weights (50 grams or less) from the loose end. 
+
+\tikzfig{lab-05-001}{
+\begin{tikzpicture}
+\draw [fill=black!20] (-0.1,-0.1) -- (-0.4,-1.0) -- (0.4,-1.0) -- (0.1,-0.1) -- cycle;
+\draw [fill=black!20] (-2,0.1) rectangle (2,-0.1);
+\draw [fill=white] (-0.3,-0.1) rectangle (0.3,-0.3);
+\draw (-0.3,-0.2) -- (2.5,-0.2);
+\draw (2.5,-0.4) circle (0.2);
+\fill (1.9,-1.0) -- (2.5,-0.4) -- (2,-1.1);
+\draw (2.7,-0.4) -- (2.7,-1.2);
+\draw [fill=white] (2.5,-1.2) rectangle (2.9,-1.6);
+\node at (-2.5,-0.5) [left] {Side View};
+
+\node at (-2.5,-4.0) [left] {Top View};
+\draw [fill=white] (2.5,-3.8) rectangle (2.9,-4.2);
+\draw [fill=white] (2.3,-4.1) rectangle (2.7,-3.9);
+\draw (0,-4) -- (2.7,-4);
+\draw [fill=black!20] (0,-4) circle (2);
+\end{tikzpicture}
+}{Rotational apparatus with initial set-up.}
+
+Measure the tangential acceleration using the computer interface. Use this tangential acceleration and the radius of the spool to calculate the angular acceleration of the system.
+
+Calculate the torque that is applied to the disk by the force of the hanging weights: $\tau = F \ell$, where the lever arm ($\ell$) is the radius of the spool around which the string was wound.
+
+Using the angular acceleration and the torque calculated above, determine the moment of inertia of the platter using Newton's second law for rotational motion.
+
+\section{Second Trial}
+
+Now, remove the metal ring from the box and add it to the apparatus.
+
+\tikzfig{lab-05-002}{
+\begin{tikzpicture}
+\draw [fill=black!20] (-0.1,-0.1) -- (-0.4,-1.0) -- (0.4,-1.0) -- (0.1,-0.1) -- cycle;
+\draw [fill=black!20] (-2,0.1) rectangle (2,-0.1);
+\fill (-1.5,0.1) rectangle (1.5,0.3);
+\draw [fill=white] (-0.3,-0.1) rectangle (0.3,-0.3);
+\draw (-0.3,-0.2) -- (2.5,-0.2);
+\draw (2.5,-0.4) circle (0.2);
+\fill (1.9,-1.0) -- (2.5,-0.4) -- (2,-1.1);
+\draw (2.7,-0.4) -- (2.7,-1.2);
+\draw [fill=white] (2.5,-1.2) rectangle (2.9,-1.6);
+\node at (-2.5,-0.5) [left] {Side View};
+
+\node at (-2.5,-4.0) [left] {Top View};
+\draw [fill=white] (2.5,-3.8) rectangle (2.9,-4.2);
+\draw [fill=white] (2.3,-4.1) rectangle (2.7,-3.9);
+\draw (0,-4) -- (2.7,-4);
+\draw [fill=black!20] (0,-4) circle (2);
+\fill (0,-4) circle (1.5);
+\draw [fill=black!20] (0,-4) circle (1.3);
+\end{tikzpicture}
+}{Rotational apparatus with additional mass ring.}
+
+Using the appropriate formula for an object of this shape calculate the moment of inertia of the ring.  Recognizing the fact that moments of inertia are additive calculate the total moment of inertia that would result from adding the ring to your system.
+
+Using Newton's second law for rotational motion, calculate the angular acceleration that should result from adding the ring to your system. Convert this into a tangential acceleration that can be measured with the smart pulley.
+
+Now measure the resulting acceleration, and compare it to the value that you just calculated.
+========
+09:Simple Harmonic Motion
+--------
+   : Thread                    : E03
+ 6 : Scissors                  : E03
+ 6 : Photogates                : D29 or D35
+ 6 : Meter Sticks              : B14
+ 6 : Height-Finder Protractors : E01
+ 6 : Stopwatches               : E04
+ 6 : Small Springs             : P04
+   : Graph Paper               : E08 or C03
+ 6 : Force Sensors             : D26
+ 6 : Large Springs             : P04
+ 6 : Lab Stands                : P25, P27
+ 6 : Pendulum Clamps           : E06
+ 6 : Hanging Weight Sets       : P35 or D34
+ 6 : Pendulum Weight Sets      : E06
+--------
+
+--------
+\section{Simple Pendulum}
+
+Recall that the frequency for a pendulum is 
+\begin{equation}
+f = \frac{1}{2 \pi}\sqrt{\frac{g}{L}}
+\end{equation}
+
+\subsection{Basic Simple Pendulum}
+
+Set up a pendulum the lab stand, clamp, thread, and a hanging mass. Orient the photogate so that the pendulum swings through the sensor.
+
+Using the formula above, calculate the frequency of the pendulum you have constructed.
+
+Using the Data Studio feature specifically designed for a photogate and pendulum, select to view the period, $T$, of your pendulum in table format. Verify the accuracy of this equation for the pendulum you have constructed by calculating the average measured frequency:
+
+Calculate the percent difference between your calculated and measured values and list some possible sources of error.
+
+\subsection{Frequency Dependence on Mass}
+
+Now explore the effect on period of changing the mass. Double the mass on your pendulum and measure the average frequency. Is there a difference? If so, why?
+
+\subsection{Frequency Dependence on Initial Angle}
+
+Recall that our equation for frequency, $f$ , was derived using the assumption that $\theta < 10\dg$. Measure and record the period for several larger amplitudes. Describe the effect that progressively increasing $\theta$ has on the validity of the equation for frequency.
+
+\subsection{How to Make a Clock}
+
+Suppose you were making a clock, and you wanted to create a pendulum with a period of exactly 1.00 second. What would the corresponding frequency be? Calculate the length of this pendulum. Set up a pendulum of this length, and verify your result.
+
+\section{Mass on a Spring}
+
+Suppose that instead you wanted to have a mass on a spring oscillate with a period of 1.00 second. Recall that the frequency for a mass on a spring is:
+
+\begin{equation}
+f = \frac{1}{2 \pi}\sqrt{\frac{k}{m}}
+\end{equation}
+
+\subsection{Determine Spring Constant}
+
+In order to construct our clock we need to determine our spring constant. Hang the small spring from the lab stand and clamp. Measure the distance between the table and the bottom of the spring. Now hang five difference masses from the spring and measure the distance between the table and the bottom of the spring (extension = current distance – initial distance).
+
+\subsection{How to Make a Clock (Again)}
+
+Now that you have a good idea of the value of the spring constant for the small spring, calculate the mass that you would want to have oscillating on this particular spring in order to observe a period of 1.00 second.
+
+Does it work? Test your calculation and describe your result including possible sources of error.
+========
+10:Archimedes' Principle
+--------
+ 6 : Raquetballs              : Prep bench, \par Fellman drawer
+ 6 : Superballs               : Prep bench, \par Fellman drawer
+ 6 : Rubber Stoppers (\#10-0) : K56
+ 6 : Cork Stoppers            : K50
+ 6 : Vernier Calipers         : E02
+ 6 : Cork Rafts               : E01
+ 6 : Force Sensors            : D26
+ 6 : Rulers                   : E05
+ 6 : Beakers (600 mL)         : J23 \& J29
+   : Thread                   : E03
+50 : Pennies                  : I10
+ 6 : Scissors                 : E03
+--------
+
+--------
+\section{Buoyant Force}
+
+\subsection{Measure Buoyant Force Directly}
+
+Zero the force sensor by holding it vertically, and pressing the `tare' button with nothing suspended from the hook. This calibrates the internal voltage of the sensor to zero force. 
+
+Now tie a string around the rubber stopper, and suspend it from the force sensor to measure its weight. This works because the force sensor measures the force required to counter-balance the weight of the stopper. Record this weight reading. With the rubber stopper still suspended from the force sensor, submerge the stopper completely in a beaker of water (make sure that the force sensor doesn't get wet). Record the new reading of the force sensor.
+
+Using a free body diagram below, show all forces acting on the submerged stopper including the buoyant force present.
+
+\tikzfig[side]{bouyant-stopper}{
+\begin{tikzpicture}
+\draw [fill=black!10] (-1,0.7) -- (1,0.7) -- (0.7,-0.7) -- (-0.7,-0.7) -- cycle;
+\node (Fs) [forcearrow,rotate=90] at (0,1.3) {};
+\node (Fb) [forcearrow,rotate=90] at (0.3,-1.3) {};
+\node (Fw) [forcearrow,rotate=-90] at (-0.3,-1.3) {};
+\node [right=0.25cm] at (Fs) {$F_{sensor}$};
+\node [right=0.25cm] at (Fb) {$F_{bouyant}$};
+\node [left=0.25cm] at (Fw) {$F_{weight}$};
+\node at (0,0) {$F_{net} = 0$};
+\end{tikzpicture}
+}{Forces on Floating Stopper}
+
+\subsection{Calculate Buoyant Force}
+
+The formula for the volume of the stopper is:
+\begin{equation}
+V = \tfrac{1}{3} \pi (r_1^2 + r_1 r_2 + r_2^2) h
+\end{equation}
+Now calculate the volume of the rubber stopper. Calculate the mass and weight of the displaced water (recall that the density of water is 1000 kg/m$^3$ and density = mass/volume).
+
+Archimedes' Principle states that the buoyant force is equal to the weight of the displaced water. Verify this by calculating the percent difference between the two.
+
+\section{Floating}
+
+Calculate the volume of a racquetball. Calculate the mass of water that would be displaced by the entire racquetball. Compare the weight of the racquetball to the weight of the water it can displace. According to Archimedes, will it float? Test your result.
+
+Using Archimedes' principle, determine the percentage of the racquetball that will be under water as it floats. Test your result visually.
+
+\section{Whatever Floats Your Boat}
+
+\subsection{Initial Raft Measurements}
+
+Soak the cork raft until it is saturated with water. We want the raft to be wet for any measurements, since it will be wet when it is floating. Calculate the volume of the wet raft. Measure the mass of the wet raft. Calculate the weight of the wet raft.
+
+\subsection{Calculate Maximum Load}
+
+Similar to the previous calculation, calculate the buoyant force if it were entirely submerged. Use this value to determine the maximum number of pennies that you could stack on top of the raft without sinking it.
+
+Determine the average mass of a penny by measuring the mass of 10 and dividing by 10. How much buoyant force is available to support the pennies? How many pennies can the raft support? Round your calculation down to the nearest penny.
+
+\subsection{Test Maximum Load}
+
+When you are certain of your calculation, place that number of pennies on the raft, verifying that it does not sink. Then verify that placing one more penny on the raft does indeed sink it. Describe your results.
+========
+11:Calorimetry
+--------
+ 6 : Digital Thermometers (each with 2 leads) : Locking cabinet \par in Geology \par prep room
+12 : Styrofoam 500mL cups                     : K13
+ 6 : Square Styrofoam lid with no holes       : K13
+12 : Beakers (400 mL)                         : J22
+ 1 : Tub of  Ice                              : 
+--------
+
+--------
+\section{Set Up}
+
+In this experiment we will be studying the transfer of heat. The timing can be fairly quick, so read through completely through this part before starting the measurements.
+
+A calorimeter is a system designed to investigate the transfer of heat. The system is isolated so the total heat in the system is constant. That means that any heat lost in one part must be gained by another.
+
+Measure the mass of the empty calorimeter. Be sure to include the thermometer also. Fill the calorimeter to roughly 2/3 full with hot tap water. Measure the mass of both. 
+
+Obtain several ice cubes directly from the freezer, noting the temperature of the freezer. Measure the temperature of the water just before adding the ice cubes and closing the calorimeter.
+
+\section{Mix and Measure}
+
+Add the ice cubes and gently swirl the mixture continuously, and record the final temperature of the mixture when all of the ice has just melted and calculate the change in temperature for the hot water and the ice cubes.
+
+Measure the total mass of the calorimeter. Calculate the mass of the mixture and the mass of the original ice cubes.
+
+Now we can calculate the heat lost by the hot water using the equation $Q = mc(\Delta T)$. This heat lost must flow into the ice cubes. This heat both melts the ice and raises the temperature of the melted ice cubes up to the final temperature. Calculate the heat required for both of these changes.
+
+Determine the percent difference between the heat lost and the heat gained and list possible sources of error in this experiment.
+========
+12:Gas Laws
+--------
+ 6 : Pressure Sensor                  : D11
+ 6 : Heat Engine/Gas Apparatus        : E09
+ 6 : Air Chambers                     : E09
+ 6 : Hanging Weight Sets              : P35 or D34
+12 : Styrofoam Cups (Large)           : K13
+12 : Thermometers (110$\dg$, no cork) : K16
+--------
+
+--------
+\section{Boyle's Law}
+
+Plug in the Pressure Sensor and connect the Gas Law Apparatus to the port labeled $P_1$. Use the diameter of the piston written on the side of the Gas Law Apparatus to calculate the surface area of the piston. You will need this value later in the lab.
+
+Verify that the clamps on the Gas Law Apparatus are both open. Expand the piston to 80 mm and clamp the open port shut. Make sure the clamp is shut tightly.
+
+Establish your baseline pressure. Do this by starting a run with no weight on the piston. Record this baseline. You will be measuring the pressure differences from this baseline.
+
+Place the 1000 g mass on the plunger. Measure the pressure now. The true pressure differential is the difference between these two numbers.
+
+Notice how the plunger continues to slowly lose volume after the initial reduction. This is because the container is not completely air tight – gas is leaking out of the chamber. Wait until the volume on the cylinder is at a convenient measuring spot (say 65 mm) and remove the mass. Record the height of the plunger now. Calculate the volume of the gas before and after removal of the 1000 g mass.
+
+Since the pressure of the gas after removal of the mass is atmospheric pressure, record the air pressure in the room. The pressure of the gas while the mass was on the piston is the pressure differential measured with the pressure sensor plus atmospheric pressure. Calculate this pressure:
+
+Verify Boyle's law by multiplying the pressure and volume before and after. Speculate on possible sources of error:
+
+\section{Charles' Law}
+
+Disconnect the Gas Law Apparatus from the pressure sensor and set the pressure sensor aside. Open up both clamps to allow air to flow freely into and out of the cylinder. Connect the Air Chamber (with stopper) where the pressure sensor had been.
+
+Place the Gas Law Apparatus on its side (notice how on the top one of the edges is not flat \ldots place that edge on the table). Expand cylinder height to approximately 70 mm and close the clamp to the open port. Record the height of the cylinder once the system is closed.
+
+Prepare two water baths (i.e., Styrofoam cups full of water). One with hot tap water, one with cold tap water. Measure the temperature of the two baths (convert to Kelvin).
+
+Now insert the Air Chamber into the warm bath. You can remove the thermometer if it is too awkward. Record the height of the piston now. Calculate the corresponding volume.
+
+Now insert the Air Chamber into the cold bath. Record the height of the piston now. Calculate the corresponding volume.
+
+Now, the volume of gas must also include the volume of the Air Chamber itself. Measure the diameter and height in order to calculate its volume.
+
+Verify Charles' Law by dividing the total volume by the temperature before and after. Speculate on possible sources of error:
+========
+13:Waves on Strings
+--------
+ 6 : Power Amplifiers with cord : D16 \& D17
+ 6 : Mechanical Vibrators       : D15
+ 6 : Clamps with metal bar      : P15--P17
+ 6 : Clamps with pulley         : P15--P17
+ 6 : Scissors                   : E03
+12 : Banana-plug wires          : Geology \par prep room
+ 1 : 2-meter stick              : B14
+   : Elastic string             : D14
+   : Physics string             : E03
+ 6 : Hanging Weight Sets        : P35 or D34
+--------
+
+--------
+For all waves, the wave speed, $v$, is equal to the product of the frequency, $f$, and the wavelength, $\lambda$:
+\begin{equation} \label{wave-eqn}
+v = f\lambda
+\end{equation}
+For waves in a string, the wave speed, $v$, is determined by
+\begin{equation} \label{wave-speed}
+v = \sqrt{T/\mu}
+\end{equation}
+where $T$ is the tension in the string, and $\mu$ is the mass per length, or linear density of the string ($\mu = m/L$).
+
+\section{Initial Set-Up}
+
+Set up a standing wave in the string by varying the tension and the frequency. Make sure that you don't hang so much weight from the end of the string that it stretches the string by a noticeable amount. You will be able to achieve the best result by fine-tuning the frequency until you clearly see a standing wave of maximum amplitude. 
+
+Calculate the wavelength of the standing wave by dividing the length of the string that is vibrating, by the number of full wavelengths it contains. 
+
+Calculate the wave speed using equation \eqref{wave-eqn}.
+
+\section{Find the Harmonics}
+
+Now, considering the total length of the vibrating string, calculate the wavelengths of the first 10 harmonics for your system. 
+
+For each wavelength, use the wave speed, $v$, for your system to determine the corresponding harmonic frequency. 
+
+Now adjust the mechanical vibrator to each of these frequencies, in turn, and verify that these are indeed the first ten harmonic frequencies of your system.
+
+\section{Verify Linear Density}
+
+Now using equation \eqref{wave-speed}, with the value for $v$ that you calculated, and the tension in the string ($T= mg$), solve for $\mu$, the linear density of the string.
+
+Now, remove the string from the setup, measure its mass and its entire length (undo any knots), and compare your value for $\mu$ obtained in this manner, to the value obtained in the previous step
+
+\section{Rinse and repeat}
+
+Repeat the previous steps for a different type of string.
+========
+14:Harmonics and Sound Waves
+--------
+ 6 : Resonance Tubes                     : Computer room
+ 6 : 512 Hz Tuning Forks (thickest ones) : E02
+ 6 : Rubber Hammers                      : E11
+ 6 : 100-mL beakers                      : J19
+ 6 : 600-mL beakers                      : J23 \& J29
+ 6 : Power Amplifiers with cord          : D16 \& D17
+ 6 : Pasco Speakers                      : D10
+ 6 : Sound Sensors                       : D09
+ 6 : Meter Sticks                        : B14
+--------
+
+--------
+Today you will be creating standing sound waves of a specific frequency in a tube open at one end. The length of the tube will be adjusted by changing the level of water in the tube. This will be done by raising and lowering the attached reservoir can along its support rod. This procedure will allow for several different wave patterns to be observed:
+
+\tikzfig[]{standing-waves-tube}{
+\begin{tikzpicture}
+\foreach \d/\h in {0/3.5,15/2.5,30/1.5,45/0.5}
+{
+\begin{scope}[xshift=\d mm]
+\draw [domain=0:4,samples=50,rotate=90] plot (\x,{0.4*cos(\x*180)});
+\draw [domain=0:4,samples=50,rotate=90] plot (\x,{-0.4*cos(\x*180)});
+\draw [fill=black!20] (-0.5,0.0) rectangle (0.5,\h);
+\draw (-0.5,4.0) -- (-0.5,0) -- (0.5,0) -- (0.5,4.0);
+\end{scope}
+}
+\end{tikzpicture}
+}{Standing Wave Patterns}
+ 
+\section{A Couple Things to Note}
+
+In reality, unlike the picture in Figure \ref{fig:standing-waves-tube}, the top edge of the tube does not coincide precisely with the position of an antinode. You will need to take this into account later.
+
+A tuning fork will be held above the tube and repeatedly struck with a rubber hammer. (Tuning forks should be struck only with the rubber hammer. Care must be taken to insure that neither the hammer nor a vibrating tuning fork comes in contact with the tube.) When the water level is at one of these positions, resonance will occur, and the sound will become noticeably louder. 
+
+\section{Establish Standing Waves}
+
+Adjust the water level until the can is essentially empty when the tube is almost full. The water level in the tube should come at least to within five centimeters of the open end of the tube. It may be necessary to remove some water from the can when the water level is lowered near the bottom of the tube eventually.
+
+Measure the position of the first resonance position to the nearest millimeter. Do this several times to produce three trials for the same position and find their average.
+
+Repeat this process for the second, third, and possibly a fourth resonance position.
+
+\section{Calculate the Speed of Sound}
+
+Use your measurements to determine the wavelength of the standing sound waves.
+
+With this wavelength and the frequency printed on the tuning fork, calculate the speed of sound. Compare this value to the accepted value for the speed of sound in air at room temperature.
+========
+15:Mirrors and Lenses
+--------
+  6 : Light Box \& Optical Set : D05 
+  6 : Power Supplies           : D06 
+All : 12'' Rulers              : E05
+All : Protractors              : E05
+  6 : Pieces of cardboard      : D04
+ 12 : Pins                     : D02
+--------
+
+--------
+\section{Reflection}
+
+\subsection{Flat Plane Mirror}
+
+Place the ray box on top of a piece of paper so that you will have a surface upon which to trace the rays. Using the appropriate slit forming plate at the end of the ray box farthest from the bulb, project a single, narrow light ray upon the plane mirror at an angle. 
+
+%\tikzfig[side]{l-11-001}{
+%\vspace{-2.5in}
+%\begin{tikzpicture}
+%\draw [thick] (1.8,0.2) -- (2.2,-0.2);
+%\draw [red,thick] (0.7,0.0) -- (2.0,0.0) -- (2.0,-0.5);
+%\begin{scope}[xshift=0.7cm]
+%\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+%\node [starburst,draw=red,fill=yellow] at (0,0) {};
+%\end{scope}
+%\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+%\end{tikzpicture}
+%}{Ray Box Set Up}
+
+Trace the incident ray, the reflected ray, and the mirror surface. Draw a line (the normal) perpendicular to the mirror at the point where the ray is reflected. Measure the angle of incidence and the angle of reflection, and verify the law of reflection.
+
+Now verify the same law the old-fashioned way (without the ray box): Place the mirror on another piece of paper which has cardboard underneath it. Place a pin about 2 inches in front of the mirror, and use a straight edge to draw a sighting line aimed at the pin's image. The sighting line is the path of the reflected ray of light. The line from the pin to the mirror is the path of the incident ray. Draw the normal and verify the law of reflection. Keep this set up for the next part.
+
+\tikzfig[side]{l-11-002}{
+\vspace{-3in}
+\begin{tikzpicture}
+\coordinate (m1) at (-1.5,0);
+\coordinate (m2) at (1.5,0);
+\draw [thick] (m1) -- (m2);
+\node (o) [circle,draw,inner sep=5mm] at (1,-2) [label=0:{Your head!}] {};
+\node (p) [circle,fill,inner sep=0.5mm] at (-1,-1) {};
+\node (i) [circle,draw,inner sep=0.5mm] at (-1,1) {};
+\coordinate (r) at (intersection of o--i and m1--m2) {};
+\draw [red,thick] (p) -- node [left] {Actual ray} (r) -- (o);
+\draw [red,dashed] (r) -- node [right] {Perceived ray} (i);
+\end{tikzpicture}
+}{Image Location}
+
+Using the same setup, draw another sighting line from a second position. Extend both sighting lines behind the mirror until they intersect (see figure \ref{fig:l-11-003}). This is the position of the image. How does the image position compare with the object position? Now, as a visual check on your results, place a second pin at the image position. Part of the second pin should now be visible above the mirror. If the second pin is at the correct image position, it will appear continuous with the image of the first pin, no matter what viewing position you choose. Verify that this is so.
+
+\tikzfig[side]{l-11-003}{
+\vspace{-2.3in}
+\begin{tikzpicture}
+\coordinate (m1) at (-1.5,0);
+\coordinate (m2) at (1.5,0);
+\draw [thick] (m1) -- (m2);
+\node (o1) [circle,draw,inner sep=5mm] at (1,-2) {};
+\node (o2) [circle,draw,inner sep=5mm] at (-1.5,-3) {};
+\node (p) [circle,fill,inner sep=0.5mm] at (-1,-1) {};
+\node (i) [circle,draw,inner sep=0.5mm] at (-1,1) {};
+\coordinate (r1) at (intersection of o1--i and m1--m2) {};
+\draw [red,thick] (p) -- (r1) -- (o1);
+\draw [red,dashed] (r1) -- ($(r1)!1.5!(i)$);
+\coordinate (r2) at (intersection of o2--i and m1--m2) {};
+\draw [red,thick] (p) -- (r2) -- (o2);
+\draw [red,dashed] (r2) -- ($(r2)!1.5!(i)$);
+\end{tikzpicture}
+}{Finding the Image}
+
+\subsection{Concave Spherical Mirror}
+
+Select the semi-circular concave mirror. Aim a set of four parallel rays into the center of the inside curve of the mirror so that the rays are parallel to the axis of symmetry of the mirror. Trace the incident and reflected rays, and note where the reflected rays meet. This point is called the focal point (or focus) of the mirror. Carefully measure the distance from the mirror to the focal point.
+
+\tikzfig[side]{l-11-004}{
+\begin{tikzpicture}
+\draw [fill=black!20] (2.0,0.4) arc (30:-30:0.8) -- (2.2,-0.4) -- (2.2,0.4) -- cycle;
+\foreach \y in {-0.1,0.0,0.1} 
+{
+\draw [red,thick] (0.7,\y) -- (2.0,\y);
+}
+\begin{scope}[xshift=0.7cm]
+\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+\node [starburst,draw=red,fill=yellow] at (0,0) {};
+\end{scope}
+\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+\end{tikzpicture}
+}{Concave Mirror Set Up}
+
+If the focal point appears blurred and broad, with too many rays overlapping through it, block the outer rays as they leave the light box and use only the central ones. The fact that the outer rays do not meet exactly at the focal point is referred to as spherical aberration, and can be corrected by using a parabolic mirror instead, as we will see below.
+
+Now, set the semi-circular mirror on a piece of paper and trace the inside reflecting surface. Move the mirror around the curve and continue tracing until you have a complete circle. Measure the diameter of this circle in several directions and calculate an average diameter. How does the radius, $R$, compare with the focal length, $f$, above?
+
+\subsection{Convex Spherical Mirror}
+
+Project a number of parallel rays to strike the outside surface of the semi-circular mirror, parallel to its axis. 
+
+\tikzfig[side]{l-11-005}{
+\begin{tikzpicture}
+\draw [fill=black!20] (2.2,0.4) arc (150:210:0.8) -- (2.3,-0.4) -- (2.3,0.4) -- cycle;
+\foreach \y in {-0.1,0.0,0.1} 
+{
+\draw [red,thick] (0.7,\y) -- (2.0,\y);
+}
+\begin{scope}[xshift=0.7cm]
+\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+\node [starburst,draw=red,fill=yellow] at (0,0) {};
+\end{scope}
+\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+\end{tikzpicture}
+}{Convex Mirror Set Up}
+
+Trace the mirror position and ray paths and indicate the ray directions with arrow heads. Where do the diverging rays appear to come from? Locate this point by drawing the diverging rays backward through the mirror position. This is the focal point. Measure the focal length for the convex mirror. This focal length should be comparable with the concave side of the mirror. What possible sources of error might account for any difference in results?
+
+\subsection{Concave Parabolic Mirror}
+
+A parabolic mirror follows the curve produced by graphing the equation $y = x^2$.
+
+%\tikzfig[side]{l-11-006b}{
+%\begin{tikzpicture}
+%\draw [->,help lines] (0,0) -- (0,1) node [above] {$y$};
+%\draw [->,help lines] (-1,0) -- (1,0) node [right] {$x$};
+%\draw [thick,domain=-1:1] plot (\x,\x^2);
+%\draw [help lines] (0,0) arc (-90:30:0.5) (0,0) arc (-90:-210:0.5);
+%\end{tikzpicture}
+%}{The parabola $y = x^2$}
+
+Aim a set of four parallel rays into a parabolic reflector along paths parallel to the axis of symmetry of the mirror. Notice the sharpness of the focal point, in comparison to the spherical mirror. Describe why this curve is better at focusing the rays rather than the spherical mirror.
+
+This sharp focus is how such sharp images of stars that are very far away are formed. You'll notice that this parabolic shape is also used in radar antennae, radio-telescopes and car headlamp reflectors. In all of these examples, where would you put the receiving or transmitting device?
+
+\section{Refraction}
+
+\subsection{Snell's Law}
+
+Place the ray box on top of a piece of paper so that you will have a surface upon which to trace the rays. Project a single light ray upon the clear plastic, rectangular object so that the ray makes a large angle with the normal. Trace the object, the incident ray, and the ray that emerges from the opposite side. Then remove the object and use the straight edge to complete drawing the path of the refracted ray. Also, draw the normals at each plastic/air interface.
+
+\tikzfig[side]{l-11-007}{
+\begin{tikzpicture}
+\draw [fill=black!20] (-0.2,-0.5) rectangle (0.2,0.5);
+\draw [red,thick] (-1,0.5) -- (-0.2,0.05) -- (0.2,-0.05) -- (1,-0.5);
+\end{tikzpicture}
+}{Refraction Through Slab}
+
+Upon entering the plastic, does the ray bend toward or away from the normal? Upon leaving the plastic, does the ray bend toward or away from the normal?
+
+Snell' law states that for each plastic/air interface,
+\begin{equation}
+n_1 \sin \theta_1 = n_2 \sin \theta_2
+\end{equation}
+where $n_1$ and $n_2$ are the different indices of refraction for the two media 1 and 2 and are the respective angles each ray makes with the normal.
+
+Consider first the point where the ray enters the plastic. Carefully measure the two angles with respect to the normal. Then, using $n_{air} = 1.00$, solve for $n_{plastic}$. Repeat the process for the point where the ray leaves the plastic. Your two values for $n_{plastic}$ should compare favorably.
+
+All lenses in your kit have the same index of refraction, so you can use this value throughout the lab.
+
+\subsection{Total Internal Reflection}
+
+When a light ray is emerging from a medium of higher index of refraction into one of lower index of refraction, if the angle it makes with the normal is large enough, it will be totally internally reflected. This critical angle is given by
+\begin{equation}
+\theta_c = \sin^{-1}{(n_1/n_2)}
+\end{equation}
+where $n_1 > n_2$.
+
+Use the value for $n_{plastic}$ that you just calculated to determine the critical angle for the plastic/air interface.
+
+Now we will determine this value experimentally. Aim a single beam of light at the shortest side of the 30-60-90 prism, so that the refracted beam inside the prism strikes the hypotenuse as shown.
+
+\tikzfig[]{l-11-008}{
+\begin{tikzpicture}
+\begin{scope}[xshift=25mm,yshift=2mm]
+\begin{scope}[rotate=-45]
+\coordinate (t1) at (-0.5,-0.5);
+\coordinate (t2) at (0.5,-0.5);
+\coordinate (t3) at (-0.5,1.5);
+\end{scope}
+\draw [fill=black!20] (t1) -- (t2) -- (t3) -- cycle;
+\end{scope}
+\coordinate (r0) at (0.7,0);
+\coordinate (r1) at (1.0,0);
+\coordinate (r2) at (intersection of r0--r1 and t1--t2);
+\coordinate (r3) at ($(r2)+(30:1)$);
+\coordinate (r4) at (intersection of r2--r3 and t2--t3);
+\coordinate (r5) at ($(r4)+(120:1)$);
+\coordinate (r6) at (intersection of r4--r5 and t3--t1);
+\coordinate (r7) at ($(r6)+(90:1)$);
+\draw [red,thick] (r0) -- (r2) -- (r4);
+\draw [red,thick] (r4) -- (r6) -- (r7);
+\coordinate (r8) at ($(r4)+(55:1.5)$);
+\draw [red,thick] (r4) -- node [pin=0:{
+\begin{minipage}{5cm}
+\small
+This ray will just touch the surface of the prism when it is oriented at the critical angle.
+\end{minipage}
+}] {} (r8);
+\begin{scope}[xshift=0.7cm]
+\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+\node [starburst,draw=red,fill=yellow] at (0,0) {};
+\end{scope}
+\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+\end{tikzpicture}
+}{Measuring Critical Angle}
+
+Adjust the light box and prism positions until total internal reflection occurs and the ray emerges through the third side. Record the first position at which this occurs and measure the angle of incidence from the normal to the hypotenuse. This should be the same angle that you calculated a moment ago.
+
+\subsection{Dispersion}
+
+Have you noticed anything regarding the color of a light ray after it is refracted several times? Aim a single ray at the 60-60-60 prism in this manner:
+
+\tikzfig[side]{l-11-009}{
+\begin{tikzpicture}[rotate=10]
+\begin{scope}[xshift=25mm,yshift=-5mm]
+\begin{scope}[rotate=-10]
+\coordinate (t1) at (90:1);
+\coordinate (t2) at (210:1);
+\coordinate (t3) at (330:1);
+\end{scope}
+\draw [fill=black!20] (t1) -- (t2) -- (t3) -- cycle;
+\end{scope}
+\coordinate (r0) at (0.7,0);
+\coordinate (r1) at (1.0,0);
+\coordinate (r2) at (intersection of r0--r1 and t1--t2);
+\draw [thick] (r0) -- (r2);
+\coordinate (r3) at ($(r2)+(-10:1)$);
+\coordinate (r4) at (intersection of r2--r3 and t1--t3);
+\coordinate (r5) at ($(r4)+(-20:2)$);
+\draw [red,thick] (r2) -- (r4) -- (r5);
+\coordinate (r2) at (intersection of r0--r1 and t1--t2);
+\coordinate (r3) at ($(r2)+(-12:1)$);
+\coordinate (r4) at (intersection of r2--r3 and t1--t3);
+\coordinate (r5) at ($(r4)+(-24:2)$);
+\draw [blue,thick] (r2) -- (r4) -- (r5);
+\begin{scope}[xshift=0.7cm]
+\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+\node [starburst,draw=red,fill=yellow] at (0,0) {};
+\end{scope}
+\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+\end{tikzpicture}
+}{Making Rainbows}
+
+Is the original beam white or colored? Is the emergent beam white or colored? For which color must the index of refraction in the plastic be the greatest? The least?
+========
+16:Interference of Light
+--------
+6 : Slitfilm demonstrator plates (with white edges) : D02
+6 : Pen lasers                                      : D02
+6 : Holographic diffraction gratings                : D02
+6 : Meter sticks                                    : B14
+6 : Rulers                                          : E05
+6 : Vernier Calipers                                : E02
+--------
+
+--------
+\section{Young's Experiment}
+
+In 1801, Thomas Young demonstrated the interference of light waves in the same manner that you will today, thereby showing that light acts like a wave. 
+
+In the following diagram (figure \ref{fig:l-12-001b}), light emerges from two slits that are separated by a distance $d$, and an interference pattern is observed on a screen that is a distance $D$ from the slits, where $D \gg d$. An interference pattern appears on the screen, in which the bright fringes are points in which waves from the two slits are constructively interfering, and the dark fringes are points where they are destructively interfering. This is analogous to the interference of sound from two speakers.
+
+\tikzfig{l-12-001b}{
+\begin{tikzpicture}
+
+\begin{scope}[xshift=80mm]
+\draw [fill] (-0.8,-1.0) -- (0.8,-2.0) -- (0.8,2.0) -- (-0.8,1.0) -- cycle;
+\foreach \y in {1.0,0.5,...,-1.0}
+{
+\shade [bottom color=red,top color=black] (-0.02,\y+0.25) rectangle (0.02,\y);
+\shade [bottom color=black,top color=red] (-0.02,\y) rectangle (0.02,\y-0.25);
+}
+\end{scope}
+
+\draw [help lines] (3,0) -- node [below] {\color{black} $D$} (8,0) -- (8,1) -- cycle;
+\node at ($(3,0)+(5:2)$) {$\theta$};
+
+\begin{scope}[xshift=30mm]
+\draw [fill=white] (-0.8,-1.0) -- (0.8,-2.0) -- (0.8,2.0) -- (-0.8,1.0) -- cycle;
+\draw (-0.2,0.03) -- (0.2,0.07);
+\draw (-0.2,-0.03) -- (0.2,-0.07);
+\draw [->] (0,0.3) -- (0,0.05);
+\draw [->] (0,-0.3) -- (0,-0.05);
+\node at (0,0) [left=2mm,fill=white] {$d$};
+\end{scope}
+
+\begin{scope}[xshift=0.7cm]
+\clip (0,0) -- (60:0.5) arc (60:-60:0.5) -- cycle;
+\node [starburst,draw=red,fill=yellow] at (0,0) {};
+\end{scope}
+\draw [fill=gray] (0.0,-0.2) rectangle (0.7,0.2);
+
+\end{tikzpicture}
+}{Double Slit Experiment}
+
+The angles at which constructive interference occurs (we call these points maxima), can be determined geometrically to be given by this equation:
+\begin{equation}
+\sin \theta = m(\lambda/d) \qquad m = 0,1,2,3,\ldots
+\end{equation}
+
+Hold the slit plate with the CAL monogram in the upper right hand corner. In the far right-hand column, except for the top element which is a single slit, there are several double slits of various spacings. Look through the various double slits at the clear light bulb on the counter. Comment on the spacing of the interference fringes that you see in relation to the spacing of the slits ($d$). Explain mathematically why this is so.
+
+Until now, the \airquote{screen} we have been using is the retina of our eye. The same interference effects can also be observed on a screen outside of our eye. Using the pen laser (\emph{don't ever look directly into it}), shine the laser light through the various double slits, and observe the interference patterns on a distant wall. Record your observations with drawings and comments.
+
+The spreading out of light passing through a small aperture or around a sharp edge is called diffraction. This is the phenomenon that made Young's double slit interference possible. Diffraction can also be observed with a single slit. The far left column of the slit plate contains single slits of varying width. Look through each of them at the clear light bulb, and comment on the patterns you observe as the slits get narrower. Which gives a more noticeable diffraction pattern, a wide or narrow slit?
+
+\section{Diffraction Grating}
+
+A diffraction grating is an array of a large number of parallel, evenly spaced slits. The interference pattern observed through such a grating is similar to that from a double slit (see diagram from previous part), and the equation describing the positions of the maxima is identical:
+\begin{equation}
+\sin \theta = m(\lambda/d) \qquad m = 0,1,2,3,\ldots
+\end{equation}
+where $d$ is the spacing between the centers of the slits in the grating.
+
+The middle column of the slit plate contains diffraction gratings of various slit spacings. Look through the central diffraction grating at the bulb placed behind two different colored filters. Comment on the spacing of the interference fringes that you see in relation to the wavelength of the light ($\lambda$). Explain mathematically why this is so.
+
+Using the holographic diffraction grating slide (please don't touch the surface) and the laser, observe the interference pattern on a wall several feet from the slide. This diffraction grating has 750 slits per mm. What would be its slit spacing, $d$?
+
+Now, carefully measure the distance between two of the maxima on the wall and the distance from the slide to the wall. Use these two measurements to calculate $\theta$ (refer to the diagram), and then using the above equation, solve for the wavelength, $\lambda$, of the laser light. Check with me when you have finished this calculation.
+
+Now that you know the wavelength of the laser light, use this value and a method similar to what you just did, to solve for the slit spacings of two different diffraction gratings on the slit plate.
+
+\section{Poor Man's Single Slit}
+
+Use the Vernier calipers to make the smallest slit that you can measure on the calipers. Point the laser beam through the slit. Can you see a diffraction pattern on the wall? 
+
+Confirm that the pattern matches the diffraction equation for $m$ = 1 (the first fringe from the center).
+\begin{equation}
+\sin \theta = m(\lambda/W) \qquad m = 1,2,3,\ldots
+\end{equation}
+where $W$ is the width of the slit.
+========
+17:DC Circuits
+--------
+ 6 : Multimeters (yellow) : Locking cabinet
+ 6 : Multimeters (blue)   : Locking cabinet
+12 : Half banana clips    : Geo prep room
+ 6 : Large 6V battery     : P45
+ 6 : Breadboards          : P47
+ 6 : AC/DC kits           : E35
+12 : Alligator clips      : P50
+--------
+
+--------
+\section{Breadboard Basics}
+
+Today we will be using a \jargon{breadboard} to construct our circuits. They can be a bit tricky to get the hang of initially, but it's easier than soldering!
+
+\emph{Important:} Don't ever jam the multimeter leads into the little holes on the breadboard! Instead, you will be measuring current and voltage by simply touching the leads to the metal part of the connecting wire that is left slightly exposed when the wire is plugged in.
+
+First, familiarize yourself with the layout of the circuit board (i.e. which holes are connected to each other). Do this by consulting the lines on the board, and then verify it yourself by using your multimeter's continuity function (each meter is a little different, so please ask for help if needed).
+
+Connect the battery to the colored terminals: red goes with the positive terminal and black with the negative. Next connect a wire from the terminals to the bread-board making the red and blue lines ``hot.'' Now hook up the simple circuit in Figure \ref{fig:first-circuit}.
+
+\tikzfig{first-circuit}
+{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{$V$ = 6 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (r) [nde,label=above:{$R$ = 1 k$\ohm$}] at (0,3) {}; 
+\draw [res] (0,3) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(r)+(-2,0)$) -- (r) -- ($(r)+(2,0)$) |- (v);
+
+\draw [->] (-0.6,1.5) node {$I$} +(0,-0.9) arc (270:90:0.9);
+\end{tikzpicture}
+}{First Circuit}
+
+Use \url{http://www.csgnetwork.com/resistcolcalc.html} for help with the resistor color codes. They are listed in Table \ref{tbl:res-col-code}.
+
+\tbl{res-col-code}{lccc}
+{
+\textbf{Color} & \textbf{Band 1} & \textbf{Band 2} & \textbf{Multiplier} \\
+Black  & 0 & 0 & 1    \\
+Brown  & 1 & 1 & 10   \\
+Red    & 2 & 2 & 100  \\
+Orange & 3 & 3 & 1k   \\
+Yellow & 4 & 4 & 10k  \\
+Green  & 5 & 5 & 100k \\
+Blue   & 6 & 6 & 1M   \\
+Violet & 7 & 7 & 10M  \\
+Gray   & 8 & 8 & 100M \\
+White  & 9 & 9 & 1G   \\
+}{Resistor Color Code}
+
+Measure the voltage across the 1k$\ohm$ resistor. Do this by placing the leads of the yellow meter on the two leads of the resistor. (Make sure the meter is set to read voltage.) Record this voltage. Is it the same as the voltage from the battery? It should be---why?
+
+Now measure the current using the blue meter. In order to measure current you must break the circuit and insert the meter across the break. Record the current and verify that Ohm's law is working.
+
+\section{Series vs. Parallel}
+
+Set up the circuit in Figure \ref{fig:series-circuit}.
+
+\tikzfig{series-circuit}
+{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{$V$ = 6 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (r1) [nde,label=above:{$R_1$ = 1 k$\ohm$}] at (-1,3) {}; 
+\draw [res] (-1,3) +(-0.4,0) -- +(0.4,0);
+
+\node (r2) [nde,label=above:{$R_2$ = 100 $\ohm$}] at (1,3) {}; 
+\draw [res] (1,3) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(r1)+(-1.5,0)$) -- (r1) -- (r2) -- ($(r2)+(1.5,0)$) |- (v);
+\end{tikzpicture}
+}{Series Circuit}
+
+Measure the voltage drops across the two resistors. Do they add up to the total voltage from the battery? 
+
+Break the circuit in front of the first resistor and measure the current. Rebuild the circuit and measure the current in front of the second resistor. Are they the same? Why?
+
+Now rearrange the circuit as shown in Figure \ref{fig:parallel-circuit}.
+
+\tikzfig{parallel-circuit}
+{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{$V$ = 6 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (r1) [nde,label=above:{$R_1$ = 1 k$\ohm$}] at (0,4) {}; 
+\draw [res] (0,4) +(-0.4,0) -- +(0.4,0);
+
+\node (r2) [nde,label=above:{$R_2$ = 100 $\ohm$}] at (0,2) {}; 
+\draw [res] (0,2) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(r1)+(-2,0)$) -- (r1) -- ($(r1)+(2,0)$) |- (v);
+\draw (v) -| ($(r2)+(-2,0)$) -- (r2) -- ($(r2)+(2,0)$) |- (v);
+\end{tikzpicture}
+}{Parallel Circuit}
+
+Do the same thing as before: measure the voltages across and currents through each resistor. The voltages should be the same and the current is split.
+
+\section{Equivalent Resistance}
+
+Set up the circuit drawn in Figure \ref{fig:equiv-resistance}.
+
+\tikzfig{equiv-resistance}
+{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{$V$ = 6 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (r1) [nde,label=above:{$R_1$ = 1 k$\ohm$}] at (0,4) {}; 
+\draw [res] (0,4) +(-0.4,0) -- +(0.4,0);
+
+\node (r2) [nde,label=above:{$R_2$ = 100 $\ohm$}] at (-1,2) {}; 
+\draw [res] (-1,2) +(-0.4,0) -- +(0.4,0);
+
+\node (r3) [nde,label=above:{$R_3$ = 330 $\ohm$}] at (1,2) {}; 
+\draw [res] (1,2) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(r1)+(-2.5,0)$) -- (r1) -- ($(r1)+(2.5,0)$) |- (v);
+\draw (v) -| ($(r2)+(-1.5,0)$) -- (r2) -- (r3) -- ($(r3)+(1.5,0)$) |- (v);
+\end{tikzpicture}
+}{Equivalent resistance}
+
+Calculate the total resistance of this circuit based on the principles from class. How much current do you expect to leave the battery to power these electronics? Measure and compare.
+
+Calculate the expected currents and voltages for each of the resistors. Pick two, measure the results and compare to your calculations.
+
+\begin{comment}
+\section{Wheatstone Bridge}
+
+Finally, set up the circuit in Figure \ref{fig:wheatstone-bridge}.
+
+\tikzfig{wheatstone-bridge}
+{
+\begin{tikzpicture}
+
+\node (v) [nde,label=below:{$V$ = 6 volts}] at (0,-1) {}; 
+\draw [bat] (0,-1)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (r1) [nde,label=above:{$R_1$ = 5 k$\ohm$}] at (-1,3) {}; 
+\draw [res] (-1,3) +(-0.4,0) -- +(0.4,0);
+
+\node (r2) [nde,label=above:{$R_2$ = 4 k$\ohm$}] at (1,3) {}; 
+\draw [res] (1,3) +(-0.4,0) -- +(0.4,0);
+
+\node (r3) [nde,label=below:{$R_3$ = 3 k$\ohm$}] at (-1,1) {}; 
+\draw [res] (-1,1) +(-0.4,0) -- +(0.4,0);
+
+\node (r4) [nde,label=below:{$R_4$ = 2 k$\ohm$}] at (1,1) {}; 
+\draw [res] (1,1) +(-0.4,0) -- +(0.4,0);
+
+\begin{scope}[xshift=0cm,yshift=2cm,rotate=90]
+\node (r5) [nde,label=right:{$R_5$ = 1 k$\ohm$}] at (0,0) {}; 
+\draw [res] (0,0) +(-0.4,0) -- +(0.4,0);
+\end{scope}
+
+\draw (v) -| ($(r1)+(-1.5,0)$) -- (r1) -- (r2) -- ($(r2)+(1.5,0)$) |- (v);
+\draw (v) -| ($(r3)+(-1.5,0)$) -- (r3) -- (r4) -- ($(r4)+(1.5,0)$) |- (v);
+\draw ($(r1)!0.5!(r2)$) -- (r5) -- ($(r3)!0.5!(r4)$);
+
+\end{tikzpicture}
+}{Wheatstone Bridge}
+
+This is an example of a set of resistors that are neither in series or parallel. Measure the current and voltages on each resistor and verify Kirchoff's rules:
+\begin{itemize}
+\item All the current that goes into a node must come out.
+\item The total voltage drop around any closed loop is zero.
+\end{itemize}
+Do this by picking two nodes and two loops and performing the calculations required.
+
+This particular circuit is called the Wheatstone bridge. It can be used as a sensitive measurement of resistance. If the values of the resistances are just right, no current will flow through the central resistor. By placing a variable resistor one can fine tune the circuit for this condition and determine the value of some unknown resistor.
+\end{comment}
+========
+18:Electromagnetism
+--------
+ 6 : Multimeters (yellow)   : Locking cabinet
+ 6 : Multimeters (blue)     : Locking cabinet
+12 : Half banana clips      : Geo prep room
+ 6 : Large 6V battery       : P45
+ 6 : Breadboards            : P47
+ 6 : AC/DC kits             : E35
+12 : Alligator clips        : P50
+ 6 : Banana clips           : Geo prep room
+ 6 : Air coil solenoids     : E29
+ 6 : Magnetic field sensors : E26
+ 6 : Compasses              : E02
+ 6 : Large wire coils       : P24
+ 6 : Calipers               : E02
+--------
+
+--------
+\section{Building a Magnet}
+
+The air coil solenoid will generate a magnetic field according to the formula
+\begin{equation}
+B = \frac{\mu_0 NI}{L}
+\end{equation}
+where $N$ represents the number of coils.
+
+Measure the radius of the solenoid and note the number of coils from the documentation. Now connect the solenoid to the power amplifier (the power amplifier will max out at 1 amp). Set the voltage to 2 volts. Measure the current running through the circuit. Use this data to calculate the magnetic field produced by the electromagnet. How does this compare with the earth's magnetic field (approx. 50 $\mu$T = 0.5 gauss)? 
+
+Insert the magnetic field sensor into the solenoid. Measure the field and compare with your calculations. It shouldn't matter where you measure unless you are near the outer edge of the coil. Verify this statement. Also the magnetic field outside the coil should be nearly zero. It won't be because of the natural magnetic field in the room, but you can verify that the field does not change as you approach the outside of the coil.
+
+Once you have completed your measurements use a compass to qualitatively see the effects of the magnetic field.
+
+\section{Deflecting a Compass}
+
+Connect the large wire ring with a 110 $\ohm$ resistor and the power amplifier. Calculate the magnetic field from this ring using
+\begin{equation}
+B = \frac{\mu_0 NI}{2R}
+\end{equation}
+Explain why are we using a different formula for this apparatus.
+
+Look carefully at this contraption: there are 15 turns. But notice on the bottom (turn it over) that the three terminals are connected in such a way that the number of coils between the outer and inner posts are different. In fact, one outer post is connected to 10 turns and the other is connected to 5 turns going the \emph{opposite} direction. In effect, there are only 5 turns between the two outer coils because the other 5 cancel out. We want to use the 10 coils, so connect your circuit between the center post and the outer post attached to the 10 coils.
+
+Set up the electronics just like the previous part with 2 volts and measure the magnetic field. Calculate and compare.
+
+Now stop the voltage and place a compass in the center. Re-orient the ring so that the compass points in the plane of the ring. Measure the residual magnetic field (without the voltage on) from the room at this point. When the voltage is turned on, a new magnetic field will be created perpendicular to this residual field. You measured its value previously. Calculate the angle you expect the compass to deflect when the voltage is turned on. Test and see.
+
+\section{Building a Motor}
+
+Do not change anything you have set up so far. Change the power amplifier to produce a step voltage instead of DC voltage. This will cause the current in the ring to run one direction then the other and back again. This will cause the compass to deflect one direction then the other and back again.
+
+If you increase the voltage from the power amplifier, the deflection increases. The maximum voltage the computer will generate is 10 volts. Try it temporarily (the ring may get hot, so be careful). 
+
+Does it seem that if we were able to increase the voltage more the compass needle would actually pass to the other side? If we could flip the magnetic field at that precise moment we could pull the compass in a full 360$\dg$ rotation. In principle this is how a motor works.
+
+Unfortunately, there are several limiting factors that make it impossible to do with this simple set-up. Think of three and discuss what could be done to overcome them.
+========
+19:AC Circuits
+--------
+ 6 : Voltage sensor  : D08
+ 6 : Current sensor  : D13
+ 6 : Banana wires    : Geo prep room
+ 6 : Breadboards     : P47
+ 6 : AC/DC kits      : E35
+12 : Alligator clips : P50
+--------
+
+--------
+\def\sc{0.20}
+\section{Simple RC Circuit}
+
+An RC circuit is one containing a DC voltage source, a resistor and a capacitor all in series. At the instant when the circuit is first connected, the current flows according to Ohm's Law: $I = V/R$. As charge (and voltage) builds on the capacitor, the current decays until the capacitor is fully charged, at which point no current flows in the circuit. The formula for the current is
+\begin{equation}
+I(t) = I_0 \exp(-t/RC)
+\end{equation}
+The so-called ``time-constant'' for the circuit is $\tau = RC$ and is associated with the time for the current to decay to 37\% = $\exp(-1)$ of its initial value.
+
+Construct a series RC circuit using a capacitor (330 $\mu$F) and resistor (1 k$\ohm$). Use the power amplifier on the computer set to DC voltage (5 volts) as your voltage source. Insert the current sensor into the circuit and connect voltage sensor across the capacitor.
+
+The measurements in this lab can be kind of tricky and quick. I suggest you set up your windows like in Figure \ref{fig:p203lab03-01}.
+
+\fig{p203lab03-01}{\sc}{Capacitor charging}
+
+Now, the circuit kind of naturally discharges through the power amplifier, so you can assume that the capacitor is discharged every time you start up the power amplifier. Reproduce the curves in Figure \ref{fig:p203lab03-01} and measure the time at which the voltage across the capacitor is 37\% of its final value. Compare this number with $RC$.
+
+After letting the circuit run long enough for the current to decrease to the leakage current (close to zero), the value of the charge on the capacitor is given by $Q = CV$. How many electrons are involved?
+
+\section{Lead or Lag?}
+
+Now change the power amplifier to a step voltage pattern (use a frequency of 1 hertz) and plot both the voltage and the current on the time graph. You should get a pattern like Figure \ref{fig:p203lab03-02}. The capacitor is essentially charging and discharging with the changes in voltage.
+
+\fig{p203lab03-02}{\sc}{RC circuit with step-voltage}
+
+Now switch the power amplifier to a true AC voltage. You should get patterns like Figure \ref{fig:p203lab03-03}.
+
+\fig{p203lab03-03}{\sc}{RC circuit with AC voltage}
+
+Both the voltage and the current should be pure sine waves. Sketch the pattern in your lab notes. What is the phase difference between the two waves? Which is in front---i.e., when the voltage is at 0$\dg$ in its cycle, at what angle is the current in its cycle? Is this consistent with the acronym \jargon{ICE}? 
+
+Cut the frequency down to 0.5 hertz. What happens to the size of the waves. Has the reactance of the capacitor gone up or down? What about the current (which is directly related to the voltage across the resistor)?
+
+\section{Phasor Basics}
+
+Now remove the current sensor and replace it with a second voltage sensor. Use this to measure the voltage across the resistor. See Figure \ref{fig:p203lab03-04}.
+
+\fig{p203lab03-04}{\sc}{Voltages in the RC circuit}
+
+Here the three windows show the instantaneous voltages across the resistor, capacitor and the source. Use the cross-hairs to find the timing and size of the peaks in the waves.
+
+Draw a phasor diagram depicting these three voltages. Since the frequency is 1 hertz (or 1 cycle per second), we can associate each second with 360$\dg$. Multiply the time by 360 to get the phase angles of these waves in degrees. Be sure to show how the voltages from the capacitor and the resistor add up to the source voltage.
+
+\begin{comment}
+\section{Inductors}
+
+Now replace the capacitor with an inductor. The relevant time constant is now given by $\tau = R/L$. Examine the voltage and current sine waves and sketch the pattern in your lab notes. Again, what is the phase difference and which is in front? Is this consistent with the acronym \jargon{ELI}?
+
+Think about the previous section with the capacitor and answer whether the voltage is driving the current or \foreign{vice versa}. What is the relevant physical law to answer this question? Why?
+\end{comment}
+========
+20:Solid State Devices
+--------
+ 6 : Multimeters (yellow) : Locking cabinet
+ 6 : Multimeters (blue)   : Locking cabinet
+12 : Half banana clips    : Geo prep room
+ 6 : Large 6V battery     : P45
+ 6 : Breadboards          : P47
+ 6 : AC/DC kits           : E35
+12 : Alligator clips      : P50
+ 6 : Banana wires         : Geo prep room
+ 6 : Voltage sensor       : D08
+--------
+
+--------
+Until now we have only considered components that obey Ohm's law: if the voltage doubles for instance, then the current doubles also. These are called ``passive'' components. In this lab we will introduce ``active'' components.
+
+The first non-ohmic electric circuits involved vacuum tubes. With the discovery of the transistor in the 1950's, vacuum tubes have gone the way of the dinosaur except in specialized cases. The miniaturization possible with these electronics has made undreamed of possibilities come true in our time.
+
+These microscopic transistors are based on something called the $pn$ junction. For reasons we can't get into, these solid state devices (solid as opposed to vacuum tubes) are very binary. They strongly resist current in one direction and easily allow current in the other. When used by itself, a $pn$ junction is called a \jargon{diode}.
+
+\section{Diodes and LEDs}
+
+All diodes release photons as current flow through them. LEDs are special diodes fine-tuned to emit photons in the visible spectrum. Wire up a green LED in series with a resistor and the power amplifier as in Figure \ref{fig:single-diode}. Note that the longer lead is the $p$ side into which the current should flow.
+
+\tikzfig{single-diode}{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{$V$ = 0--4 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+
+\node (d) [nde,label=above:{LED (gr)}] at (-1,3) {}; 
+\draw [led] (-1,3) % circle (0.4)
+  +(-0.4,    0) -- +(-0.2,    0)
+  +(-0.2, 0.23) -- +(-0.2,-0.23) -- +( 0.2,   0) -- cycle
+  +( 0.2, 0.23) -- +( 0.2,-0.23)
+  +( 0.2,    0) -- +( 0.4,    0)
+;
+
+\node (r) [nde,label=above:{$R_1$ = 1 k$\ohm$}] at (1,3) {}; 
+\draw [res] (1,3) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(d)+(-1.5,0)$) -- (d) -- (r) -- ($(r)+(1.5,0)$) |- (v);
+
+\draw [->] (-1.1,1.5) node {$I$} +(0,-0.9) arc (270:90:0.9);
+\end{tikzpicture}
+}{Single LED}
+
+\emph{Note:} these components are sensitive to large current. It is fairly easy to destroy them by letting too much current run through them. Always err on using too much resistance as you test your circuits.
+
+Plot the current for voltages starting from 0 up to 4 volts in 0.2 volt increments. The LED should act something like a switch going from zero current to the maximum current allowed by the resistor. What is the voltage that ``switches'' the diode on?
+
+The switching voltage is related to the color of the diode. Can you figure out the relationship? (Hint: use $E = qV$, $E = hf$, and $v = f\lambda$).
+
+Now set up the circuit in Figure \ref{fig:double-diode} by putting a red LED and resistor in parallel with your green LED. Notice the red LED is pointing in the other direction. Switch the power amplifier to an AC sine wave (note the small 1 Hz frequency). Describe what you see and why it is happening.
+
+\tikzfig{double-diode}{
+\begin{tikzpicture}
+\node (v) [nde,label=below:{
+\begin{minipage}{2cm}
+\centering
+$V$ = 4 volts \\
+$f$ = 1 Hz
+\end{minipage}
+}] at (0,0) {}; 
+\draw [acv] (0,0) circle (0.4) ++(-0.2,0) 
+  sin +(0.1, 0.1) 
+  cos +(0.1,-0.1) 
+  sin +(0.1,-0.1) 
+  cos +(0.1, 0.1)
+;
+
+\node (d1) [nde,label=above:{LED (gr)}] at (-1,2) {}; 
+\draw [led] (-1,2) % circle (0.4)
+  +(-0.4,    0) -- +(-0.2,    0)
+  +(-0.2, 0.23) -- +(-0.2,-0.23) -- +( 0.2,   0) -- cycle
+  +( 0.2, 0.23) -- +( 0.2,-0.23)
+  +( 0.2,    0) -- +( 0.4,    0)
+;
+
+\node (d2) [nde,label=above:{LED (rd)}] at (-1,4) {}; 
+\draw [led] (-1,4) % circle (0.4)
+  +(-0.4,    0) -- +(-0.2,    0)
+  +(-0.2, 0.23) -- +(-0.2,-0.23)
+  +(-0.2,    0) -- +( 0.2, 0.23) -- +( 0.2,-0.23) -- cycle
+  +( 0.2,    0) -- +( 0.4,    0)
+;
+
+\node (r) [nde,label=above:{$R_1$ = 1 k$\ohm$}] at (2,3) {}; 
+\draw [res] (2,3) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -- ($(v)+(-3.5,0)$) |- ($(d1)!0.5!(d2)+(-1.5,0)$) |- (d1) -| ($(d1)!0.5!(r)$) |- (r) -- ($(r)+(1.5,0)$) |- (v);
+\draw (v) -- ($(v)+(-3.5,0)$) |- ($(d1)!0.5!(d2)+(-1.5,0)$) |- (d2) -| ($(d2)!0.5!(r)$) |- (r);
+
+\end{tikzpicture}
+}{Double LED}
+
+Now set up the circuit in Figure \ref{fig:wheatstone-diode}. For this circuit, we will use the black IN4007 diodes. The gray bar is on the $n$ side.
+
+\tikzfig{wheatstone-diode}{
+\begin{tikzpicture}
+\node (v) [nde,label=left:{
+\begin{minipage}{2cm}
+\centering
+$V$ = 4 volts \\
+$f$ = 1 Hz
+\end{minipage}
+}] at (-4,0) {}; 
+\draw [acv] (-4,0) circle (0.4) ++(-0.2,0) 
+  sin +(0.1, 0.1) 
+  cos +(0.1,-0.1) 
+  sin +(0.1,-0.1) 
+  cos +(0.1, 0.1)
+;
+
+\begin{scope}[xshift=-1cm,yshift=1cm,rotate=-135,transform shape]
+\node (d1) [nde] at (0,0) {}; 
+\draw [led] (0,0) +(-0.4,0) -- +(-0.2,0) 
+  +(-0.2,0.23) -- +(-0.2,-0.23) -- +(0.2,0) -- cycle 
+  +(0.2,0.23) -- +(0.2,-0.23) 
+  +(0.2,0) -- +(0.4,0);
+\end{scope}
+
+\begin{scope}[xshift=1cm,yshift=1cm,rotate=135,transform shape]
+\node (d2) [nde] at (0,0) {}; 
+\draw [led] (0,0) +(-0.4,0) -- +(-0.2,0) 
+  +(-0.2,0.23) -- +(-0.2,-0.23) -- +(0.2,0) -- cycle 
+  +(0.2,0.23) -- +(0.2,-0.23) 
+  +(0.2,0) -- +(0.4,0);
+\end{scope}
+
+\begin{scope}[xshift=1cm,yshift=-1cm,rotate=-135,transform shape]
+\node (d3) [nde] at (0,0) {}; 
+\draw [led] (0,0) +(-0.4,0) -- +(-0.2,0) 
+  +(-0.2,0.23) -- +(-0.2,-0.23) -- +(0.2,0) -- cycle 
+  +(0.2,0.23) -- +(0.2,-0.23) 
+  +(0.2,0) -- +(0.4,0);
+\end{scope}
+
+\begin{scope}[xshift=-1cm,yshift=-1cm,rotate=135,transform shape]
+\node (d4) [nde] at (0,0) {}; 
+\draw [led] (0,0) +(-0.4,0) -- +(-0.2,0) 
+  +(-0.2,0.23) -- +(-0.2,-0.23) -- +(0.2,0) -- cycle 
+  +(0.2,0.23) -- +(0.2,-0.23) 
+  +(0.2,0) -- +(0.4,0);
+\end{scope}
+
+\begin{scope}[xshift=0,yshift=0]
+\node (r) [nde,label=above:{$R$ = 1 k$\ohm$}] at (0,0) {}; 
+\draw [res] (0,0) +(-0.4,0) -- +(0.4,0);
+\end{scope}
+
+\coordinate (x12) at ($(d1)!0.5!(d2)+(0,1)$);
+\coordinate (x23) at ($(d2)!0.5!(d3)+(1,0)$);
+\coordinate (x34) at ($(d3)!0.5!(d4)+(0,-1)$);
+\coordinate (x41) at ($(d4)!0.5!(d1)+(-1,0)$);
+
+\draw (v) |- (x12) -- (d1) -- (x41) -- (d4) -- (x34) -| (v);
+\draw (v) |- (x12) -- (d2) -- (x23) -- (d3) -- (x34);
+\draw (x41) -- (r) -- (x23);
+
+\end{tikzpicture}
+}{Full Wave Rectifier}
+
+Plot the voltage across the resistor using the voltage sensor. Describe the plot. These diodes are easier to switch on than the LEDs. Can you see the switch voltage?
+
+Now slip a capacitor in parallel with the resistor and monitor the voltage. You have just created a basic AC to DC converter.
+
+\section{Basic Transistors}
+
+The simplest transistor is made by placing two diodes side by side but with opposing polarity as in Figure \ref{fig:diodes-in-series}. 
+
+\tikzfig{diodes-in-series}{
+\begin{tikzpicture}
+
+\begin{scope}[xshift=-2cm,yshift=3cm]
+\node (d1) [nde,label=below:{$np$}] at (0,0) {}; 
+\draw [led] (0,0) % circle (0.4)
+  +( 0.4,    0) -- +( 0.2,    0)
+  +( 0.2,-0.23) -- +( 0.2, 0.23) -- +(-0.2,   0) -- cycle
+  +(-0.2,-0.23) -- +(-0.2, 0.23)
+  +(-0.2,    0) -- +(-0.4,    0)
+;
+\end{scope}
+
+\begin{scope}[xshift=0cm,yshift=3cm]
+\node (d2) [nde,label=below:{$pn$}] at (0,0) {}; 
+\draw [led] (0,0) % circle (0.4)
+  +(-0.4,    0) -- +(-0.2,    0)
+  +(-0.2, 0.23) -- +(-0.2,-0.23) -- +( 0.2,   0) -- cycle
+  +( 0.2, 0.23) -- +( 0.2,-0.23)
+  +( 0.2,    0) -- +( 0.4,    0)
+;
+\end{scope}
+
+\draw ($(d1)+(-1.5,0)$) -- (d1) -- (d2) -- ($(d2)+(1.5,0)$);
+
+\draw [fill=white] ($(d1)!0.5!(d2)$) circle (0.1);
+
+\end{tikzpicture}
+}{Diodes in Series}
+
+This may seem silly because no current should flow no matter what. But if we place them close together so that they overlap, we end up with a $npn$ transistor. 
+
+When we place a voltage source in the center, we can overwhelm one of the diodes to let current flow. This is how transistors act like electronic switches. We can build a circuit like this in Figure \ref{fig:npn-switch}.
+
+\tikzfig[full]{npn-switch}
+{
+\begin{tikzpicture}
+
+\begin{scope}[xshift=3cm,yshift=0cm,rotate=-90]
+\node (vc) [nde,label=right:{$V_c$ = 6 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+\end{scope}
+
+\begin{scope}[xshift=0cm,yshift=0cm]
+\node (npn) [nde,label=right:{$npn$}] at (0,0) {};
+\draw [npn] (0,0) 
+ +(0,0.4) node [right] {$c$} -- +(0,0.25) 
+ +(0,-0.4) node [right] {$e$} -- +(0,-0.25)
+ ++(-0.15,0) circle (0.3)
+ +(-0.4,0) node [below] {$b$} +(-0.25,0) -- +(-0.1,0)
+ +(-0.1,0.2) -- +(-0.1,-0.2)
+ +(60:0.3) -- +(-0.1,0.1)
+;
+\draw [->] (0,0) ++(-0.15,0) +(-0.1,-0.1) -- +(-60:0.3);
+;
+\end{scope}
+
+\begin{scope}[xshift=1.5cm,yshift=2cm]
+\node (rc) [nde,label=above:{$R_c$ = 1 k$\ohm$}] at (0,0) {}; 
+\draw [res] (0,0) +(-0.4,0) -- +(0.4,0);
+\end{scope}
+
+\draw (vc) |- (rc) -| (npn) |- ($(vc)+(0,-2)$) -- (vc);
+
+\begin{scope}[xshift=-3cm,yshift=-1cm,rotate=-90]
+\node (vb) [nde,label=left:{$V_b$ = 0--2 volts}] at (0,0) {}; 
+\draw [bat] (0,0)
+ +(-0.5, 0.2) node {\tiny $+$}
+ +(-0.3,-0.1) -- +(-0.3,0.1)
+ +(-0.1,-0.3) -- +(-0.1,0.3)
+ +( 0.1,-0.1) -- +( 0.1,0.1)
+ +( 0.3,-0.3) -- +( 0.3,0.3)
+ +( 0.5, 0.2) node {\tiny $-$} 
+;
+\end{scope}
+
+\begin{scope}[xshift=-1.5cm,yshift=0cm]
+\node (rb) [nde,label=above:{$R_b$ = 1 k$\ohm$}] at (0,0) {}; 
+\draw [res] (0,0) +(-0.4,0) -- +(0.4,0);
+\end{scope}
+
+\draw (vb) |- (rb) -- (npn) |- ($(vb)+(0,-1)$) -- (vb);
+
+\end{tikzpicture}
+}{Basic $npn$ Switch}
+
+The transistor has three leads associated with it. Looking head-on, the leads are collector, base, emitter. The base ($b$) controls the transistor. This is the voltage we are using to overwhelm the lower $pn$ junction to allow current to flow. 
+
+The main flow of current travels down the transistor which is indicated by the little arrow. The top lead is called the collector and the bottom is called the emitter. This may seem counter-intuitive until one remembers that if the conventional current is down, the electrons are actually flowing up. The terminology comes from the physical direction the electrons are flowing and actually is a hold-over from vacuum tubes.
+
+Use the large battery to provide the voltage between the collector and emitter ($V_c$). Hook up the power amplifier to provide the base voltage ($V_b$). Vary the voltage on the power amplifier starting from zero volts. Find the voltage that switches the transistor ``on''.
+
+\section{Amplifiers and Radios}
+
+With the transistor ``on'', measure the current running through the two resistors. The small current running through the base is effectively controlling the relatively large current running through the collector. The ratio of these two is called the \jargon{gain} of the resistor. Calculate this number for our set-up.
+
+There are actually quite a bit of things that can change the gain of a particular transistor. But, this is the underlying method used to build circuits that can amplify a small signal (attached to the base) using a much larger current source.
+
+In fact this is how a simple AM radio works. The electrons in the antenna are jostled slightly by the passing electromagnetic waves. By hooking the antenna up to a transistor (used to amplify this signal) one can capture the signal in the wave. If this current is then hooked up to an RCL circuit, one can tune out the surrounding static by dialing into a particular frequency. Hook this up to a speaker and that's it!
+========
+21:RCL Circuits
+--------
+ 6 : Multimeters (yellow) : Locking cabinet
+ 6 : Multimeters (blue)   : Locking cabinet
+12 : Half banana clips    : Geo prep room
+ 6 : RCL network kits     : E30
+ 6 : Banana wires         : Geo prep room
+--------
+
+--------
+\section{Setting Things Up}
+
+The first thing is to build the simplest possible RCL circuit from Figure \ref{fig:series-rcl}.
+
+\tikzfig{series-rcl}
+{
+\begin{tikzpicture}
+
+\node (v) [nde,label=below:{
+\begin{minipage}{2cm}
+\centering
+$V$ = 2 volts \\
+$f$ = 1 kHz
+\end{minipage}
+}] at (0,0) {}; 
+\draw [acv] (0,0) circle (0.4) ++(-0.2,0) 
+  sin +(0.1, 0.1) 
+  cos +(0.1,-0.1) 
+  sin +(0.1,-0.1) 
+  cos +(0.1, 0.1)
+;
+
+\node (r) [nde,label=above:{$R$ = 33 $\ohm$}] at (-2,3) {}; 
+\draw [res] (-2,3) +(-0.4,0) -- +(0.4,0);
+
+\node (c) [nde,label=below:{$C$ = 100 $\mu$F}] at (0,3) {}; 
+\draw [cpr] (0,3) 
+  +(-0.4,  0) -- +(-0.1,   0)
+  +(-0.1,0.3) -- +(-0.1,-0.3)
+  +( 0.1,0.3) -- +( 0.1,-0.3)
+  +( 0.1,  0) -- +( 0.4,   0);
+
+\node (l) [nde,label=above:{$L$ = 8.2 mH}] at (2,3) {}; 
+\draw [ind] (2,3) +(-0.4,0) -- +(0.4,0);
+
+\draw (v) -| ($(r)+(-1.5,0)$) -- (r) -- (c) -- (l) -- ($(l)+(1.5,0)$) |- (v);
+
+\end{tikzpicture}
+}{Series RCL Circuit}
+
+Set up the power amplifier to produce a 2 volt sine wave at a frequency of 1000 hertz. Measure the voltage drop across each component. Do they add up to the driving voltage?
+
+They don't and here is why. The meters are designed to measure the RMS voltage, which represents a kind of average of the voltage across the meter. Truly, the voltage is oscillating up and down (a thousand times a second in this case). At any one moment in time, the three voltages \emph{do} add up to the instantaneous voltage from the power amplifier. But the meter does not show the phase differences involved. In other words, when the capacitor voltage is positive, the inductor voltage is negative, etc. Rather than get lost is sines and cosines, we can use phasors to show the relationship between these voltages.
+
+Draw an arrow representing the voltage from the resistor pointing to the right. Now draw the inductor voltage as an arrow pointing up and the capacitor as an arrow pointing down. Make sure the lengths of these arrows are based on your measured voltages.
+
+Now add these arrows like vectors. (You do remember Chapter 1, don't you?) This new arrow is the AC combination of the three voltages and should correspond to the driving voltage. Confirm that its length matches the power supply voltage. The angle of this arrow corresponds to the power consumption of the circuit. The formula is
+\begin{equation} \label{ac-power}
+P = IV \cos \theta
+\end{equation}
+Measure the current of this circuit to estimate the power used to drive this circuit.
+
+\section{Finding Resonance}
+
+The size of the capacitor and inductor arrows depends on the frequency of the driving voltage. The higher the frequency, the lower the capacitor voltage will get (it's less resistive to the AC current). The lower the frequency, the higher the capacitor voltage---at the extreme is regular DC voltage in which the capacitor will drop all the voltage from the source and act like an open circuit. The inductor reacts in just the opposite way. This is also easy to see since for DC voltage it's just a wire. Only for AC voltage will Faraday's law come into play and create self-inductance.
+
+There is a certain frequency in which the voltage drops across the capacitor and inductor are equal. In the phasor diagram they cancel leaving only the resistor as the only source of power consumption. This is consistent with equation \eqref{ac-power} since $\theta = 0$. 
+
+Since the resistor is the only component that in which the power is truly lost (to heat), this frequency is the point of maximum power absorption. It is also the frequency in which the current flow is maximized. This frequency is called the resonant frequency because energy is resonanting between the electric field (in the capacitor) and the magnetic field (in the inductor).
+
+Create a graph of the current flow in this circuit as you vary the frequency from 10 hertz to 1000 hertz. Plot more points as you try to find maximum current value. Record on the graph each of your attempts and label the resonant frequency.
+
+The formula for the resonant frequency is
+\begin{equation}
+f = \frac{1}{2\pi} \sqrt{\frac{1}{LC}}
+\end{equation}
+Confirm this formula for your circuit.
+
+\section{Rinse and Repeat}
+
+Repeat the previous section for a different set of values for the resistor and capacitor.
+========
+22:Relativity for Dinner
+--------
+ 6 : Masking tape        : ??
+ 6 : Large drinking cups : ??
+ 6 : Scissors            : ??
+ 6 : Ruler               : ??
+ 6 : Paper plates        : ??
+--------
+Material to be provided by instructor
+--------
+This lab has been inspired by the book \src{Relativity Visualized} by Lewis Epstein.
+
+%\section{Cones and Curvature}
+
+\section{Drinking Cups and Earth Gravity}
+
+Place the drinking cup upside down on the table, such that the wider end is down.
+
+Start with a piece of masking tape a couple of feet long. Stick one end of the tape near the top of the cup, but keep the rest of the tape away from the cup. Make sure to orient the length of the masking tape so that it is parallel to the table. This initial orientation is somewhat important, so take a little bit of time to make sure it is set.
+
+Slowly wrap the tape around the cup once. Do your best to not introduce any additional curvature into the path of the tape. The cup will pull the length of the tape down naturally. Notice how you cannot complete a trip around the cup and return to your starting point. Measure the distance between your starting point and the point after one wrapping.
+
+Now, wrap the tape around the cup until it reaches the table. You may need to wrap the tape two or three times around the cup. Measure the distances between the trips around the cup. Are the distances increasing? If the cup were very long, what do you think happens to the path of the tape?
+
+How is this related to Earth gravity? The vertical dimension of the cup represents the vertical dimension in space. The horizontal dimension of the cup represents time. Initially, the path of the tape is horizontal: no motion in the vertical dimension, only flowing through time. This represents a particle initially at rest. As time progresses (i.e., as you wrap the tape around the cup), the particle is pulled downward---it acquires a downward velocity. As more time progresses, the downward velocity increases. This represents the acceleration due to gravity. In the case of the cup there is no ``force'' involved; the curvature of the cup guides the acceleration of the path. This illustrates Einstein's re-definition of gravity as space-time curvature.
+
+Calculate the average ``acceleration'' of the tape from top to bottom of the cup. Do this by measuring the distance from the top to the bottom of the cup (not across the cup, but down the cup). This is the total ``distance'' traveled by the particle. Now measure the total angle traveled by the tape. Thus, 360$\dg$ for once around, 720$\dg$ for twice around, etc. This is the total ``duration'' the particle is travelling. The average acceleration is distance divided by duration squared. Your units will be meters per degree squared.
+
+Calculate the conversion factor between degrees on the cup and real seconds. Do this by determining the factor required to bring your measured value to the true acceleration due to gravity of 9.8 m/s$^2$. Note: The curvature of the cup is not correct to maintain constant acceleration. In order to truly represent Earth gravity, the shape of the cup would need to be a parabola (or a hyperbola to be relativistically correct).
+
+Does time run ``slower'' at the top or the bottom of the cup? Explain. This variation in the ``speed'' of time is what is meant by curved time.
+
+Now, take the cup and cut it vertically (top of the cup to the bottom of the cup). Cut out the bottom of cup, so you have only the region left where you have placed your tape.
+
+Lay this portion of the cup flat on the table (you will have to hold it down, or tape it). What do you notice about the path your tape now? This lack of curvature is related to the equivalence principle: each step of the way, the path of the tape is straight. Locally, the path of the tape is indistiguishable from one that is force-free. This emphasizes the fact that the curvature in the path is not coming from the particle (it is moving in a straight line); the curvature in the path is coming from the curvature of the space through which it travels.
+
+\section{Spatial Curvature and Dinner Plates}
+
+Use the masking tape to tape the plate face down on the table.
+
+Start with another piece of masking tape a couple of feet long. Stick one end of the tape on the table and aim somewhere between the middle and the edge of the plate. Lay the tape down carefully, trying not to introduce any curvature into the path.
+
+When the tape encounters the plate, it will be drawn toward the center. Just as with the cup, follow this natural tendency in the path of the tape. Extend the tape all the way to the other side of the table and out some distance.
+
+Measure the deflection of the tape by laying a meter stick along the path as the tape leaves the plate. The meter stick will form an angle with the original direction of the tape. Measure that angle.
+
+Repeat the deflection for different directions and entry points. Notice that if you run the tape directly through the center of the plate the tape will not deflect at all. What makes the angle larger or smaller?
+
+While earth gravity is said to be due to the curvature of time, this deflection represents the deflection due to the curvature of space. In a sense, one could say this effect is the relativistic ``shadow'' of normal gravity. This is the effect that increases with increasing speed.
+
+The plate represents the sun and your tape represents the deflection of light. The actual deflection of light is twice the value predicted without general relativity---the deflection represented in this section is the effect that produces the additional curvature. This is also the effect that causes the anomolous precession of Mercury.
+
+If you were to squish the plate flat, where would the plate bunch up? I like to say that the ``space-time density'' is larger than normal in this area. Note whether the deflection is in to or out of the ``high density'' region. Is this consistent with the previous section with the cup?
+
+\begin{comment}
+\section{Space-Time Metric with Pyramids}
+
+Take the handout and cut out only the section with the grid. Notice how the grid is even when the paper is flat.
+
+Fold the paper such that it creates a pyramid. Now the areas in grey (the faces of the pyramid) sit at an angle. Look from the top and notice how the grid lines in the grey area are aligned 2:1 with the grid lines in the white area. Each of the faces is now an area of ``high space-time density''. Notice also that there is a directionality to the density. For the faces on the top and bottom the increased density is vertical. For the other faces the increased density is horizontal.
+
+These facts are summarized in the space-time metric. In this case, the metric is summarized in Table \ref{tbl:pyramid-metric}.
+
+\tbl{pyramid-metric}{l|ccc}{
+Pyramid Face & $g_{xx}$ & $g_{xy}$ & $g_{yy}$ \\
+\hline
+Top          & 1        & 0        & 2        \\
+Right        & 2        & 0        & 1        \\
+Bottom       & 1        & 0        & 2        \\
+Left         & 2        & 0        & 1        \\
+}{Pyramid Metric}
+
+The $g_{xx}$ is the amount of ``space-time density'' compression exists in the horizontal direction, while the $g_{yy}$ is the compression in the vertical. The $g_{xy}$ is a cross term that we don't need to worry about here.
+
+Flatten out the pyramid. Trace a line that starts in the white region and enters the bottom face in the center of its bottom interface. The slope of that line should be 1/2. Continue this line until it strikes the missing region you have cut out.
+
+Now fold the paper such that the missing section is closed. (This may take some contortions to get this in a workable state. You should end up with the pyramid half reconstructed and inverted.) Continue the line across the closed gap. Once you have crossed the gap, it will probably be easier to flatten the pyramid again.
+
+Notice how the angle relative to the grid has changed quite a bit. In fact, the change in angle is equal to the angle that you cut out of the paper originally.
+
+Continue the line over the right face and out onto the white space. What is the slope of the line now?
+
+Now reconstruct the pyramid by closing all the gaps. Look down from the top and observe the line you have drawn. There are three points of deflection. In general we have noted that the overall deflection is toward the area of high ``space-time density''. What is the relationship between the direction of the deflection of each of these three points to the space-time metric?
+\end{comment}
+========

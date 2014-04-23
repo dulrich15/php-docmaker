@@ -1,0 +1,138 @@
+\ProvidesPackage{p200beamer}
+
+\usepackage{ifthen,makeidx,verbatim,array,url,multirow}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\hypersetup{pdfauthor = {David J. Ulrich}, pdfsubject = {Physics}}
+
+% General things
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{0}
+\setlength\parindent{0in}
+\setlength\parskip{0.1in}
+\setlength\columnsep{0.5in}
+\setlength\itemsep{0in}
+% \numberwithin{equation}{section}
+
+% Special formats for highlighting
+%\newcommand{\jargon}[1]{\textbf{#1} \index{#1}}
+\newcommand{\jargon}[2][]{\textbf{#2}%
+\ifthenelse{\equal{#1}{}}%
+{\index{#2}\label{idx:#2}}%
+{\index{#1}\label{idx:#1}}%
+}
+\newcommand{\airquote}[1]{``#1''}
+\newcommand{\foreign}[1]{\textit{#1}}
+\newcommand{\src}[1]{\textit{#1}}
+\newcommand{\probtext}[1]{``#1''}
+
+% Special mathematical shortcuts
+\newcommand{\unit}[1]{\text{ #1}}
+\newcommand{\vect}[1]{\vec{#1}}
+\newcommand{\vhat}[1]{\hat{#1}}
+
+\newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pdd}[2]{\frac{\partial^2{#1}}{\partial{#2}^2}}
+
+\newcommand{\half}{\tfrac{1}{2}}
+
+\newcommand{\dg}{^\circ}
+\newcommand{\ohm}{\Omega}
+
+\newcommand{\sci}[2]{#1 \times 10^{#2}}
+\newcommand{\avg}[1]{\langle #1 \rangle}
+
+\newcommand{\vmag}[1]{\text{mag} \; \vect{#1}}
+\newcommand{\vang}[1]{\text{ang} \; \vect{#1}}
+
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+\DeclareMathOperator{\grad}{\nabla}
+\DeclareMathOperator{\vdiv}{\nabla \cdot}
+\DeclareMathOperator{\curl}{\nabla \times}
+%\DeclareMathOperator{\grad}{grad}
+%\DeclareMathOperator{\vdiv}{div}
+%\DeclareMathOperator{\curl}{curl}
+
+\newcounter{x} % Just an index -- use to number exercises, for example
+
+% New environments
+\newenvironment{items}
+{ \begin{itemize} \setlength\parskip{0in} }
+{ \end{itemize} }
+\newenvironment{enum}
+{ \begin{enumerate} \setlength\parskip{0in} }
+{ \end{enumerate} }
+
+\newcommand{\fig}[3]{
+  \begin{figure*}[!htp]
+  \centering
+  \includegraphics[scale=#2]{images/#1.png}
+  \ifthenelse{\equal{#3}{}}{}{\caption{#3}}
+  \ifthenelse{\equal{#1}{}}{}{\label{fig:#1}}
+  \end{figure*}
+}
+\newcommand{\tikzfig}[3]{
+  \begin{figure*}[!htp]
+  \centering
+  #2
+  \ifthenelse{\equal{#3}{}}{}{\caption{#3}}
+  \ifthenelse{\equal{#1}{}}{}{\label{fig:#1}}
+  \end{figure*}
+}
+\newcommand{\tbl}[4]{
+{
+  \renewcommand{\arraystretch}{1.5}
+  \renewcommand{\tabcolsep}{0.2cm}
+  \ifthenelse{\equal{#4}{}}{}{\begin{table*}[!htp]}
+  \begin{center}
+  \begin{tabular}{#2}
+  \hline #3 \hline
+  \end{tabular}
+  \ifthenelse{\equal{#4}{}}{}{\caption{#4}}
+  \ifthenelse{\equal{#1}{}}{}{\label{tbl:#1}}
+  \end{center}
+  \ifthenelse{\equal{#4}{}}{}{\end{table*}}
+}
+}
+
+% Tikz stuff...
+
+\usepackage{tikz}
+\let \Tiny = \tiny % To avoid font size `error'.
+\usetikzlibrary{arrows} % For pretty arrows.
+\usetikzlibrary{shapes} % Required to use the keyword `ellipse', for example.
+\usetikzlibrary{positioning} % Used to position nodes.
+\usetikzlibrary{calc} % Used to calculate linear combinations of coordinates.
+\usetikzlibrary{snakes} % Used for snake decorations.
+\usetikzlibrary{backgrounds} % Used to get the background outline.
+\usetikzlibrary{through} % Used for geometric calculations.
+\usetikzlibrary{decorations.pathmorphing} % For coils, etc...
+\usetikzlibrary{decorations.markings} % For arrow-heads within the line.
+\usetikzlibrary{decorations.pathreplacing} % For braces.
+\usetikzlibrary{decorations.text} % For text-along-path.
+
+\tikzstyle{every picture}+=[remember picture] % For picture-to-picture paths.
+
+\tikzstyle {every picture} = [>=latex]
+\tikzstyle {every pin} = [fill=white]
+\tikzstyle {eqn} = [inner sep=0.2cm,fill=blue!10,draw=blue!50,rounded corners,text centered]%,very thick]
+\tikzstyle {forcearrow} = [draw,fill=black,fill opacity=0.25,single arrow,shape border uses incircle,scale=0.5,minimum height=1cm]
+
+\tikzstyle {nde} = [fill=white,minimum width=8mm, minimum height=8mm]
+\tikzstyle {bat} = []
+\tikzstyle {res} = [decorate,decoration={zigzag,amplitude=2mm,segment length=2mm}]
+\tikzstyle {cpr} = []
+\tikzstyle {ind} = [decorate,decoration={coil,amplitude=2mm,segment length=2mm}]
+\tikzstyle {acv} = []
+\tikzstyle {led} = []
+\tikzstyle {npn} = []
+\newcommand{\prep}{}
+\newcommand{\hide}{}
+\newcommand{\eq}[3]{
+\begin{equation}\label{#1}
+#2
+\end{equation}
+}
+
